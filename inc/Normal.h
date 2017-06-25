@@ -15,8 +15,6 @@ Possible improvements:
      this way because returning a normal would remove the increase in magnitude through the automatic normalization.
 */
 
-class Vector;
-
 class Normal
 {
 public:

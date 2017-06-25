@@ -1,7 +1,6 @@
 #include <math.h>
 
 #include "Constants.h"
-#include "Point.h"
 #include "RayGenerator.h"
 
 RayGenerator::RayGenerator(const int width, const int height, const Point& eye, const Point& center, const Vector& up, float fovy)

@@ -12,8 +12,6 @@ Description:
    They are stored in the BGR order instead of RGB, as required by the FreeImage library.
 */
 
-class Colour;
-
 class Film
 {
 public:

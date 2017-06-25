@@ -4,9 +4,7 @@
 #include <Vector>
 
 #include "Ray.h"
-#include "Colour.h"
 #include "GeometricShape.h"
-#include "Intersection.h"
 
 /*
 Description:
@@ -18,6 +16,30 @@ Description:
 
    It also provides the common member variable that defines the colour of a light source.
 */
+
+struct Attenuation
+{
+   Attenuation()
+      : constant(1)
+      , linear(0)
+      , quadratic(0)
+   { }
+
+   Attenuation(float constant, float linear, float quadratic)
+      : constant(constant)
+      , linear(linear)
+      , quadratic(quadratic)
+   { }
+
+   void set(float constant, float linear, float quadratic)
+   {
+      this->constant = constant;
+      this->linear = linear;
+      this->quadratic = quadratic;
+   }
+
+   float constant, linear, quadratic;
+};
 
 class Light
 {

@@ -1,10 +1,6 @@
 #ifndef INTERSECTION_H
 #define INTERSECTION_H
 
-#include "Point.h"
-#include "Normal.h"
-#include "Material.h"
-
 /*
 Description:
 

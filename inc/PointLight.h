@@ -1,7 +1,6 @@
 #ifndef POINT_LIGHT_H
 #define POINT_LIGHT_H
 
-#include "Point.h"
 #include "Light.h"
 
 /*
@@ -11,30 +10,6 @@ Description:
 
    This type of light is placed at a specific location and can be affected by constant, linear and quadratic attenuation.
 */
-
-struct Attenuation
-{
-   Attenuation()
-      : constant(1)
-      , linear(0)
-      , quadratic(0)
-   { }
-
-   Attenuation(float constant, float linear, float quadratic)
-      : constant(constant)
-      , linear(linear)
-      , quadratic(quadratic)
-   { }
-
-   void set(float constant, float linear, float quadratic)
-   {
-      this->constant = constant;
-      this->linear = linear;
-      this->quadratic = quadratic;
-   }
-
-   float constant, linear, quadratic;
-};
 
 class PointLight : public Light
 {

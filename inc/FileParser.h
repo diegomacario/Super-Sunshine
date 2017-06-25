@@ -1,14 +1,10 @@
 #ifndef FILE_PARSER_H
 #define FILE_PARSER_H
 
-#include <vector>
 #include <stack>
 #include <fstream>
-#include <sstream>
 
-#include "Point.h"
-#include "Vector.h"
-#include "GeometricShape.h"
+#include "Affine.h"
 #include "Scene.h"
 
 /*
@@ -21,7 +17,6 @@ Description:
 */
 
 class SceneDescription;
-class Scene;
 
 class FileParser
 {

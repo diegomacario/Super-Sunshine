@@ -1,4 +1,3 @@
-#include "Vector.h"
 #include "Ray.h"
 #include "Triangle.h"
 

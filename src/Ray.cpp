@@ -1,5 +1,3 @@
-#include "Point.h"
-#include "Vector.h"
 #include "Ray.h"
 
 Ray::Ray()

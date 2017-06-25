@@ -1,18 +1,13 @@
-#include <string>
 #include <iostream>
-#include <fstream>
 #include <sstream>
 #include <memory>
 
-#include "Affine.h"
-#include "Colour.h"
 #include "Triangle.h"
 #include "Sphere.h"
 #include "PointLight.h"
 #include "DirectionalLight.h"
 #include "FileParser.h"
 #include "SceneDescription.h"
-#include "Scene.h"
 
 FileParser::FileParser(const char* filename)
 {

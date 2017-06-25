@@ -1,17 +1,11 @@
 #include <memory>
-#include <algorithm>
 #include <iostream>
 
-#include "Point.h"
-#include "Vector.h"
-#include "Normal.h"
-#include "Affine.h"
 #include "FileParser.h"
 #include "SampleGenerator.h"
 #include "RayGenerator.h"
 #include "Film.h"
 #include "SceneDescription.h"
-#include "Scene.h"
 #include "FreeImage.h"
 
 bool validateCmdLineArguments(const int numOfArgs);

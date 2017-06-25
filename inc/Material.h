@@ -17,8 +17,6 @@ Description:
    The Material class provides a function for computing and returning these two terms for a specific light source.
 */
 
-class Vector;
-
 class Material
 {
 public:
