@@ -1,24 +1,17 @@
+<!---
+Image of beautiful header
+--->
+
 # Ray-Tracer
+
 A recursive ray-tracer with a built-in scene parser for easily generating beautiful images.
 
 <!---
-<p align="center">
-  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/flower.gif"/>
-</p>
+Image of beautiful flower
+<em>You can make lots of cool things by squashing a few spheres and putting them together! The flower above only uses five spheres.</em>
 --->
 
 <p align="center">
-  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid.gif"/>
-</p>
-
-<p align="center">
-  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/qua-force-no-spec.png"/>
-</p>
-
-<p align="center">
-  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/qua-force.png"/>
-</p>
-
-<p align="center">
-  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/bandera.png"/>
+  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/flower.gif"/>
+  <em>You can make lots of cool things by squashing a few spheres and putting them together! The flower above only uses five spheres.</em>
 </p>
