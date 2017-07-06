@@ -13,5 +13,6 @@ Image of beautiful flower
 
 <p align="center">
   <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/flower.gif"/>
+  
   <em>You can make lots of cool things by squashing a few spheres and putting them together! The flower above only uses five spheres.</em>
 </p>
