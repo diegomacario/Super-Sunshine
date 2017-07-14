@@ -1,4 +1,4 @@
-# Ray-Tracer
+# Manta-Ray-Tracer
 
 A recursive ray-tracer with a built-in scene parser for easily generating beautiful images.
 
@@ -8,9 +8,13 @@ A recursive ray-tracer with a built-in scene parser for easily generating beauti
 
 ## About
 
-This ray-tracer was written as a final project for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It was built from scratch with a strong focus on making the C++ code clear and organized.
+This ray-tracer was written as a final project for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It was built from scratch with a strong focus on making the C++ code clear and organized. In its final form, the project consists of:
 
-The only external library used is the [FreeImage Library](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2).
+- A recursive ray-tracer.
+- A scene parser with support for many simple commands that can be used to generate images from text files.
+- A linear algebra API for performing operations with points, vectors, normals and affine transformation matrices.
+
+The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values produced by the ray-tracer).
 
 ## Description
 
@@ -26,5 +30,7 @@ Keeping track of all these values can become quite complex, specially as the num
 And turn it into this:
 
 A scene parser makes it a lot easier to play with a ray-tracer, and it also allows users to generate animations by writing scripts. It is hard to believe how such a simple feature can enable users to produce such stunning results:
+
+## Features
 
 ## Learning Resources
