@@ -46,7 +46,7 @@ Where:
 - *__up__* is the vector that defines which way is up.
 - *__fovy__* is the field of view in the Y direction.
 
-In the animation below the *__from__* point is rotated along a 45° arc while the *__at__* point remains fixed:
+In the animation below the *__from__* point is rotated along a 45° arc, while the *__at__* point remains fixed.
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_on_mars.gif"/>
@@ -56,12 +56,12 @@ In the animation below the *__from__* point is rotated along a 45° arc while th
 </p>
 
 ### Geometry
-The ray-tracer currently supports two geometric primitives: spheres and triangles. They don't sound like much, but remember you can make any shape with just triangles:
+The ray-tracer currently supports two geometric primitives: spheres and triangles. Two doesn't sound like much, but remember you can make any shape with just triangles:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/stanford_dragon.png"/>
  <p align="center">
-  <em>This rendering of the Stanford Dragon is made up of 100 thousand triangles (scene description from CSE167x).</em>
+  <em>This rendering of the Stanford Dragon is made out of 100 thousand triangles (scene description from CSE167x).</em>
  </p>
 </p>
 
