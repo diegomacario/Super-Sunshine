@@ -53,9 +53,9 @@ Where __from__ is the point at which the camera is located, __at__ is the point 
 The ray-tracer currently supports two geometric primitives: spheres and triangles. Two primitives doesn't sound like much, but remember you can make any shape with just triangles:
 
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_on_mars.gif"/>
+<img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/stanford_dragon.png"/>
  <p align="center">
-  <em>A pyramid on Mars.</em>
+  <em>This rendering of the Stanford Dragon is made up of 100 thousand triangles (scene description from CSE167x).</em>
  </p>
 </p>
 
