@@ -29,12 +29,18 @@ A scene parser makes it a lot easier to play with a ray-tracer, and it also allo
 
 ## Features
 
+All the commands supported by the scene parser follow this format:
+ ```sh
+ command parameter1 parameter2 ...
+ ```
+Where each parameter is separated by at least one space.
+
 ### Camera
-The camera is specified using the following command:
+The camera is specified as follows:
  ```sh
  camera fromx fromy fromz atx aty atz upx upy upz fovy
  ```
-Where __from__ is the point at which the camera is located, __at__ is the point that it points to, __up__ is the vector that defines which way is up and __fovy__ is the field of view in the Y direction. In the animation below I am rotating the __from__ point up and down along a 45° arc:
+Where __from__ is the point at which the camera is located, __at__ is the point that it points to, __up__ is the vector that defines which way is up and __fovy__ is the field of view in the Y direction. In the animation below I am rotating the __from__ point along a 45° arc:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_on_mars.gif"/>
