@@ -2,10 +2,6 @@
 
 A recursive ray-tracer with a built-in scene parser for easily generating beautiful images.
 
-<p align="center">
-  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_on_mars.gif"/>
-</p>
-
 ## About
 
 This ray-tracer was written as a final project for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It was built from scratch with a strong focus on making the C++ code clear and organized. In its final form, the project consists of:
@@ -32,5 +28,24 @@ And turn it into this:
 A scene parser makes it a lot easier to play with a ray-tracer, and it also allows users to generate animations by writing scripts. It is hard to believe how such a simple feature can enable users to produce such stunning results:
 
 ## Features
+
+### Camera
+The camera is specified using the following command:
+ ```sh
+ camera fromx fromy fromz atx aty atz upx upy upz fovy
+ ```
+Where __from__ is the point at which the camera is located, __at__ is the point that it points to, __up__ is the vector that defines which way is up and __fovy__ is the field of view in the Y direction. In the animation below I am rotating the __from__ point up and down along a 45 degree arc:
+
+<p align="center">
+  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_on_mars.gif"/>
+</p>
+
+### Geometry
+
+### Transformations
+
+### Lights
+
+### Materials
 
 ## Learning Resources
