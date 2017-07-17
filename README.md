@@ -98,7 +98,7 @@ Where:
  - *__rotate__* rotates a geometric primitive *__angle__* degrees about the vector defined by *__x__*, *__y__* and *__z__*.
  - *__scale__* scales a geometric primtive by *__x__*, *__y__* and *__z__* units along the X, Y and Z axes, respectively.
  
-Additionally, the commands *__pushTransform__* and *__popTransform__* are also supported to imitate the syntax of old-school OpenGL. To better understand their use, and the order in which transformations are applied, consider the following example:
+Additionally, the commands *__pushTransform__* and *__popTransform__* are also supported to imitate the syntax of old-school OpenGL. To better understand their use and the order in which transformations are applied, consider the following example:
  ```sh
  translate 1 0 0
  
