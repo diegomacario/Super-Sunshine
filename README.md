@@ -84,7 +84,7 @@ In the case of a triangle, it is created as follows:
 Where:
 - *__maxverts__* is the command used to define the maximum number of vertices (*__num__*) that can be used in a scene description.
 - *__vertex__* is the command used to create a single vertex at point *__pos__*.
-- *__tri__* is the command used to create a triangle. Its three parameters are the indices of three vertices. The first vertex you create with the *__vertex__* command has index zero, and this value increases by one for each subsequent vertex you create. Note that the indices must be specified in a counter-clockwise order so that the normal of the triangle points in the correct direction, and that multiple triangles can share vertices.
+- *__tri__* is the command used to create a triangle. Its three parameters are the indices of three vertices. The first vertex you create with the *__vertex__* command has index zero, and this value increases by one for each subsequent vertex you create. Note that the indices must be specified in a counter-clockwise order so that the normal of the triangle points in the correct direction, and that different triangles can share vertices.
 
 ### Transformations
 
