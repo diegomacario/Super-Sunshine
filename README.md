@@ -40,7 +40,13 @@ The camera is specified as follows:
  ```sh
  camera fromx fromy fromz atx aty atz upx upy upz fovy
  ```
-Where *__from__* is the point at which the camera is located, *__at__* is the point that it points to, *__up__* is the vector that defines which way is up and *__fovy__* is the field of view in the Y direction. In the animation below I am rotating the *__from__* point along a 45° arc:
+Where:
+- *__from__* is the point at which the camera is located.
+- *__at__* is the point that the camera point to.
+- *__up__* is the vector that defines which way is up.
+- *__fovy__* is the field of view in the Y direction.
+
+In the animation below the *__from__* point is rotated along a 45° arc while leaving the *__at__* point fixed:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_on_mars.gif"/>
@@ -58,6 +64,27 @@ The ray-tracer currently supports two geometric primitives: spheres and triangle
   <em>This rendering of the Stanford Dragon is made up of 100 thousand triangles (scene description from CSE167x).</em>
  </p>
 </p>
+
+A sphere is created using this command:
+ ```sh
+ sphere centerx centery centerz radius
+ ```
+Where:
+- *__center__* is the point at which the center of the sphere is located.
+- *__radius__* is the radius of the sphere.
+
+In the case of a triangle, it is created as follows:
+ ```sh
+ maxverts num
+ vertex posx posy posz
+ vertex posx posy posz
+ vertex posx posy posz
+ tri index1 index2 index3
+ ```
+Where:
+- *__maxverts__* is the command used to define the maximum number of vertices (*__num__*) that can be used in a scene description.
+- *__vertex__* is the command used to create a single vertex at point *__pos__*.
+- *__tri__* is the command used to create a triangle. Its three parameters are the indices of three vertices. The first vertex you create with the *__vertex__* command has index zero, and this value increases by one for each subsequent vertex you create. Note that the indices must be specified in a counter-clockwise order so that the normal of the triangle points in the correct direction, and that multiple triangles can share vertices.
 
 ### Transformations
 
