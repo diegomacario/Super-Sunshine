@@ -56,7 +56,7 @@ In the animation below the *__from__* point is rotated along a 45° arc, while t
 </p>
 
 ### Geometry
-The ray-tracer currently supports two geometric primitives: spheres and triangles. Two doesn't sound like much, but remember you can make any shape with just triangles:
+Two geometric primitives are currently supported: *__spheres__* and *__triangles__*. Two doesn't sound like much, but remember you can make any shape with just triangles:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/stanford_dragon.png"/>
@@ -87,6 +87,32 @@ Where:
 - *__tri__* is the command used to create a triangle. Its three parameters are the indices of three vertices. The first vertex you create with the *__vertex__* command has index zero, and this value increases by one for each subsequent vertex you create. Note that the indices must be specified in a counter-clockwise order so that the normal of the triangle points in the correct direction, and that different triangles can share vertices.
 
 ### Transformations
+Three basic transformations are currently supported: *__translations__*, *__rotations__* and *__scaling__*. The commands for these transformations are:
+ ```sh
+ translate x y z
+ rotate x y z angle
+ scale x y z
+ ```
+Where:
+ - *__translate__* translates a geometric primitive *__x__*, *__y__* and *__z__* units along the X, Y and Z axes, respectively.
+ - *__rotate__* rotates a geometric primitive *__angle__* degrees about the vector defined by *__x__*, *__y__* and *__z__*.
+ - *__scale__* scales a geometric primtive by *__x__*, *__y__* and *__z__* units along the X, Y and Z axes, respectively.
+ 
+Additionally, the commands *__pushTransform__* and *__popTransform__* are also supported to imitate the syntax of old-school OpenGL. To better understand their use, and the order in which transformations are applied, consider the following example:
+ ```sh
+ translate 1 0 0
+ 
+ pushTransform
+    rotate 0 1 0 45
+    sphere 0 0 0 1
+ popTransform
+ 
+ sphere 0 1 0 0.5
+ ```
+ - The sphere that is inside the push/pop block is centered at (0, 0, 0) and has a radius of 1. The first transformation applied to it is the nearest one moving towards the top. In this case it is a 45° rotation about the Y axis. The next transformation is a translation of 1 unit along the X axis.
+ - The sphere that is outside the push/pop block is centered at (0, 1, 0) and has a radius of 0.5. Since it is not inside the push/pop block, the 45° rotation about the Y axis does not apply to it. Its first transformation then ends up being the translation of 1 unit along the X axis.
+ 
+This order might seem odd at first, but if you think about it in terms of transformation matrices being right multiplied it makes a lot of sense! Just remember that the last transformation specified is the first one applied.
 
 ### Lights
 
