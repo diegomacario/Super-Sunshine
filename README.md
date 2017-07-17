@@ -46,7 +46,7 @@ Where:
 - *__up__* is the vector that defines which way is up.
 - *__fovy__* is the field of view in the Y direction.
 
-In the animation below the *__from__* point is rotated along a 45° arc while leaving the *__at__* point fixed:
+In the animation below, the *__from__* point is rotated along a 45° arc while leaving the *__at__* point fixed:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_on_mars.gif"/>
