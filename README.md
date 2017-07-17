@@ -11,14 +11,14 @@ A recursive ray-tracer with a built-in scene parser for easily generating beauti
 This ray-tracer was written as a final project for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It was built from scratch with a strong focus on making the C++ code clear and organized. In its final form, the project consists of:
 
 - A recursive ray-tracer.
-- A scene parser with support for many simple commands that can be used to generate images from text files.
+- A scene parser that can be used to generate images from text files.
 - A linear algebra API for performing operations with points, vectors, normals and affine transformation matrices.
 
 The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values produced by the ray-tracer).
 
 ## Description
 
-When I started working on this project, I thought the most challenging aspect of it would be to translate the theory behind a ray-tracer into well-written code. Once I finished it, however, I found that using a ray-tracer is a lot more challenging that actually implementing one! Just consider some of the things that need to be specified to generate an image:
+When I started working on this project, I thought the most challenging part of it would be to translate the theory behind a ray-tracer into well-written code. Once I finished it, however, I found that using a ray-tracer is a lot more challenging that actually implementing one! Just consider some of the things that need to be specified to generate an image:
 
 - A camera (including its position, orientation and field of view).
 - Geometric shapes (including their positions, dimensions and the transformations that act on them).
