@@ -36,7 +36,7 @@ All the commands supported by the scene parser follow this format:
 Where each parameter is separated by at least one space.
 
 ### Camera
-The camera is specified as follows:
+The camera is specified with this command:
  ```sh
  camera fromx fromy fromz atx aty atz upx upy upz fovy
  ```
@@ -70,7 +70,7 @@ A sphere is created using this command:
  sphere centerx centery centerz radius
  ```
 Where:
-- *__center__* is the point at which the center of the sphere is located.
+- *__center__* is the point at which the sphere is centered.
 - *__radius__* is the radius of the sphere.
 
 In the case of a triangle, it is created as follows:
