@@ -136,3 +136,6 @@ Transformations can be intimidating at first, but play around with them for a wh
 ### Materials
 
 ## Learning Resources
+
+## Dedication
+
