@@ -42,7 +42,7 @@ The camera is specified with this command:
  ```
 Where:
 - *__from__* is the point at which the camera is located.
-- *__at__* is the point that the camera point to.
+- *__at__* is the point that the camera points to.
 - *__up__* is the vector that defines which way is up.
 - *__fovy__* is the field of view in the Y direction.
 
