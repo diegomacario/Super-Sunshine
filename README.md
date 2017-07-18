@@ -139,3 +139,8 @@ Transformations can be intimidating at first, but play around with them for a wh
 
 ## Dedication
 
+This last image is for all the citizens of Venezuela, who are currently fighting for their freedom against an oppressive dictatorship.
+
+<p align="center">
+<img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/bandera.png"/>
+</p>
