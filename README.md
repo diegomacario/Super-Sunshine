@@ -95,9 +95,26 @@ Three basic transformations are currently supported: *__translations__*, *__rota
  ```
 Where:
  - *__translate__* translates a geometric primitive *__x__*, *__y__* and *__z__* units along the X, Y and Z axes, respectively.
- - *__rotate__* rotates a geometric primitive *__angle__* degrees about the vector defined by *__x__*, *__y__* and *__z__*.
+ - *__rotate__* rotates a geometric primitive counterclockwise by *__angle__* degrees about the vector defined by *__x__*, *__y__* and *__z__*.
  - *__scale__* scales a geometric primtive by *__x__*, *__y__* and *__z__* units along the X, Y and Z axes, respectively.
- 
+
+Just as in OpenGL, these transformations right multiply the model-view matrix. This means that the last transformation specified is the first one to be applied. For example, if you wanted to:
+
+- Create a sphere of radius 1.5 centered at the origin.
+- Scale it by a factor of 2. 
+- Rotate it clockwise by 90 degrees about the Y axis.
+- Translate it -5 units along the Z axis.
+
+You would write the following:
+ ```sh
+ translate 0 0 -5
+ rotate 0 1 0 -90
+ scale 2 2 2
+ sphere 0 0 0 1.5
+ ```
+
+This order might seem odd at first, but all you have to remember is that the last transformation specified is the first one to be applied. Also keep in mind that the order does matter: rotating and then translating is not the same as translating and then rotating.
+
 Additionally, the commands *__pushTransform__* and *__popTransform__* are also supported to imitate the syntax of old-school OpenGL. To better understand their use and the order in which transformations are applied, consider the following example:
  ```sh
  translate 1 0 0
@@ -109,10 +126,10 @@ Additionally, the commands *__pushTransform__* and *__popTransform__* are also s
  
  sphere 0 1 0 0.5
  ```
- - The sphere that is inside the push/pop block is centered at (0, 0, 0) and has a radius of 1. The first transformation applied to it is the nearest one moving towards the top. In this case it is a 45° rotation about the Y axis. The next transformation is a translation of 1 unit along the X axis.
- - The sphere that is outside the push/pop block is centered at (0, 1, 0) and has a radius of 0.5. Since it is not inside the push/pop block, the 45° rotation about the Y axis does not apply to it. Its first transformation then ends up being the translation of 1 unit along the X axis.
+ - The sphere that is inside the push/pop block is centered at (0, 0, 0) and has a radius of 1. The first transformation applied to it is the nearest one moving towards the top. In this case it is a 45° counterclockwise rotation about the Y axis. The next transformation is a translation of 1 unit along the X axis.
+ - The sphere that is outside the push/pop block is centered at (0, 1, 0) and has a radius of 0.5. Since it is not inside the push/pop block, the 45° counterclockwise rotation about the Y axis does not apply to it. Its first transformation then ends up being the translation of 1 unit along the X axis.
  
-This order might seem odd at first, but if you think about it in terms of transformation matrices being right multiplied it makes a lot of sense! Just remember that the last transformation specified is the first one applied.
+Transformations can be intimidating at first, but play around with them for a while and they will start to make sense!
 
 ### Lights
 
