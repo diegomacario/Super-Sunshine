@@ -132,7 +132,7 @@ Additionally, the commands *__pushTransform__* and *__popTransform__* are also s
 Transformations can be intimidating at first, but play around with them for a while and they will start to make sense!
 
 ### Lights
-Three types of lights are currently supported: *__ambient light__*, *__point lights__* and *__directional lights__*.
+Three types of light sources are currently supported: *__ambient light__*, *__point lights__* and *__directional lights__*.
 
 The command used to set the colour of the ambient light is:
  ```sh
