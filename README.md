@@ -132,16 +132,16 @@ Additionally, the commands *__pushTransform__* and *__popTransform__* are also s
 Transformations can be intimidating at first, but play around with them for a while and they will start to make sense!
 
 ### Lights
-Three types of light are currently supported: *__ambient light__*, *__point lights__* and *__directional lights__*.
+Three types of lights are currently supported: *__ambient light__*, *__point lights__* and *__directional lights__*.
 
 The command used to set the colour of the ambient light is:
  ```sh
  ambient r g b
  ```
 Where:
-- The colour of the ambient light is defined by the *__RGB__* values, which can range from 0 to 1. The default colour of the ambient light is (0.2, 0.2, 0.2).
+- The *__RGB__* values, which can range from 0 to 1, define the colour of the ambient light. If this command is not specified in a scene description, the colour of the ambient light defaults to (0.2, 0.2, 0.2).
 
-In theory, ambient light exists at all points in space and is propagated with equal intensity in all directions. Based on this definition, there should only exist "one ambient light" in a scene. While this is true for this ray-tracer, it does allow something rather unusual: the colour of the "one ambient light" in a scene can be modified in between the creation of geometric primitives. In other words, users can use the ambient light to give primitives a base colour. Consider the following scene description, in which I create four spheres and modify the colour of the ambient light before creating each one:
+In theory, ambient light exists at all points in space and is propagated with equal intensity in all directions. Based on this definition, there should only exist one ambient light in a scene. While this is true for this ray-tracer, it still allows something rather unusual: the colour of the ambient light can be modified in between the creation of geometric primitives. In other words, users can use the ambient light to give primitives a base colour. Consider the following scene description, in which I create four spheres and modify the colour of the ambient light before creating each one:
 
 The resulting image is:
 
