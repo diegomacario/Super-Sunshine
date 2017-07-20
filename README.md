@@ -170,7 +170,7 @@ The resulting image is:
 
 This behaviour does not match the real world, but it is very convenient in the context of a ray-tracer. Just remember that settings like the ambient light, the attenuation and the material properties are all maintained by a state machine. Once they are set, they affect all the lights and geometric primitives created afterwards. If you want different lights or primitives to have different appeareances, you need to modify these settings before creating them.
 
-A point light is placed at a specific location and emits light in all directions. This type of light can be affected by three different types of attenuation: *__constant__*, *__linear__* and *__quadratic__* attenuation. The commands used to create this type of light are:
+**(Connect flow here)** A point light is placed at a specific location and emits light in all directions. This type of light can be affected by three different types of attenuation: *__constant__*, *__linear__* and *__quadratic__* attenuation. The commands used to create this type of light are:
  ```sh
  attenuation constant linear quadratic
  point posx posy posz r g b
