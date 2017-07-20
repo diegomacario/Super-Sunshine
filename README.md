@@ -142,8 +142,31 @@ Where:
 - The *__RGB__* values, which can range from 0 to 1, define the colour of the ambient light. If this command is not specified in a scene description, the colour of the ambient light defaults to (0.2, 0.2, 0.2).
 
 In theory, ambient light exists at all points in space and is propagated with equal intensity in all directions. Based on this definition, there should only exist one ambient light in a scene. While this is true for this ray-tracer, it still allows something rather unusual: the colour of the ambient light can be modified in between the creation of geometric primitives. In other words, users can use the ambient light to give primitives a base colour. Consider the following scene description, in which I create four spheres and modify the colour of the ambient light before creating each one:
+ ```sh
+ # Left sphere (green)
+ambient 0.2 0.4 0.1
+sphere -0.75 0 -2 0.5
+
+# Right sphere (yellow)
+ambient 0.7 0.7 0
+sphere 0.75 0 -2 0.5
+
+# Bottom sphere (red)
+ambient 0.75 0 0
+sphere 0 -0.75 -2 0.5
+
+# Top sphere (blue)
+ambient 0 0.262 0.344
+sphere 0 0.75 -2 0.5
+ ```
 
 The resulting image is:
+<p align="center">
+<img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/quad_sphere_ambient.png"/>
+ <p align="center">
+  <em>One ambient light shining four different colours.</em>
+ </p>
+</p>
 
 This behaviour does not match the real world, but it is very convenient in the context of a ray-tracer. Just remember that settings like the ambient light, the attenuation and the material properties are all maintained by a state machine. Once they are set, they affect all the lights and geometric primitives created afterwards. If you want different lights or primitives to have different appeareances, you need to modify these settings before creating them.
 
