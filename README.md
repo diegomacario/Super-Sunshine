@@ -162,7 +162,7 @@ sphere 0 0.75 -2 0.5
 
 The resulting image is:
 <p align="center">
-<img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/quad_sphere_ambient.png"/>
+<img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/four_spheres_ambient.png"/>
  <p align="center">
   <em>One ambient light shining four different colours.</em>
  </p>
