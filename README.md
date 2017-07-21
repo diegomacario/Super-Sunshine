@@ -96,7 +96,7 @@ Three basic transformations are currently supported: *__translations__*, *__rota
 Where:
  - *__translate__* translates a geometric primitive *__x__*, *__y__* and *__z__* units along the X, Y and Z axes, respectively.
  - *__rotate__* rotates a geometric primitive counterclockwise by *__angle__* degrees about the vector defined by *__x__*, *__y__* and *__z__*.
- - *__scale__* scales a geometric primtive by *__x__*, *__y__* and *__z__* units along the X, Y and Z axes, respectively.
+ - *__scale__* scales a geometric primitive by *__x__*, *__y__* and *__z__* units along the X, Y and Z axes, respectively.
 
 Just as in OpenGL, these transformations right multiply the model-view matrix. This means that the last transformation specified is the first one to be applied. For example, if you wanted to:
 
@@ -139,7 +139,7 @@ The command used to set the colour of the ambient light is:
  ambient r g b
  ```
 Where:
-- The *__RGB__* values, which can range from 0 to 1, define the colour of the ambient light. If this command is not specified in a scene description, the colour of the ambient light defaults to (0.2, 0.2, 0.2).
+- The *__RGB__* values, which can range from 0 to 1, determine the colour of the ambient light. If this command is not specified in a scene description, the colour of the ambient light defaults to (0.2, 0.2, 0.2).
 
 In theory, ambient light exists at all points in space and is propagated with equal intensity in all directions. Based on this definition, there should only exist one ambient light in a scene. While this is true for this ray-tracer, it also allows something rather unusual: the colour of the ambient light can be modified in between the creation of geometric primitives. In other words, users can use the ambient light to give primitives a base colour. Consider the following scene description, in which I create four spheres and modify the colour of the ambient light before creating each one:
  ```sh
@@ -177,7 +177,7 @@ Now in the case of point lights, these are placed at specific locations and emit
  ```
 Where:
 - *__attenuation__* is the command used to set the attenuation for point lights. A point light with no attenuation has a *__constant__* coefficient of 1, and *__linear__*/*__quadratic__* coefficients of 0 (these are the default values, just as in OpenGl).
-- *__point__* is the command used to create a point light at point *__pos__*. The colour of the emitted light is defined by the *__RGB__* values.
+- *__point__* is the command used to create a point light at point *__pos__*. The colour of the emitted light is determined by the *__RGB__* values.
 
 As for directional lights, these are considered to be placed infinitely far away, which is why they only emit light in a single direction and are not affected by attenuation. The command used to create this type of light is:
  ```sh
