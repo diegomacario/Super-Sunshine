@@ -33,7 +33,11 @@ All the commands supported by the scene parser follow this format:
  ```sh
  command parameter1 parameter2 ...
  ```
-Where each parameter is separated by at least one space.
+Where each parameter is separated by at least one space. Comments are also supported in this format:
+ ```sh
+ # This comment is correct because it starts with '#' and has its own line.
+ command parameter1 parameter2 parameter3 # This comment is incorrect because it shares its line with a command. 
+ ```
 
 ### Camera
 The camera is specified with this command:
