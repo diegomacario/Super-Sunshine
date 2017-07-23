@@ -170,13 +170,13 @@ The resulting image is:
 
 This behaviour does not match the real world, but it is very convenient in the context of a ray-tracer. Just remember that settings like the ambient light, the attenuation and the material properties are all maintained by a state machine. Once they are set, they affect all the lights and geometric primitives created afterwards. If you want different lights or primitives to have different appeareances, you need to modify these settings before creating them.
 
-Now in the case of point lights, these are placed at specific locations and emit light in all directions. Because they have a position in space, point lights can be affected by three different types of attenuation: *__constant attenuation__*, *__linear attenuation__* and *__quadratic attenuation__*. The commands used to create this type of light are:
+In the case of point lights, these are placed at specific locations and emit light in all directions. Because their positions in space are defined, point lights can be affected by three different types of attenuation: *__constant__*, *__linear__* and *__quadratic__* attenuation. The commands used to create this type of light are:
  ```sh
  attenuation constant linear quadratic
  point posx posy posz r g b
  ```
 Where:
-- *__attenuation__* is the command used to set the attenuation for point lights. A point light with no attenuation has a *__constant__* coefficient of 1, and *__linear__*/*__quadratic__* coefficients of 0 (these are the default values, just as in OpenGl).
+- *__attenuation__* is the command used to set the attenuation. A point light with no attenuation has a *__constant__* coefficient of 1, and *__linear__*/*__quadratic__* coefficients of 0 (these are the default values, just as in OpenGl).
 - *__point__* is the command used to create a point light at point *__pos__*. The colour of the emitted light is determined by the *__RGB__* values.
 
 As for directional lights, these are considered to be placed infinitely far away, which is why they only emit light in a single direction and are not affected by attenuation. The command used to create this type of light is:
