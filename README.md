@@ -188,7 +188,7 @@ In the case of point lights, these are placed at specific locations and emit lig
  point posx posy posz r g b
  ```
 Where:
-- *__attenuation__* is the command used to set the attenuation. A point light with no attenuation has a *__constant__* coefficient of 1, and *__linear__*/*__quadratic__* coefficients of 0 (these are the default values, just as in OpenGl).
+- *__attenuation__* is the command used to set the attenuation. A point light with no attenuation has a *__constant__* coefficient of 1 and *__linear__*/*__quadratic__* coefficients of 0 (these are the default values, just as in OpenGl).
 - *__point__* is the command used to create a point light at point *__pos__*. The colour of the emitted light is determined by the *__RGB__* values.
 
 As for directional lights, these are considered to be placed infinitely far away, which is why they only emit light in a single direction and are not affected by attenuation. The command used to create this type of light is:
