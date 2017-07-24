@@ -14,7 +14,7 @@ The only external library used is the [FreeImage](https://www.edx.org/course/com
 
 ## Description
 
-When I started working on this project, I thought the most challenging part of it would be to translate the theory behind a ray-tracer into well-written code. Once I finished it, however, I found that using a ray-tracer is a lot more challenging that actually implementing one! Just consider some of the things that need to be specified to generate an image:
+When I started working on this project, I thought the most challenging part of it would be to translate the theory behind a ray-tracer into well-written code. Once I finished it, however, I found that using a ray-tracer is a lot more challenging that actually implementing one. Just consider some of the things that need to be specified to generate an image:
 
 - A camera (including its position, orientation and field of view).
 - Geometric shapes (including their positions, dimensions and the transformations that act on them).
