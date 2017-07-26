@@ -200,6 +200,8 @@ Where:
 
 ### Materials
 
+## Future Improvements
+
 ## Learning Resources
 
 ## Dedication
