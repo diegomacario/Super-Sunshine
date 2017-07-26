@@ -202,6 +202,15 @@ Where:
 
 ## Future Improvements
 
+There is still so much that remains to be done! The more I read about computer graphics, the more I want to continue exploring this field. 
+
+I really wish my job involved anything related to graphics, or at least a little linear algebra. For now I will keep bringing graphics textbooks with me on my super long commute. If you ever see a guy programming on a bus or metro in Montreal, it is probably me. And I will probably be working on implementing:
+
+- Acceleration structures (I tried to reduce the number of operations performed for each pixel as much as I could, but that will only take you so far - acceleration structures will speed things up enormously).
+- Refractions (good old Snell's law is not going to implement itself!).
+- Surfaces with interpolated normals (this will allow the ray-tracer to create things like [this](http://math.hws.edu/graphicsbook/c3/opengl-rgb-triangle.png)).
+- Colour bleeding (hopefully one day I will be able to generate my own Cornell Box).
+
 ## Learning Resources
 
 ## Dedication
