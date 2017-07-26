@@ -208,8 +208,8 @@ I really wish my job involved anything related to graphics, or at least a little
 
 - Acceleration structures (I tried to reduce the number of operations performed for each pixel as much as I could, but that will only take you so far - acceleration structures will speed things up enormously).
 - Refractions (good old Snell's law is not going to implement itself!).
-- Surfaces with interpolated normals (this will allow the ray-tracer to create things like [this](http://math.hws.edu/graphicsbook/c3/opengl-rgb-triangle.png)).
-- Colour bleeding (hopefully one day I will be able to generate my own Cornell Box).
+- Surfaces with interpolated normals (this will allow the ray-tracer to create things [RGB triangles](http://math.hws.edu/graphicsbook/c3/opengl-rgb-triangle.png)).
+- Colour bleeding (hopefully one day I will be able to generate my own [Cornell Box](https://upload.wikimedia.org/wikipedia/commons/2/24/Cornell_box.png)).
 
 ## Learning Resources
 
