@@ -206,8 +206,8 @@ There is still so much that remains to be done! The more I read about computer g
 
 - Acceleration structures (I reduced the number of operations performed for each pixel as much as I could, but to truly speed things up I must implement acceleration structures).
 - Refractive materials (good old Snell's law is not going to implement itself!).
-- Surfaces with interpolated normals (this feature will allow the ray-tracer to create things like [RGB triangles](http://math.hws.edu/graphicsbook/c3/opengl-rgb-triangle.png)).
-- Colour bleeding (hopefully one day I will be able to generate a [Cornell Box](https://upload.wikimedia.org/wikipedia/commons/2/24/Cornell_box.png)).
+- Surfaces with interpolated normals (this feature will allow users to generate things like [RGB triangles](http://math.hws.edu/graphicsbook/c3/opengl-rgb-triangle.png)).
+- Colour bleeding (it would be really cool to generate a [Cornell Box](https://upload.wikimedia.org/wikipedia/commons/2/24/Cornell_box.png)).
 
 ## Learning Resources
 
