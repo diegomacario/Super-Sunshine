@@ -114,7 +114,7 @@ Just as in OpenGL, these transformations right multiply the model-view matrix. T
 
 - Create a sphere of radius 1.5 centered at the origin.
 - Scale it by a factor of 2. 
-- Rotate it clockwise by 90 degrees about the Y axis.
+- Rotate it clockwise by 90° about the Y axis.
 - Translate it -5 units along the Z axis.
 
 You would write the following:
@@ -190,6 +190,8 @@ In the case of point lights, these are placed at specific locations and emit lig
 Where:
 - *__attenuation__* is the command used to set the attenuation. A point light with no attenuation has a *__constant__* coefficient of 1 and *__linear__*/*__quadratic__* coefficients of 0 (these are the default values, just as in OpenGl).
 - *__point__* is the command used to create a point light at point *__pos__*. The colour of the emitted light is determined by the *__RGB__* values.
+
+In the animation below, a point light is rotated along a 180° arc from right to left:
 
 As for directional lights, these are considered to be placed infinitely far away, which is why they only emit light in a single direction and are not affected by attenuation. The command used to create this type of light is:
  ```sh
