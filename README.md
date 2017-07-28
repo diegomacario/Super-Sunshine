@@ -191,7 +191,7 @@ Where:
 - *__attenuation__* is the command used to set the attenuation. A point light with no attenuation has a *__constant__* coefficient of 1 and *__linear__*/*__quadratic__* coefficients of 0 (these are the default values, just as in OpenGl).
 - *__point__* is the command used to create a point light at point *__pos__*. The colour of the emitted light is determined by the *__RGB__* values.
 
-If you wanted the intensity of a point light to decrease linearly with the distance from its origin, you would set the attenuation coefficients to (0, 1, 0). If you wanted it to decrease quadratically, you would use (0, 0, 1). Note that you can also combine the different forms of attenuation and use coefficients larger than 1 increase the attenuation even further.  In the animation below, a point light with quadratic attenuation is rotated along a 180° arc from right to left:
+If you wanted the intensity of a point light to decrease linearly with the distance from its origin, you would set the attenuation coefficients to (0, 1, 0). If you wanted it to decrease quadratically, you would use (0, 0, 1). Note that you can combine the different forms of attenuation and use coefficients larger than 1 to increase the attenuation even further.  In the animation below, a point light with quadratic attenuation is rotated along a 180° arc from right to left:
 
 As for directional lights, these are considered to be placed infinitely far away, which is why they only emit light in a single direction and are not affected by attenuation. The command used to create this type of light is:
  ```sh
