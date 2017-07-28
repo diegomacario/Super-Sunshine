@@ -206,6 +206,7 @@ Where:
 
 There is still so much that remains to be done! The more I read about computer graphics, the more I want to continue exploring this field. I really wish my job involved anything related to graphics, or at least a little linear algebra. For now I will continue reading graphics textbooks on my super long commute. If you ever see a guy programming on a bus or metro in Montreal, it is probably me, and I will probably be working on implementing:
 
+- Anti-aliasing (you can blame the saw-like patterns you see in the images above on the lack of this feature).
 - Acceleration structures (I reduced the number of operations performed for each pixel as much as I could, but to truly speed things up I must implement acceleration structures).
 - Refractive materials (good old Snell's law is not going to implement itself!).
 - Surfaces with interpolated normals (this feature will allow users to generate things like [RGB triangles](http://math.hws.edu/graphicsbook/c3/opengl-rgb-triangle.png)).
