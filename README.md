@@ -200,7 +200,7 @@ As for directional lights, these are considered to be placed infinitely far away
 Where:
 - *__dir__* is the vector that defines the direction in which light is emitted, while the *__RGB__* values determine the colour of the light.
 
-### 6) Materials
+### 6) Materials 
 
 ## Future Improvements
 
