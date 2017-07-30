@@ -48,7 +48,7 @@ Where:
 - *__filename__* is the filename that will be assigned to the PNG image.
 
 ### 2) Camera
-The camera is specified with this command:
+A camera must be specified to define how the scene will be framed. This is done with the following command:
  ```sh
  camera fromx fromy fromz atx aty atz upx upy upz fovy
  ```
