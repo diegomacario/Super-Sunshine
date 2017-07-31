@@ -211,6 +211,45 @@ Now it seems a lot more natural to use a directional light! It's fun to think ab
 
 ### 6) Materials
 
+// --- --- --- --- --- --- --- ---
+
+Now that you know how light sources are modeled, there is only one thing left to be defined: what happens to a ray of light when it hits a surface? A simplified view of what happens in nature has a part of the ray being absorbed by the surface, while another part is reflected off of it. If the surface is smooth, the angle of incidence is equal to the angle of reflection. If it is rough, the direction of the reflected ray depends on the micro structure of the material that makes up the surface. Note that some of the incident light is also transmitted into the surface, but we won't be considering this behaviour since it is not supported yet. The whole process ends when our eyes catch the reflected light, allowing us to perceive the colour of the object.
+
+We can break this description down into the phenomena that we expect to see:
+
+(1) A surface that faces a light source should be brighter than one that is angled with respect to the light source.
+(2) Objects should cast shadows.
+(3) A mirror surface should show the reflections of other objects.
+(4) A shiny surface should present specular highlights.
+
+These effects are achieved by combining two reflectance models:
+
+a) The Lambertian reflectance model
+
+// *** *** *** *** ****
+
+This model is based on a very simple premise: when a ray of light hits a surface, it is reflected with equal intensity in all directions, regardless of whether the surface is smooth or rough.
+
+It achieves effect (1) with excellent results by taking the diffuse colour of a material, which you specify with the command below, and varying its contribution depending on the angle between the normal of the surface and the direction of the incident ray of light.
+
+ ```sh
+ diffuse r g b
+ ```
+
+As the angle between the normal and the ray of light decreases, the contribution of the diffuse colour increases. In other words, the more closely the normal and the ray of light align, the brighter the diffuse colour appears.
+
+// *** *** *** *** ****
+
+b) The Blinn-Phong reflectance model
+
+Specular
+Shininess
+Maxdepth
+
+Emissive
+
+// --- --- --- --- --- --- --- ---
+
 ## Future Improvements
 
 There is still so much that remains to be done! The more I read about computer graphics, the more I want to continue exploring this field. I really wish my job involved anything related to graphics, or at least a little linear algebra. For now I will continue reading graphics textbooks on my super long commute. If you ever see a guy programming on a bus or metro in Montreal, it is probably me, and I will probably be working on implementing:
@@ -222,6 +261,20 @@ There is still so much that remains to be done! The more I read about computer g
 - Colour bleeding (it would be really cool to generate a [Cornell Box](https://upload.wikimedia.org/wikipedia/commons/2/24/Cornell_box.png)).
 
 ## Learning Resources
+
+// ---
+
+I know how difficult it is to work on side projects after work or school. If you spend all day in front of a computer, all you want to do in the evening is get some sun and relax. 
+
+That's why it's important to choose side projects that you find exciting! It's a lot easier to motivate yourself to work on something if you are deeply interested in it.
+
+I think building a ray-tracer is a great side project because all the effort you put into it materializes as actual images that you can marvel at. What is more exciting than that? Well, probably skydiving or getting married. But still, it's a very rewarding experience.
+
+I cannot describe the elation I felt when this ray-tracer spat out it its first image.
+
+What's wonderful about building a ray-tracer is that all the effort you put into it materializes in actual images that you can marvel at. What is more exciting than that? Well, probably skydiving or getting married. But still, it's a very rewarding experience.
+
+// ---
 
 ## Dedication
 
