@@ -262,19 +262,14 @@ There is still so much that remains to be done! The more I read about computer g
 
 ## Learning Resources
 
-// ---
+If you are interested in learning more about computer graphics, I recommend you get started in the following places:
 
-I know how difficult it is to work on side projects after work or school. If you spend all day in front of a computer, all you want to do in the evening is get some sun and relax. 
+- [CSE167x](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2): This EDX course is taught by Ravi Ramamoorthi. It covers the basic linear algebra concepts you need to understand graphics, as well as the derivations of many fundamental equations. It uses OpenGl to illustrate the concepts discussed in the lectures, and the final project consists of building what this readme describes!
+- [Learn OpenGL](https://learnopengl.com/): This site is maintained by Joey de Vries. It teaches computer graphics with OpenGl. It is full of excellent examples and diagrams!
+- [Scratch a Pixel](https://www.scratchapixel.com/): This site is similar to the previous one, and it has a section that covers the basics of ray-tracing!
+- [Real-Time Rendering](http://www.realtimerendering.com/): This book, written by Tomas Akenine-Möller, Eric Haines and Naty Hoffman, is absolutely invaluable. It compiles hundreds of sources and presents them with brilliant clarity. It truly astonishes with its scope.
 
-That's why it's important to choose side projects that you find exciting! It's a lot easier to motivate yourself to work on something if you are deeply interested in it.
-
-I think building a ray-tracer is a great side project because all the effort you put into it materializes as actual images that you can marvel at. What is more exciting than that? Well, probably skydiving or getting married. But still, it's a very rewarding experience.
-
-I cannot describe the elation I felt when this ray-tracer spat out it its first image.
-
-What's wonderful about building a ray-tracer is that all the effort you put into it materializes in actual images that you can marvel at. What is more exciting than that? Well, probably skydiving or getting married. But still, it's a very rewarding experience.
-
-// ---
+I think building a ray-tracer is a great side project because all the effort you put into it yields actual images that you can marvel at. Just the sheer excitement of generating your first image will keep you motivated while you learn new things! I felt elated when this ray-tracer spat out its first image:
 
 ## Dedication
 
