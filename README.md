@@ -269,7 +269,7 @@ If you are interested in learning more about computer graphics, I recommend you 
 - [Scratch a Pixel](https://www.scratchapixel.com/): This site is similar to the previous one, and it has a section that covers the basics of ray-tracing!
 - [Real-Time Rendering](http://www.realtimerendering.com/): This book, written by Tomas Akenine-Möller, Eric Haines and Naty Hoffman, is absolutely invaluable. It compiles hundreds of sources and presents them with brilliant clarity. It truly astonishes with its scope.
 
-I think building a ray-tracer is a great side project because all the effort you put into it yields actual images that you can marvel at. Just the sheer excitement of generating your first image will keep you motivated while you learn new things! I felt elated when this ray-tracer spat out its first image:
+I think building a ray-tracer is a great project because all the effort you put into it yields actual images that you can marvel at. Just the sheer excitement of generating your first image will keep you motivated while you learn new things! I felt elated when this ray-tracer spat out this:
 
 ## Dedication
 
