@@ -204,7 +204,7 @@ Before moving on to the material properties, consider this question: what type o
 
 When I was first asked that question, my answer was: "Well ambient light of course! When you are outside, the sun illuminates everything around you uniformly". This seemed natural to me, but let's think about it scientifically: 
 
-- The sun is 149.6 million kilometers away from earth. Because this distance is so large, we can think of the sun as a light source that is placed infinitely far away (at least until humanity figures out how to travel at the speed of light, in which case no distance will be too large 😜).
+- The sun is 149.6 million kilometers away from earth. Because this distance is so large, we can think of the sun as a light source that is placed infinitely far away (at least until humanity figures out how to travel at the speed of light, in which case no distance will be too large).
 - The position of the sun affects the way it illuminates objects. Things don't look the same at dawn and at noon, do they?
 
 Now it seems a lot more natural to use a directional light! It's fun to think about things scientifically. Another fun question: why is the sky blue?
