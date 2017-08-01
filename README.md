@@ -180,7 +180,7 @@ The resulting image is:
  </p>
 </p>
 
-This behaviour does not match the real world, but it is very convenient in the context of a ray-tracer. Just remember that settings like the ambient light, the attenuation and the material properties are all maintained by a state machine. Once they are set, they affect all the lights and geometric primitives created afterwards. If you want different lights or primitives to have different appeareances, you need to modify these settings before creating them.
+This behaviour is very particular, but it is convenient in the context of a ray-tracer. Just remember that settings like the ambient light, the attenuation and the material properties are all maintained by a state machine. Once they are set, they affect all the lights and geometric primitives created afterwards. If you want different lights or primitives to have different appeareances, you need to modify these settings before creating them.
 
 In the case of point lights, these are placed at specific points in space and they emit light in all directions from those points. Because their positions are defined, point lights can be affected by three different types of attenuation: *__constant__*, *__linear__* and *__quadratic__*. The commands used to create this type of light are:
  ```sh
@@ -269,7 +269,7 @@ If you are interested in learning more about computer graphics, I recommend you 
 - [Scratch a Pixel](https://www.scratchapixel.com/): This site is similar to the previous one, and it has a section that covers the basics of ray-tracing!
 - [Real-Time Rendering](http://www.realtimerendering.com/): This book, written by Tomas Akenine-Möller, Eric Haines and Naty Hoffman, is absolutely invaluable. It compiles hundreds of sources and presents them with brilliant clarity. It truly astonishes with its scope.
 
-I think building a ray-tracer is a really fun project because all the effort you put into it yields actual images that you can marvel at. Just the sheer excitement of generating your first image will keep you motivated while you learn new things! I felt elated when the ray-tracer described in this readme spat out this:
+I think building a ray-tracer is a really fun project because all the effort you put into it yields actual images that you can marvel at. Just the sheer excitement of generating your first image will keep you motivated while you learn new things! I felt elated when the ray-tracer described in this readme spat this out:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/first_image.png"/>
