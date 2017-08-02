@@ -210,45 +210,16 @@ When I was first asked that question, my answer was: "Well ambient light of cour
 Now it seems a lot more natural to use a directional light! It's fun to think about things scientifically. Another fun question: why is the sky blue?
 
 ### 6) Materials
+Material properties define what happens to a ray of light when it hits a surface. If you have ever taken a class in electromagnetic waves, you are probably familiar with this description:
 
-// --- --- --- --- --- --- --- ---
+_A part of the incident ray of light is absorbed by the surface, while another part is reflected off of it. If the surface is smooth, the angle of incidence is equal to the angle of reflection. If it is rough, the direction of the reflected ray depends on the micro structure of the material that makes up the surface. Some of the incident light is also transmitted into the surface, where it gets refracted and possibly travels in a new medium._
 
-Now that you know how light sources are modeled, there is only one thing left to be defined: what happens to a ray of light when it hits a surface? A simplified view of what happens in nature has a part of the ray being absorbed by the surface, while another part is reflected off of it. If the surface is smooth, the angle of incidence is equal to the angle of reflection. If it is rough, the direction of the reflected ray depends on the micro structure of the material that makes up the surface. Note that some of the incident light is also transmitted into the surface, but we won't be considering this behaviour since it is not supported yet. The whole process ends when our eyes catch the reflected light, allowing us to perceive the colour of the object.
+This is a very simple, yet powerful model.
 
-We can break this description down into the phenomena that we expect to see:
-
-(1) A surface that faces a light source should be brighter than one that is angled with respect to the light source.
-(2) Objects should cast shadows.
-(3) A mirror surface should show the reflections of other objects.
-(4) A shiny surface should present specular highlights.
-
-These effects are achieved by combining two reflectance models:
-
-a) The Lambertian reflectance model
-
-// *** *** *** *** ****
-
-This model is based on a very simple premise: when a ray of light hits a surface, it is reflected with equal intensity in all directions, regardless of whether the surface is smooth or rough.
-
-It achieves effect (1) with excellent results by taking the diffuse colour of a material, which you specify with the command below, and varying its contribution depending on the angle between the normal of the surface and the direction of the incident ray of light.
-
- ```sh
- diffuse r g b
- ```
-
-As the angle between the normal and the ray of light decreases, the contribution of the diffuse colour increases. In other words, the more closely the normal and the ray of light align, the brighter the diffuse colour appears.
-
-// *** *** *** *** ****
-
-b) The Blinn-Phong reflectance model
-
-Specular
-Shininess
-Maxdepth
-
-Emissive
-
-// --- --- --- --- --- --- --- ---
+- A surface that faces a light source should be brighter than one that is angled with respect to the light source.
+- Objects should cast shadows.
+- A mirror surface should show the reflections of other objects.
+- A shiny surface should present specular highlights.
 
 ## Future Improvements
 
