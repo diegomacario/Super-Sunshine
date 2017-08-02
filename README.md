@@ -210,11 +210,11 @@ When I was first asked that question, my answer was: "Well ambient light of cour
 Now it seems a lot more natural to use a directional light! It's fun to think about things scientifically. Another fun question: why is the sky blue?
 
 ### 6) Materials
-Material properties define what happens to a ray of light when it hits a surface. If you have ever taken a class in electromagnetic waves, you are probably familiar with this description:
+Material properties define what happens to a ray of light when it hits a surface. If you have ever taken a class in electromagnetic waves, you are probably familiar with this description of the interaction between light and matter:
 
 _A part of the incident ray of light is absorbed by the surface, while another part is reflected off of it. If the surface is smooth, the angle of incidence is equal to the angle of reflection. If it is rough, the direction of the reflected ray depends on the micro structure of the material that makes up the surface. Some of the incident light is also transmitted into the surface, where it gets refracted and possibly travels in a new medium._
 
-This is a very simple, yet powerful model.
+This is a very simple, yet powerful model. 
 
 - A surface that faces a light source should be brighter than one that is angled with respect to the light source.
 - Objects should cast shadows.
