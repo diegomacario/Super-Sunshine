@@ -212,9 +212,9 @@ Now it seems a lot more natural to use a directional light! It's fun to think ab
 ### 6) Materials
 Material properties define what happens to a ray of light when it hits a surface. If you have ever taken a class in electromagnetic waves, you are probably familiar with this description of the interaction between light and matter:
 
-_A part of the incident ray of light is absorbed by the surface, while another part is reflected off of it. If the surface is smooth, the angle of incidence is equal to the angle of reflection. If it is rough, the direction of the reflected ray depends on the micro structure of the material that makes up the surface. Some of the incident light is also transmitted into the surface, where it gets refracted and possibly travels in a new medium._
+_A part of the incident ray of light is absorbed by the surface, while another part is reflected off of it. If the surface is smooth, the angle of incidence is equal to the angle of reflection. If it is rough, the direction of the reflected ray depends on the micro structure of the material that makes up the surface. Some of the incident light is also transmitted into the surface, where it gets refracted and continues propagating._
 
-This is a very simple, yet powerful model. 
+This is a very simple, yet powerful model. It mostly involves basic geometry, and it allows us to trace the path of a ray of light as it propagates through different media. It is also very flexible in terms of its applications, commonly being used as a tool in optical design. The application I wish to illustrate, however, is image generation. How is this model adapted to produce "realistic" images on a computer? One good way to approach this question is to start with the results we wish to obtain, and work our way backwards. Hold an apple in front of you and think about how light interacts with it. What details depend on the position of light sources? Do any of them depend on your position as an observer? Now eat the apple if you want and try this experiment again with something shinier. Do you notice any reflections? I think there are four visual effects that stand out in these experiments:
 
 - A surface that faces a light source should be brighter than one that is angled with respect to the light source.
 - Objects should cast shadows.
