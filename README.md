@@ -216,16 +216,17 @@ _A part of the incident ray is absorbed by the surface, while another part is re
 
 This is a very simple, yet powerful model. By specifying material properties such as indices of refraction, attenuation coefficients and reflection coefficients, among many others, it enables us to trace the path of a ray of light as it propagates through different media. It is also very flexible in terms of its applications, commonly being used as a tool in optical design. The application we are interested in, however, is image generation. So we need to ask ourselves: how can this model be adapted to produce "realistic" images on a computer? One good way to approach this question is to start with the results we wish to obtain, and work our way backwards. So let's look at what happens in nature:
 
-Hold an apple in front of you and think about how light interacts with it. What details depend on the position of the light sources? Do any of them depend on your position as an observer? Now eat the apple if you want and try this experiment again with something shinier, preferably metallic. Do you notice any reflections?
+Hold an apple in front of you and think about how light interacts with it. What details depend on the position of the light sources? Do any of them depend on your position as an observer? Now eat the apple if you want and try this experiment again with something shinier, preferably something metallic. Do you notice any reflections?
 
-I think there are four visual effects that stand out in these experiments:
+I think there are three visual effects that stand out in these experiments:
 
 1. A surface that faces a light source is brighter than one that is angled with respect to the light source.
-2. A mirror surface shows the reflections of other objects.
-3. A shiny surface presents specular highlights.
-4. Objects cast shadows.
+2. A shiny surface presents specular highlights.
+3. A mirror surface shows the reflections of other objects.
 
-Note that I did not mention translucency, transparency, refraction or any other effects that involve the transmission of light into a material because they are not supported by the ray-tracer described in this readme.
+(Note that I did not mention translucency, transparency, refractions or any other effects that involve the transmission of light into different media, because they are not supported by the ray-tracer described in this readme. Come back in a few weeks and you will hopefully find an expanded discussion!)
+
+Let's break these effects down into their basic components (this will help me illustrate how to use the ray-tracer described in this readme, and it will give you an understanding of how it works):
 
 ## Future Improvements
 
