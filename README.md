@@ -228,6 +228,8 @@ I think there are three visual effects that stand out in these experiments:
 
 Let's break these effects down into their basic components (this will help me illustrate how to use the ray-tracer described in this readme, and it will give you an understanding of how it works):
 
+The first one is the simplest of the three. All it requires is a way of quantifying how directly a surface faces a light source. This is easily achieved by measuring the angle between the incident ray of light and the normal of the surface at the point where the ray hits it. If the angle is equal to 0°, the normal and the ray align, which means that the surface faces the light source directly. This should correspond to a bright spot. If the angle is equal to 90°, the normal and the ray are perpendicular to each other, which means that the surface is parallel to the light source. This should correspond to a dark spot. Using this method we can achieve an image like the one presented below:
+
 ## Future Improvements
 
 There is still so much that remains to be done! The more I read about computer graphics, the more I want to continue exploring this field. I really wish my job involved anything related to graphics, or at least a little linear algebra. For now I will continue reading graphics textbooks on my super long commute. If you ever see a guy programming on a bus or metro in Montreal, it is probably me, and I will probably be working on implementing:
