@@ -228,7 +228,13 @@ I think there are three visual effects that stand out in these experiments:
 
 Let's break these effects down into their basic components (this will help me illustrate how to use the ray-tracer described in this readme, and it will give you an understanding of how it works):
 
-The first one is the simplest of the three. All it requires is a way of quantifying how directly a surface faces a light source. This is easily achieved by measuring the angle between the incident ray of light and the normal of the surface at the point where the ray hits it. If the angle is equal to 0°, the normal and the ray align, which means that the surface faces the light source directly. This should correspond to a bright spot. If the angle is equal to 90°, the normal and the ray are perpendicular to each other, which means that the surface is parallel to the light source. This should correspond to a dark spot. Using this method we can achieve an image like the one presented below:
+The first one is the simplest of the three. All it requires is a way of quantifying how directly a surface faces a light source. This is easily achieved by measuring the angle between the incident ray of light and the normal of the surface at the point where the ray hits it. If the angle is equal to 0°, the normal and the ray align, which means that the surface faces the light source directly. This should correspond to a bright spot. If the angle is equal to 90°, the normal and the ray are perpendicular to each other, which means that the surface is parallel to the light source. This should correspond to a dark spot. By varying the intensity of a particular colour based on this angle, we can achieve an image like the one presented below:
+
+To set the colour that varies with said angle, use the command below:
+ ```sh
+ diffuse r g b
+ ```
+Note that the name *__diffuse__* comes from the official name of the model behind this effect: *__The Lambertian or Diffuse Reflectance Model__*.
 
 ## Future Improvements
 
