@@ -230,7 +230,7 @@ Let's break these effects down into their basic components (this will help me il
 
 The first one is the simplest of the three. All it requires is a way of quantifying how directly a surface faces a light source. This is easily achieved by measuring the angle between the incident ray of light and the normal of the surface at the point where the ray hits it. If the angle is equal to 0°, the normal and the ray align, which means that the surface faces the light source directly. This should correspond to a bright spot. If the angle is equal to 90°, the normal and the ray are perpendicular to each other, which means that the surface is parallel to the light source. This should correspond to a dark spot. By varying the intensity of a particular colour based on this angle, we can achieve an image like the one presented below:
 
-To set the colour that varies with said angle, use the command below:
+To set the colour whose intensity you want to vary with the angle described above, use this command:
  ```sh
  diffuse r g b
  ```
