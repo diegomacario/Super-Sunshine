@@ -110,7 +110,7 @@ Where:
  - *__rotate__* rotates a geometric primitive counterclockwise by *__angle__* degrees about the vector defined by *__x__*, *__y__* and *__z__*.
  - *__scale__* scales a geometric primitive by *__x__*, *__y__* and *__z__* units along the X, Y and Z axes, respectively.
 
-Just as in OpenGL, these transformations right multiply the model-view matrix. This means that the last transformation specified is the first one to be applied. For example, if you wanted to:
+Just as in OpenGL, these transformations right multiply the model-view matrix. This means that *__the last transformation specified is the first one to be applied__*. For example, if you wanted to:
 
 - Create a sphere of radius 1.5 centered at the origin.
 - Scale it by a factor of 2. 
@@ -125,7 +125,7 @@ You would write the following:
  sphere 0 0 0 1.5
  ```
 
-The order of the commands might seem odd at first, but if you read it from the bottom to the top it matches the verbal description of what we wanted to achieve. The rule of thumb is this: whenever you see a command that creates a geometric primitive, read from the command to the top and apply transformations as you run into them. Also keep in mind that the order in which transformations are specified does matter: rotating and then translating is not the same as translating and then rotating.
+The order of the commands might seem odd at first, but if you read it from the bottom to the top it matches the verbal description of what we wanted to achieve. The rule of thumb is this: *__whenever you see a command that creates a geometric primitive, read from the command to the top and apply transformations as you run into them__*. Also keep in mind that *__the order in which transformations are specified does matter__*: rotating and then translating is not the same as translating and then rotating.
 
 Additionally, the commands *__pushTransform__* and *__popTransform__* are also supported to imitate the syntax of old-school OpenGL. To better understand their use and the order in which transformations are applied, consider the following example:
  ```sh
@@ -239,7 +239,7 @@ To answer this question, we need to take two parameters into account:
 
 The consequences of the first parameter are already taken care of by the attenuation associated with the light source: as the distance between the light source and the point increases, the brightness of the light decreases.
 
-The second parameter is the one that enables us to simulate the visual effect we are examining. Picture a ray of light being emitted by the light source and striking the surface at the point you chose. By measuring the angle between the incident ray of light and the normal of the surface at the point, we can determine how the point is illuminated. If the angle is equal to 0°, the normal and the ray align, which means that the surface faces the light source directly at the point. In this scenario, the point would be illuminated with the maximum brightness that the light source can provide at the given distance. If the angle is equal to 90°, the normal and the ray are perpendicular, which means that the surface is parallel to the light source at the point. In this scenario, the point would not be illuminated at all.
+The second parameter is the one that enables us to simulate the visual effect we are examining. Picture a ray of light being emitted by the light source and striking the surface at the point you chose. *__By measuring the angle between the incident ray of light and the normal of the surface at the point, we can determine how the point is illuminated__*. If the angle is equal to 0°, the normal and the ray align, which means that the surface faces the light source directly at the point. In this scenario, the point would be illuminated with the maximum brightness that the light source can provide at the given distance. If the angle is equal to 90°, the normal and the ray are perpendicular, which means that the surface is parallel to the light source at the point. In this scenario, the point would not be illuminated at all.
 
 Measuring this angle at every point that is struck by a ray of light, and adding up the contributions of all the light sources in a scene, allows us to determine how an entire surface is illuminated.
 
