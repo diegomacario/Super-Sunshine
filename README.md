@@ -21,7 +21,7 @@ When I started working on this project, I thought the most challenging part of i
 - Light sources (including their positions, directions, colours and attenuations).
 - Material properties.
 
-Keeping track of all these values can become quite complex, specially as the number of geometric shapes and light sources increases. On top of that, the whole process is slowed down significantly if you have to recompile your ray-tracer whenever you make changes to a scene. That is why it is essential to have a scene parser! With this tool a ray-tracer can take a scene description written with simple commands, such as this one:
+Keeping track of all these values can become quite complex, specially as the number of geometric shapes and light sources increases. On top of that, the whole process is slowed down significantly if you have to recompile your ray-tracer whenever you make changes to a scene. For these reasons, it is essential to have a scene parser! With this tool a ray-tracer can take a scene description written with simple commands, such as this one:
 
 And turn it into this:
 
