@@ -33,8 +33,10 @@ The language used to write a scene description is very simple. Each line contain
  ```sh
  command parameter1 parameter2 ...
  ```
-Where each parameter is separated by at least one space.
-
+Where each parameter is separated by at least one space. Once you finish writing a scene description, you can use it to generate an image by specifying its filename in the command-line:
+ ```sh
+ ray-tracer.exe scene.txt
+ ```
 Below you will find descriptions for all the commands supported by the scene parser. They are separated into six different categories: Setup, Camera, Geometry, Transformations, Lights and Materials.
 
 ### 1) Setup
