@@ -110,7 +110,7 @@ Where:
  - *__rotate__* rotates a geometric primitive counterclockwise by *__angle__* degrees about the vector defined by *__x__*, *__y__* and *__z__*.
  - *__scale__* scales a geometric primitive by *__x__*, *__y__* and *__z__* units along the X, Y and Z axes, respectively.
 
-Just as in OpenGL, these transformations right multiply the model-view matrix. This means that *__the last transformation specified is the first one to be applied__*. For example, if you wanted to:
+Just as in OpenGL, these transformations right multiply the model-view matrix. This means that the last transformation specified is the first one to be applied. For example, if you wanted to:
 
 - Create a sphere of radius 1.5 centered at the origin.
 - Scale it by a factor of 2. 
@@ -125,7 +125,7 @@ You would write the following:
  sphere 0 0 0 1.5
  ```
 
-The order of the commands might seem odd at first, but if you read it from the bottom to the top it matches the verbal description of what we wanted to achieve. The rule of thumb is this: *__whenever you see a command that creates a geometric primitive, read from the command to the top and apply transformations as you run into them__*. Also keep in mind that *__the order in which transformations are specified does matter__*: rotating and then translating is not the same as translating and then rotating.
+The order of the commands might seem odd at first, but if you read them from the bottom to the top they match the verbal description of what we wanted to achieve. So if you are ever confused about the order in which transformations apply to a specific geometric primitive, you can always rely on this rule of thumb: read from the command that creates the geometric primitive to the beginning of the scene description, and apply transformations as you run into them. Also keep in mind that the order in which transformations are specified does matter: rotating and then translating is not the same as translating and then rotating.
 
 Additionally, the commands *__pushTransform__* and *__popTransform__* are also supported to imitate the syntax of old-school OpenGL. To better understand their use and the order in which transformations are applied, consider the following example:
  ```sh
