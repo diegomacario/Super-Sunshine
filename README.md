@@ -35,7 +35,7 @@ The language used to write a scene description is very simple. Each line can con
  ```
 Where each parameter is separated by at least one space.
 
-The commands that make up a scene description must be contained in a single text file, which you can then use to generate an image by specifying its filename as a command-line argument:
+The commands that make up a scene description must be contained in a single text file, which you can use to generate an image by specifying its filename as a command-line argument:
  ```sh
  ray-tracer.exe scene.txt
  ```
