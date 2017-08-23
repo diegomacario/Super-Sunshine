@@ -254,7 +254,7 @@ Note that so far I have talked about varying the brightness of light sources bas
  ```sh
  diffuse r g b
  ```
-Note that the name *__diffuse__* comes from the official name of the model behind this effect: The Lambertian or Diffuse Reflectance Model. Using this model we can achieve images like the ones presented below:
+Note that the name *__diffuse__* comes from the official name of the model behind this effect: *__The Lambertian or Diffuse Reflectance Model__*. Using this model we can achieve images like the ones presented below:
 
 The second effect is a little more complicated than the first one. When I asked you to look at an apple a few minutes ago, you might have noticed that the positions of its specular highlights depended on your position as an observer. If you haven't eaten your apple yet, place it on a table and walk around it. You will see the specular highlights "slide" on its surface as you walk. This means that to simulate this effect we need to take into account the positions of the light sources and of the camera.
 
