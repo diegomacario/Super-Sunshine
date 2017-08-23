@@ -223,7 +223,7 @@ _A part of the incident ray is absorbed by the surface, while another part is re
 
 This is a very simple, yet powerful model. By specifying material properties such as indices of refraction, attenuation coefficients and reflection coefficients, among many others, it enables us to trace the path of a ray of light as it propagates through different media. It is also very flexible in terms of its applications, commonly being used as a tool in optical design. The application we are interested in, however, is image generation. So we need to ask ourselves: how can this model be adapted to produce "realistic" images on a computer? One good way to approach this question is to start with the results we wish to obtain, and work our way backwards. So let's look at what happens in nature:
 
-Hold an apple in front of you and think about how light interacts with it. What details depend on the position of the light sources? Do any of them depend on your position as an observer? Now try this experiment again with something shinier, preferably something metallic. Do you notice any reflections?
+Hold an apple in front of you and think about how light interacts with it. What details depend on the position of the light sources? Do any of them depend on your position as an observer? Now try this experiment again with something shinier. Do you notice any reflections?
 
 I think there are three visual effects that stand out in these experiments:
 
