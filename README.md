@@ -31,9 +31,7 @@ A scene parser makes it a lot easier to play with a ray-tracer, and it also allo
 
 ## Features
 
-A scene description is nothing more than a text file, and the language used to write one is very simple.
-
-In terms of syntax, all you need to know is that each line of a scene description can contain a single command, and that they all follow this format:
+A scene description is nothing more than a text file, and the language used to write one is very simple. In terms of syntax, all you need to know is that each line of a scene description can contain a single command, and that they all follow this format:
  ```sh
  command parameter1 parameter2 ...
  ```
