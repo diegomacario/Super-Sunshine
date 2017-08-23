@@ -223,7 +223,7 @@ If you have ever taken a class that covered electromagnetic waves, you are proba
 
 This is a very simple, yet powerful model. By specifying material properties such as indices of refraction, attenuation coefficients and reflection coefficients, among many others, it enables us to trace the path of a ray of light as it propagates through different media. It is also very flexible in terms of its applications, commonly being used as a tool in optical design. The application we are interested in, however, is image generation. So we need to ask ourselves: how can this model be adapted to produce "realistic" images on a computer? One good way to approach this question is to start with the results we wish to obtain, and work our way backwards. So let's look at what happens in nature:
 
-> Hold an apple in front of you and think about how light interacts with it. What details depend on the position of the light sources? Do any of them depend on your position as an observer? Now try this experiment again with something shinier. Do you notice any reflections?
+Hold an apple in front of you and think about how light interacts with it. What details depend on the position of the light sources? Do any of them depend on your position as an observer? Now try this experiment again with something shinier. Do you notice any reflections?
 
 I think there are three visual effects that stand out in these experiments:
 
@@ -235,9 +235,11 @@ I think there are three visual effects that stand out in these experiments:
 
 Let's break these visual effects down into their basic components (this will help me illustrate how to use the ray-tracer described in this readme, and it will give you an understanding of how it works):
 
+#### 1. A surface that faces a light source is brighter than one that is angled with respect to the light source. 
+
 The first one is the simplest of the three. I like to approach it by thinking about the following situation:
 
-> Imagine you have a scene that contains a single light source and a single surface. Now let's say you choose a point on the surface. How do you determine how brightly the light source illuminates that point?
+Imagine you have a scene that contains a single light source and a single surface. Now let's say you choose a point on the surface. How do you determine how brightly the light source illuminates that point?
 
 To answer this question, we need to take two parameters into account:
 
@@ -255,6 +257,8 @@ Note that so far I have talked about varying the brightness of light sources bas
  diffuse r g b
  ```
 Note that the name *__diffuse__* comes from the official name of the model behind this effect: *__The Lambertian or Diffuse Reflectance Model__*. Using this model we can achieve images like the ones presented below:
+
+#### 2. A shiny surface presents specular highlights.
 
 The second effect is a little more complicated than the first one. When I asked you to look at an apple a few minutes ago, you might have noticed that the positions of its specular highlights depended on your position as an observer. If you haven't eaten your apple yet, place it on a table and walk around it. You will see the specular highlights "slide" on its surface as you walk. This means that to simulate this effect we need to take into account the positions of the light sources and of the camera.
 
