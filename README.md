@@ -23,7 +23,7 @@ When I started working on this project, I thought the most challenging part of i
 
 Keeping track of all these values can become quite complex, specially as the number of geometric shapes and light sources increases. On top of that, the process of generating an image is slowed down significantly if you have to recompile your ray-tracer whenever you make changes to a scene.
 
-It is because of these obstacles why it was essential to implement a scene parser. With this tool, a ray-tracer can take a scene description written with simple commands, such as this one:
+It is because of these obstacles that this project includes a scene parser. With this tool, a ray-tracer can take a scene description written with simple commands, such as this one:
 
 And turn it into this:
 
