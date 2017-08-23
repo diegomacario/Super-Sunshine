@@ -227,9 +227,9 @@ Hold an apple in front of you and think about how light interacts with it. What 
 
 I think there are three visual effects that stand out in these experiments:
 
-1. *__A surface that faces a light source is brighter than one that is angled with respect to the light source.__*
-2. *__A shiny surface presents specular highlights.__*
-3. *__A mirror surface shows the reflections of other objects.__*
+1. __A surface that faces a light source is brighter than one that is angled with respect to the light source.__
+2. __A shiny surface presents specular highlights.__
+3. __A mirror surface shows the reflections of other objects.__
 
 (Note that I did not mention translucency, transparency, refraction or any other effects that involve the transmission of light into different media, because they are not supported by the ray-tracer described in this readme. Come back in a few weeks and you will hopefully find an expanded discussion!)
 
@@ -246,7 +246,7 @@ To answer this question, we need to take two parameters into account:
 
 The consequences of the first parameter are already taken care of by the attenuation associated with the light source: as the distance between the light source and the point increases, the brightness of the light decreases.
 
-The second parameter is the one that enables us to simulate the visual effect we are examining. Picture a ray of light being emitted by the light source and striking the surface at the point you chose. *__By measuring the angle between the incident ray of light and the normal of the surface at the point, we can determine how the point is illuminated__*. If the angle is equal to 0°, the normal and the ray align, which means that the surface faces the light source directly at the point. In this scenario, the point would be illuminated with the maximum brightness that the light source can provide at the given distance. If the angle is equal to 90°, the normal and the ray are perpendicular, which means that the surface is parallel to the light source at the point. In this scenario, the point would not be illuminated at all.
+The second parameter is the one that enables us to simulate the visual effect we are examining. Picture a ray of light being emitted by the light source and striking the surface at the point you chose. __By measuring the angle between the incident ray of light and the normal of the surface at the point, we can determine how the point is illuminated__. If the angle is equal to 0°, the normal and the ray align, which means that the surface faces the light source directly at the point. In this scenario, the point would be illuminated with the maximum brightness that the light source can provide at the given distance. If the angle is equal to 90°, the normal and the ray are perpendicular, which means that the surface is parallel to the light source at the point. In this scenario, the point would not be illuminated at all.
 
 Measuring this angle at every point that is struck by a ray of light, and adding up the contributions of all the light sources in a scene, allows us to determine how an entire surface is illuminated.
 
@@ -254,7 +254,7 @@ Note that so far I have talked about varying the brightness of light sources bas
  ```sh
  diffuse r g b
  ```
-Note that the name *__diffuse__* comes from the official name of the model behind this effect: *__The Lambertian or Diffuse Reflectance Model__*. Using this model we can achieve images like the ones presented below:
+Note that the name *__diffuse__* comes from the official name of the model behind this effect: __The Lambertian or Diffuse Reflectance Model__. Using this model we can achieve images like the ones presented below:
 
 The second effect is a little more complicated than the first one. When I asked you to look at an apple a few minutes ago, you might have noticed that the positions of its specular highlights depended on your position as an observer. If you haven't eaten your apple yet, place it on a table and walk around it. You will see the specular highlights "slide" on its surface as you walk. This means that to simulate this effect we need to take into account the positions of the light sources and of the camera.
 
