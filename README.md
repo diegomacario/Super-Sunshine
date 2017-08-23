@@ -227,9 +227,9 @@ Hold an apple in front of you and think about how light interacts with it. What 
 
 I think there are three visual effects that stand out in these experiments:
 
-1. __A surface that faces a light source is brighter than one that is angled with respect to the light source.__
-2. __A shiny surface presents specular highlights.__
-3. __A mirror surface shows the reflections of other objects.__
+1. *__A surface that faces a light source is brighter than one that is angled with respect to the light source.__*
+2. *__A shiny surface presents specular highlights.__*
+3. *__A mirror surface shows the reflections of other objects.__*
 
 (Note that I did not mention translucency, transparency, refraction or any other effects that involve the transmission of light into different media, because they are not supported by the ray-tracer described in this readme. Come back in a few weeks and you will hopefully find an expanded discussion!)
 
