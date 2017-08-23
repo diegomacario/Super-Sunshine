@@ -235,8 +235,6 @@ I think there are three visual effects that stand out in these experiments:
 
 Let's break these visual effects down into their basic components (this will help me illustrate how to use the ray-tracer described in this readme, and it will give you an understanding of how it works):
 
-#### 1. A surface that faces a light source is brighter than one that is angled with respect to the light source. 
-
 The first one is the simplest of the three. I like to approach it by thinking about the following situation:
 
 Imagine you have a scene that contains a single light source and a single surface. Now let's say you choose a point on the surface. How do you determine how brightly the light source illuminates that point?
@@ -257,8 +255,6 @@ Note that so far I have talked about varying the brightness of light sources bas
  diffuse r g b
  ```
 Note that the name *__diffuse__* comes from the official name of the model behind this effect: *__The Lambertian or Diffuse Reflectance Model__*. Using this model we can achieve images like the ones presented below:
-
-#### 2. A shiny surface presents specular highlights.
 
 The second effect is a little more complicated than the first one. When I asked you to look at an apple a few minutes ago, you might have noticed that the positions of its specular highlights depended on your position as an observer. If you haven't eaten your apple yet, place it on a table and walk around it. You will see the specular highlights "slide" on its surface as you walk. This means that to simulate this effect we need to take into account the positions of the light sources and of the camera.
 
