@@ -24,56 +24,17 @@ When I started working on this project, I thought the most challenging part of i
 Keeping track of all these values can become quite complex, specially as the number of geometric shapes and light sources increases. On top of that, the process of generating an image is slowed down significantly if you have to recompile your ray-tracer whenever you make changes to a scene.
 
 It is because of these obstacles that this project includes a scene parser. With this tool, a ray-tracer can take a scene description written with simple commands, such as this one:
- ```sh
-size 640 480
-output planet_test.png
-
-camera 0 0 1 0 0 0 0 1 0 40
-
-ambient 0.1 0.1 0.1
-point -0.5 1 1 0.9 0.9 0.9
-point -0.5 -1 1 0.9 0.9 0.9
-
-# Planet
-diffuse 0.4588 0 0.2353
-sphere 0 0 0 0.175
-
-# Tilt the rings
-rotate 0 0 1 -15
-rotate 1 0 0 15
-
-# Inner ring
-diffuse 0.2157 0.0824 0.2902
-pushTransform
-   scale 0.825 0.09 0.825
-   sphere 0 0 0 0.3
-popTransform
-
-# Middle ring
-diffuse 0.7686 0.2235 0.0666
-pushTransform
-   scale 0.9 0.075 0.9
-   sphere 0 0 0 0.3
-popTransform
-
-# Outter ring
-diffuse 0.9686 0.5608 0
-pushTransform
-   scale 1 0.05 1
-   sphere 0 0 0 0.3
-popTransform
- ```
  
 And turn it into this:
 
+A scene parser makes it a lot easier to play with a ray-tracer, and it also allows users to generate animations by writing scripts. It is hard to believe how such a simple feature can enable users to produce such stunning results:
+
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/planet_test.png"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/flower_120.gif"/>
  <p align="center">
-  <em>The planet Tralfamadore.</em>
+  <em>A very narcissistic flower.</em>
  </p>
 </p>
-
-A scene parser makes it a lot easier to play with a ray-tracer, and it also allows users to generate animations by writing scripts. It is hard to believe how such a simple feature can enable users to produce such stunning results:
 
 ## Features
 
@@ -245,6 +206,13 @@ Where:
 - *__point__* is the command used to create a point light at point *__pos__*. The colour of the emitted light is determined by the *__RGB__* values.
 
 If you wanted the intensity of a point light to decrease linearly with the distance from its origin, you would set the attenuation coefficients to (0, 1, 0). If you wanted it to decrease quadratically, you would use (0, 0, 1). Note that you can also combine the different forms of attenuation and use coefficients larger than 1 to make the intensity of a point light decrease even faster.  In the animation below, a point light with quadratic attenuation is rotated along a 180° arc from right to left:
+
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/castle.gif"/>
+ <p align="center">
+  <em>A very narcissistic flower.</em>
+ </p>
+</p>
 
 As for directional lights, these are considered to be placed infinitely far away, which is why they only emit light in a single direction and are not affected by attenuation. The command used to create this type of light is:
  ```sh
