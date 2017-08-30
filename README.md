@@ -141,6 +141,15 @@ You would write the following:
 
 The order of the commands might seem odd at first, but if you read them from the bottom to the top they match the verbal description of what we wanted to achieve. So if you are ever confused about the order in which transformations apply to a specific geometric primitive, you can always rely on this rule of thumb: read from the command that creates the geometric primitive to the beginning of the scene description, and apply transformations as you run into them. Also keep in mind that the order in which transformations are specified does matter: rotating and then translating is not the same as translating and then rotating.
 
+In the case of the image presented below, the three rings of the planet are made out of spheres that have been scaled along the Y axis and subsequently rotated about the X and Z axes:
+
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/planet_test.png"/>
+ <p align="center">
+  <em>The planet Tralfamadore.</em>
+ </p>
+</p>
+
 Additionally, the commands *__pushTransform__* and *__popTransform__* are also supported to imitate the syntax of old-school OpenGL. To better understand their use and the order in which transformations are applied, consider the following example:
  ```sh
  translate 1 0 0
