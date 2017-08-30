@@ -114,7 +114,7 @@ Where:
 In the animation below, the *__from__* point is rotated along a 45° arc while the *__at__* point remains fixed.
 
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_on_mars.gif"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_red.gif"/>
  <p align="center">
   <em>A pyramid on Mars.</em>
  </p>
