@@ -72,7 +72,7 @@ Where:
 - *__up__* is the vector that defines which way is up for the camera.
 - *__fovy__* is the field of view in the Y direction.
 
-In the animation below, the *__from__* point is rotated along a 45° arc while the *__at__* point remains fixed.
+In the animation below, the *__from__* point is rotated along a 45° arc while the *__at__* point remains fixed at the center of the pyramid's base.
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_red.gif"/>
