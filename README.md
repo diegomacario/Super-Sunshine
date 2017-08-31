@@ -133,7 +133,7 @@ The image below illustrates a simple use case of these transformations:
  </p>
 </p>
 
-You might be surprised to learn the following things:
+You might be surprised to learn that...
 
 - The rings are made out of spheres that were squashed along the Y axis using the scale command.
 - The slight tilt of the rings was achieved by rotating them about the X and Z axes using the rotate command.
