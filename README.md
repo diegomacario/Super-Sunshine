@@ -137,7 +137,7 @@ You might be surprised to learn that...
 
 - The rings are made out of spheres that were squashed along the Y axis using the scale command.
 - The slight tilt of the rings was achieved by rotating them about the X and Z axes using the rotate command.
-- The stars are spheres with the same radius as the planet that were moved very far away using the translate command.
+- The stars are copies of the planet that were moved very far away using the translate command.
 
 Just as in OpenGL, these transformations right multiply the model-view matrix. This means that the last transformation specified is the first one to be applied. For example, if you wanted to:
 
