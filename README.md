@@ -127,7 +127,7 @@ Where:
 The image below illustrates a simple use case of these transformations:
 
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/planet_test.png"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/trafalmadore.png"/>
  <p align="center">
   <em>The planet Tralfamadore.</em>
  </p>
