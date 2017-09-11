@@ -24,8 +24,38 @@ When I started working on this project, I thought the most challenging part of i
 Keeping track of all these values can become quite complex, specially as the number of geometric shapes and light sources increases. On top of that, the process of generating an image is slowed down significantly if you have to recompile your ray-tracer whenever you make changes to a scene.
 
 It is because of these obstacles that this project includes a scene parser. With this tool, a ray-tracer can take a scene description written with simple commands, such as this one:
+ ```sh
+ size 640 480
+ output test.png
+
+ # Camera and light source
+ camera 0 0 1 0 0 0 0 1 0 40
+ point -0.5 1 1 0.9 0.9 0.9
+
+ # Sphere
+ diffuse 0.5 0.14 0.8
+ sphere 0 0 0 0.175
+
+ # Triangle
+ diffuse 0.1 0.1 0.1
+ specular 1 1 1
+ shininess 1000
+ 
+ maxverts 3
+ vertex 0.15 0 0
+ vertex 0 0.2598 0
+ vertex -0.15 0 0
+ tri 0 1 2
+ ```
  
 And turn it into this:
+
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/test.png"/>
+ <p align="center">
+  <em>A sphere and a triangle.</em>
+ </p>
+</p>
 
 A scene parser makes it a lot easier to play with a ray-tracer, and it also allows users to generate animations by writing scripts. It is hard to believe how such a simple feature can enable users to produce such stunning results:
 
