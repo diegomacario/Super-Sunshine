@@ -25,27 +25,38 @@ Keeping track of all these values can become quite complex, specially as the num
 
 It is because of these obstacles that this project includes a scene parser. With this tool, a ray-tracer can take a scene description written with simple commands, such as this one:
  ```sh
- size 640 480
- output test.png
+size 640 480
+output ice_cream.png
 
- # Camera and light source
- camera 0 0 1 0 0 0 0 1 0 40
- point -0.5 1 1 0.9 0.9 0.9
+# Camera
+camera 1.5 3.5 1.5 -0.5 0 -0.5 0 1 0 45
 
- # Sphere
- diffuse 0.5 0.14 0.8
- sphere 0 0 0 0.175
+# Light
+attenuation 0 1 0
+point 0.4 1 -1.6 1 1 1
 
- # Triangle
- diffuse 0.1 0.1 0.1
- specular 1 1 1
- shininess 1000
- 
- maxverts 3
- vertex 0.15 0 0
- vertex 0 0.2598 0
- vertex -0.15 0 0
- tri 0 1 2
+# Material
+diffuse 0 0.75 0
+shininess 100
+
+# Spheres
+ambient 0.122 0.541 0.439
+sphere -0.6 0.375 -0.6 0.375
+ambient 0.745 0.859 0.224
+sphere -0.6 1.05 -0.6 0.3
+ambient 0.9 0.9 0.102
+sphere -0.6 1.575 -0.6 0.225
+
+# Floor
+specular 0 0.25 0
+ambient 0.992 0.455 0
+maxverts 4
+vertex 0.7125 0 0.7125
+vertex 0.7125 0 -1.9125
+vertex -1.9125 0 0.7125
+vertex -1.9125 0 -1.9125
+tri 0 1 2
+tri 1 3 2
  ```
  
 And turn it into this:
