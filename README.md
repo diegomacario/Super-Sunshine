@@ -51,7 +51,7 @@ It is because of these obstacles that this project includes a scene parser. With
 And turn it into this:
 
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/test.png"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream.png"/>
  <p align="center">
   <em>A sphere and a triangle.</em>
  </p>
