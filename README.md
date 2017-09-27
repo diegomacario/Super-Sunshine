@@ -64,7 +64,7 @@ And turn it into this:
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream_dark.png"/>
  <p align="center">
-  <em>A simple scene made with a single light source, two triangles and three spheres.</em>
+  <em>A simple scene composed of a single light source, two triangles and three spheres.</em>
  </p>
 </p>
 
