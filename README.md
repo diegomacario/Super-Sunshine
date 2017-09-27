@@ -33,7 +33,7 @@ camera 1.5 3.5 1.5 -0.5 0 -0.5 0 1 0 45
 
 # Light
 attenuation 0 1 0
-point 0.4 1 -1.6 1 1 1
+point 0.4 3.75 -1.6 1 1 1
 
 # Material
 diffuse 0 0.75 0
@@ -62,7 +62,7 @@ tri 1 3 2
 And turn it into this:
 
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream.png"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream_dark.png"/>
  <p align="center">
   <em>A simple scene made with a single light source, two triangles and three spheres.</em>
  </p>
