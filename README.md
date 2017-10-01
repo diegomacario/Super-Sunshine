@@ -2,6 +2,13 @@
 
 A recursive ray-tracer with a built-in scene parser for easily generating beautiful images.
 
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/rupee_green.gif"/>
+ <p align="center">
+  <em>A green rupee from Ocarina of Time!</em>
+ </p>
+</p>
+
 ## About
 
 This ray-tracer was written as a final project for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It was built from scratch with a strong focus on making the C++ code clear and organized. In its current form, the project consists of:
