@@ -7,9 +7,9 @@
 A recursive ray-tracer with a built-in scene parser for easily generating beautiful images.
 
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/rupee_green_slow_small.gif"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/castle.gif"/>
  <p align="center">
-  <em>A green rupee from Ocarina of Time!</em>
+  <em>The perspective is not exactly isometric, but I still think this could be the foundation of a really fun RTS game.</em>
  </p>
 </p>
 
@@ -272,12 +272,12 @@ Where:
 - *__attenuation__* is the command used to set the attenuation. A point light with no attenuation has a *__constant__* coefficient of 1 and *__linear__*/*__quadratic__* coefficients of 0 (these are the default values, just as in OpenGl).
 - *__point__* is the command used to create a point light at point *__pos__*. The colour of the emitted light is determined by the *__RGB__* values.
 
-If you wanted the intensity of a point light to decrease linearly with the distance from its origin, you would set the attenuation coefficients to (0, 1, 0). If you wanted it to decrease quadratically, you would use (0, 0, 1). Note that you can also combine the different forms of attenuation and use coefficients larger than 1 to make the intensity of a point light decrease even faster.  In the animation below, a point light with quadratic attenuation is rotated along a 180° arc from right to left:
+If you wanted the intensity of a point light to decrease linearly with the distance from its origin, you would set the attenuation coefficients to (0, 1, 0). If you wanted it to decrease quadratically, you would use (0, 0, 1). Note that you can also combine the different forms of attenuation and use coefficients larger than 1 to make the intensity of a point light decrease even faster. The animation below contains two quadratically-attenuated point lights (one at the upper-left corner and the other at the lower-right corner):
 
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/castle.gif"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/rupee_green_slow_small.gif"/>
  <p align="center">
-  <em>The perspective is not exactly isometric, but I still think this could be the foundation of a really fun RTS game.</em>
+  <em>A green rupee from Ocarina of Time!</em>
  </p>
 </p>
 
