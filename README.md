@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/sword_dark_360_frames_50_fps.gif"/>
+  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/sword_light_360_frames_50_fps.gif"/>
 </p>
 
 # Ray-Tracer
