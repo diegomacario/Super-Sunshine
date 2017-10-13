@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/sword_360_frames_50_fps_2.gif"/>
+  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/sword_dark_360_frames_50_fps.gif"/>
 </p>
 
 # Ray-Tracer
@@ -275,7 +275,7 @@ Where:
 If you wanted the intensity of a point light to decrease linearly with the distance from its origin, you would set the attenuation coefficients to (0, 1, 0). If you wanted it to decrease quadratically, you would use (0, 0, 1). Note that you can also combine the different forms of attenuation and use coefficients larger than 1 to make the intensity of a point light decrease even faster. The animation below contains two quadratically-attenuated point lights (one at the upper-left corner and the other at the lower-right corner):
 
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/rupee_green_slow_small.gif"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/rupee_360_frames_50_fps.gif"/>
  <p align="center">
   <em>A green rupee from Ocarina of Time!</em>
  </p>
