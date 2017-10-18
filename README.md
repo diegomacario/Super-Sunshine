@@ -366,7 +366,7 @@ I think building a ray-tracer is a really fun project because all the effort you
 
 ## Dedication
 
-This last image is for all the citizens of Venezuela, who are currently fighting for their freedom against an oppressive dictatorship.
+This last image is for Venezuela and all of its citizens.
 
 <p align="center">
 <img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/bandera.png"/>
