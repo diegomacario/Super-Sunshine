@@ -41,7 +41,8 @@ bool Sphere::isIntersected(const Ray& ray, float& distAlongRayToIntersection) co
 {
    Point transformedHitPoint;
 
-   if (sphereIsIntersected(ray, transformedHitPoint, Normal()))
+   Normal temporaryNormal;
+   if (sphereIsIntersected(ray, transformedHitPoint, temporaryNormal))
    {
       // We apply M to the intersection point to bring it back into the appropriate coordinate system
       distAlongRayToIntersection = ((objToWorldTransf * transformedHitPoint) - ray.origin).length();
