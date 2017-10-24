@@ -1,5 +1,4 @@
 #include <algorithm>
-
 #include <string.h>
 
 #include "Colour.h"
