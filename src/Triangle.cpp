@@ -31,7 +31,7 @@ bool Triangle::isIntersected(const Ray& ray, Intersection* intersection) const
 
 bool Triangle::isIntersected(const Ray& ray, float& distAlongRayToIntersection) const
 {
-   Point temporaryPoint;	
+   Point temporaryPoint;
 
    if (triangleIsIntersected(ray, distAlongRayToIntersection, temporaryPoint))
    {
@@ -44,7 +44,7 @@ bool Triangle::isIntersected(const Ray& ray, float& distAlongRayToIntersection) 
 bool Triangle::isIntersected(const Ray& ray) const
 {
    float distAlongRayToHit;
-   Point temporaryPoint;	
+   Point temporaryPoint;
 
    if (triangleIsIntersected(ray, distAlongRayToHit, temporaryPoint))
    {

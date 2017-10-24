@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <string.h>
+#include <math.h>
 
 #include "Constants.h"
 #include "Point.h"
