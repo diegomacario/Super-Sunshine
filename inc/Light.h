@@ -1,7 +1,7 @@
 #ifndef LIGHT_H
 #define LIGHT_H
 
-#include <Vector>
+#include <vector>
 
 #include "Ray.h"
 #include "GeometricShape.h"

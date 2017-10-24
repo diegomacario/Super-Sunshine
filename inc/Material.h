@@ -2,6 +2,7 @@
 #define MATERIAL_H
 
 #include "Colour.h"
+#include "Vector.h"
 
 /*
 Description:

@@ -1,4 +1,4 @@
-#include <Algorithm>
+#include <algorithm>
 
 #include "Vector.h"
 #include "Material.h"
