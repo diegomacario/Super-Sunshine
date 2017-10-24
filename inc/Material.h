@@ -1,8 +1,8 @@
 #ifndef MATERIAL_H
 #define MATERIAL_H
 
-#include "Colour.h"
 #include "Vector.h"
+#include "Colour.h"
 
 /*
 Description:
