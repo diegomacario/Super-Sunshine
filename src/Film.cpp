@@ -1,4 +1,5 @@
 #include <algorithm>
+#include <string.h>
 
 #include "Colour.h"
 #include "Film.h"
