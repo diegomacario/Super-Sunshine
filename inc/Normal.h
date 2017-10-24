@@ -2,6 +2,7 @@
 #define NORMAL_H
 
 #include "Vector.h"
+
 /*
 Description:
 
