@@ -1,6 +1,8 @@
 #ifndef FILM_H
 #define FILM_H
 
+#include "Colour.h"
+
 /*
 Description:
 

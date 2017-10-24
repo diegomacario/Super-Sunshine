@@ -1,6 +1,7 @@
 #ifndef MATERIAL_H
 #define MATERIAL_H
 
+#include "Vector.h"
 #include "Colour.h"
 
 /*

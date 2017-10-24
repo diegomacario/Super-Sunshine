@@ -1,9 +1,8 @@
-#include <Algorithm>
+#include <algorithm>
 #include <math.h>
 
 #include "Vector.h"
 #include "Material.h"
-
 
 Material::Material(const Colour& diffuse, const Colour& specular, const Colour& emission, float shininess)
    : diffuse(diffuse)
