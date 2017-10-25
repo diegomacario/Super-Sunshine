@@ -12,10 +12,10 @@ A recursive ray-tracer with a simple scene description language for easily gener
 
 ## About
 
-Super-Sunshine was written as a final project for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It was built from scratch with a strong focus on making the C++ code clear and organized. In its current form, the project consists of:
+This ray-tracer was written as a final project for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It was built from scratch with a strong focus on making the C++ code clear and organized. In its current form, the project consists of:
 
 - A recursive ray-tracer.
-- A scene description language composed of 21 commands.
+- A file-parser designed to read scene descriptions written with a simple, 21-command scene description language.
 - A linear algebra API for performing operations with points, vectors, normals and affine transformation matrices.
 
 The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
