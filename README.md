@@ -15,14 +15,14 @@ A recursive ray-tracer with a simple scene description language for easily gener
 This ray-tracer was written as a final project for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It was built from scratch with a strong focus on making the C++ code clear and organized. In its current form, the project consists of:
 
 - A recursive ray-tracer.
-- A file-parser designed to read scene descriptions written with a simple scene description language (SDL).
+- A file-parser designed to read scene descriptions written with a simple scene description language.
 - A linear algebra API for performing operations with points, vectors, normals and affine transformation matrices.
 
 The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
 
 ## What is a scene description language?
 
-An SDL is a set of commands used to describe an image so that it can be rendered by a computer. Imagine, for example, that we wanted to render an image of "three scoops of ice cream sitting in the middle of a desert". Using the language developed for this project, we would write the following scene description:
+A scene description language is a set of commands used to describe an image so that it can be rendered by a computer. Imagine, for example, that we wanted to render an image of "three scoops of ice cream sitting in the middle of a desert". Using the language developed for this project, we would write the following scene description:
  ```sh
 size 640 480
 output ice_cream.png
