@@ -4,7 +4,7 @@
 
 # Super-Sunshine
 
-A recursive ray-tracer with a built-in scene parser for easily generating beautiful images.
+A recursive ray-tracer with a simple scene description language for easily generating beautiful images.
 
 <p align="center">
   <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/castle.gif"/>
@@ -12,26 +12,17 @@ A recursive ray-tracer with a built-in scene parser for easily generating beauti
 
 ## About
 
-This ray-tracer was written as a final project for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It was built from scratch with a strong focus on making the C++ code clear and organized. In its current form, the project consists of:
+Super-Sunshine was written as a final project for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It was built from scratch with a strong focus on making the C++ code clear and organized. In its current form, the project consists of:
 
 - A recursive ray-tracer.
-- A scene parser that can be used to generate images from text files.
+- A scene description language composed of 21 commands.
 - A linear algebra API for performing operations with points, vectors, normals and affine transformation matrices.
 
 The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
 
-## Description
+## What is a scene description language?
 
-When I started working on this project, I thought the most challenging part of it would be to translate the theory behind a ray-tracer into well-written code. Once I finished it, however, I found that using a ray-tracer is a lot more challenging that actually implementing one. Just consider some of the things that need to be specified to generate an image:
-
-- A camera (including its position, orientation and field of view).
-- Geometric shapes (including their positions, dimensions and the transformations that act on them).
-- Light sources (including their positions, directions, colours and attenuations).
-- Material properties.
-
-Keeping track of all these values can become quite complex, specially as the number of geometric shapes and light sources increases. On top of that, the process of generating an image is slowed down significantly if you have to recompile your ray-tracer whenever you make changes to a scene.
-
-It is because of these obstacles that this project includes a scene parser. With this tool, a ray-tracer can take a scene description written with simple commands, such as this one:
+A scene description language is a set of commands used to describe an image so that it can be rendered by a computer. Imagine, for example, that we wanted to render an image of "three scoops of ice cream sitting in the middle of a desert". Using the language developed for this project, we would write the following scene description:
  ```sh
 size 640 480
 output ice_cream.png
@@ -67,7 +58,7 @@ tri 0 1 2
 tri 1 3 2
  ```
  
-And turn it into this:
+The description above may not be as clear as "three scoops of ice cream in the middle of the desert", but it can be interpreted by Super-Sunshine and turned into this:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream_dark.png"/>
@@ -76,7 +67,7 @@ And turn it into this:
  </p>
 </p>
 
-A scene parser makes it a lot easier to play with a ray-tracer, and it also allows users to generate animations by writing scripts. It is hard to believe how such a simple feature can enable users to produce such stunning results:
+A scene description language makes it a lot easier to play with a ray-tracer, and it also allows users to generate animations by writing scripts. It is hard to believe how such a simple feature can enable users to produce such stunning results:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/flower_120.gif"/>
@@ -126,7 +117,7 @@ In the animation below, the *__from__* point is rotated along a 45° arc while t
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_green_centered_big.gif"/>
  <p align="center">
-  <em>A pyramid on Mars.</em>
+  <em>A lonely pyramid.</em>
  </p>
 </p>
 
