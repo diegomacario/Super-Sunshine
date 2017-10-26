@@ -12,11 +12,17 @@ A recursive ray-tracer with a built-in file-parser for easily generating beautif
 
 ## Summary
 
-The idea behind this project is simple:
+The aim of this project is to enable its users to generate images programmatically.
+
+The aim of this project is to enable its users to generate images by describing them in text files.
+
+This tool enables its users to generate images by describing them in text files.
+
+This idea is more clearly illustrated with the following diagram, which guided the development process:
 
 ## About
 
-This ray-tracer was written as a final project for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It was built from scratch with a strong focus on making the C++ code clear and organized. In its current form, the project consists of:
+This tool was written as a final project for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It was built from scratch with a strong focus on making the C++ code clear and organized. In its current form, the project consists of:
 
 - A recursive ray-tracer.
 - A file-parser designed to read scene descriptions written with a simple scene description language.
