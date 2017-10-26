@@ -64,6 +64,10 @@ void FileParser::readFile(std::unique_ptr<SceneDescription>& sceneDesc, std::uni
                {
                   // Light
                }
+			   else if (parseTextureCommands(cmd, wordStream, validationFlags, state))
+			   {
+				  // Textures
+			   }
                else if (parseMaterialCommands(cmd, wordStream, state))
                {
                   // Material
@@ -343,6 +347,41 @@ bool FileParser::parseLightCommands(const std::string& cmd, std::stringstream& w
    return false;
 }
 
+bool FileParser::parseTextureCommands(const std::string& cmd, std::stringstream& wordStream, std::unique_ptr<ValidationFlags>& validationFlags, std::unique_ptr<FileParserState>& state)
+{
+	float values[2];
+	bool validInput = false;
+
+
+	if (cmd == "texture")
+	{
+		state->texture.unloadImage();
+		std::string file;
+		wordStream >> file;
+		state->texture.set(file.c_str());
+
+		if (!state->texture.isImageLoaded())
+		{
+			std::cout << "\n Could not read the texture file.\n";
+			validationFlags->textureIsSpecified = false;
+			return false;
+		}
+        validationFlags->textureIsSpecified = true;
+		return true;
+	}
+	else if (cmd == "textureCoord")
+	{
+		validInput = readValues(cmd, wordStream, 2, values);
+		if (validInput)
+		{
+			Colour colour = state->texture.sampleColour(TextureCoord(values[0], values[1]));
+			state->ambient.set(colour.r, colour.g, colour.b);
+		}
+		return true;
+	}
+	return false;
+}
+
 bool FileParser::parseMaterialCommands(const std::string& cmd, std::stringstream& wordStream, std::unique_ptr<FileParserState>& state)
 {
    // The values array is given a size of 3 because that is the maximum number
@@ -461,6 +500,12 @@ void FileParser::parameterPreValidation(std::string cmd, std::unique_ptr<Validat
    {
       throw "\n An attempt to pop a transformation was made while the transformation stack was empty.\n";
    }
+   // "texture" must be specified before any textureCoords are defined
+   else if (!validationFlags->textureIsSpecified && (cmd == "textureCoord"))
+   {
+	  throw "\n A texture file must be specified before any texture coordinates are defined.\n";
+   }
+
 }
 
 void FileParser::parameterPostValidation(const std::unique_ptr<ValidationFlags>& validationFlags)
@@ -506,6 +551,7 @@ FileParser::ValidationFlags::ValidationFlags()
    , outputIsSpecified(false)
    , cameraIsSpecified(false)
    , maxVertsIsSpecified(false)
+   , textureIsSpecified(false)
 { }
 
 FileParser::FileParserState::FileParserState()
@@ -526,6 +572,7 @@ FileParser::FileParserState::FileParserState()
    , attenuation()
    , ambient(static_cast<float>(0.2)) // The ambient illumination is equal to (0.2, 0.2, 0.2) by default
    , lights()
+   , texture()
    , diffuse()
    , specular()
    , emission()

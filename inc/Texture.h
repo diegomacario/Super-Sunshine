@@ -1,7 +1,7 @@
 #ifndef TEXTURE_H
 #define TEXTURE_H
 
-#include "TextureCoords.h"
+#include "TextureCoord.h"
 #include "Colour.h"
 #include "FreeImage.h"
 
@@ -10,20 +10,26 @@ class Texture
 {
 public:
 
-	Texture(char * textureFile, TextureCoords * textureCoords);
+	Texture();
+	void set(const char * textureFile);
 
-	Colour getColour(float u, float v);
+	Colour sampleColour(TextureCoord textureCoord);
 
-	char * textureFile;
-	TextureCoords * coords;
+	void unloadImage();
+	bool isImageLoaded();
 
 private:
-	// image
-	FIBITMAP * image;
 
-	// Read image file
+	bool imageLoaded = false;
 	bool loadImage();
-	
+
+	FIBITMAP * image;
+	unsigned height, width;
+
+	bool validateCoords(TextureCoord textureCoord);
+
+	const char * textureFile;
+
 };
 
 #endif

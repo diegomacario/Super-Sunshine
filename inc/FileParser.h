@@ -3,9 +3,12 @@
 
 #include <stack>
 #include <fstream>
+#include <memory>
 
 #include "Affine.h"
 #include "Scene.h"
+#include "TextureCoord.h"
+#include "Texture.h"
 
 /*
 Description:
@@ -39,6 +42,7 @@ private:
       bool outputIsSpecified;
       bool cameraIsSpecified;
       bool maxVertsIsSpecified;
+	  bool textureIsSpecified;
    };
 
    // The destructor of a FileParserState object does not delete
@@ -70,6 +74,9 @@ private:
       Colour ambient;
       std::vector<Light*> lights;
 
+	  // Textures
+	  Texture texture;
+
       // Materials
       Colour diffuse;
       Colour specular;
@@ -81,6 +88,7 @@ private:
    bool parseGeometryCommands(const std::string& cmd, std::stringstream& wordStream, std::unique_ptr<ValidationFlags>& validationFlags, std::unique_ptr<FileParserState>& state);
    bool parseTransformationCommands(const std::string& cmd, std::stringstream& wordStream, std::unique_ptr<FileParserState>& state);
    bool parseLightCommands(const std::string& cmd, std::stringstream& wordStream, std::unique_ptr<FileParserState>& state);
+   bool parseTextureCommands(const std::string& cmd, std::stringstream& wordStream, std::unique_ptr<ValidationFlags>& validationFlags, std::unique_ptr<FileParserState>& state);
    bool parseMaterialCommands(const std::string& cmd, std::stringstream& wordStream, std::unique_ptr<FileParserState>& state);
 
    bool readValues(const std::string& cmd, std::stringstream& wordStream, const int numValues, float* values);
