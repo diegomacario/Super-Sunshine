@@ -4,7 +4,7 @@
 
 # Super-Sunshine
 
-A recursive ray-tracer with a built-in file-parser for easily generating beautiful images using a simple scene description language.
+A recursive ray-tracer with a simple scene description language for easily generating beautiful images.
 
 <p align="center">
   <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/castle.gif"/>
@@ -12,13 +12,7 @@ A recursive ray-tracer with a built-in file-parser for easily generating beautif
 
 ## Summary
 
-The aim of this project is to enable its users to generate images programmatically.
-
-The aim of this project is to enable its users to generate images by describing them in text files.
-
-This tool enables its users to generate images by describing them in text files.
-
-This idea is more clearly illustrated with the following diagram, which guided the development process:
+ 
 
 ## About
 
