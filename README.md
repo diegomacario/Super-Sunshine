@@ -12,17 +12,17 @@ A recursive ray-tracer with a simple scene description language for easily gener
 
 ## Summary
 
- 
 
-## About
 
-This tool was written as a final project for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It was built from scratch with a strong focus on making the C++ code clear and organized. In its current form, the project consists of:
+## Technical details
+
+This project started out as a final assignment for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It has continued to grow because it provides a great environment for learning and experimenting with new computer graphics concepts. In its current form, the project consists of:
 
 - A recursive ray-tracer.
-- A file-parser designed to read scene descriptions written with a simple scene description language.
+- A file parser designed to read scene descriptions written with a simple scene description language.
 - A linear algebra API for performing operations with points, vectors, normals and affine transformation matrices.
 
-The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
+All the code was written from ~~scratch~~ in C++, with a strong focus on making it clear and organized. The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
 
 ## What is a scene description language?
 
