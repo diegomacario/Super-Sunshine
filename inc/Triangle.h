@@ -24,7 +24,7 @@ public:
 
    Triangle(const Point& vertexA, const Point& vertexB, const Point& vertexC, const Colour& ambient, Material* material);
 
-   //Triangle(const Point& vertexA, const Point& vertexB, const Point& vertexC, const Colour& textureA, const Colour& textureB, const Colour& textureC, Material* material);
+   Triangle(const Point& vertexA, const Point& vertexB, const Point& vertexC,  const TextureCoord& textureA, const TextureCoord& textureB, const TextureCoord& textureC, Texture* texture, Material* material);
    ~Triangle();
 
    bool isIntersected(const Ray& ray, Intersection* intersection) const;
@@ -33,14 +33,11 @@ public:
 
 private:
 
-   // This function implements the triangle intersection algorithm
    bool triangleIsIntersected(const Ray& ray, float& distAlongRayToHit, Point& hitPoint) const;
+   Point calcBarycentricCoord(Point& hitPoint) const;
 
    // Vertices are specified CCWISE
    Point vertexA, vertexB, vertexC;
-   // Colours	
-	//Colour ambient;
-   //Colour textureA, textureB, textureC;
    Normal faceNormal;
 };
 

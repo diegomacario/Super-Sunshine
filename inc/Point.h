@@ -37,6 +37,7 @@ public:
 };
 
 float dot(const Point& lhsPoint, const Normal& rhsNormal);
+float dot(const Point& lhsPoint, const Point& rhsPoint);
 
 #endif
 

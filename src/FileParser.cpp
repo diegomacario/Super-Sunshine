@@ -258,16 +258,13 @@ bool FileParser::parseGeometryCommands(const std::string& cmd, std::stringstream
 			int textureB = static_cast<int>(values[3]);
 			int textureC = static_cast<int>(values[5]);
 
-			Colour colourA = state->texture.sampleColour(state->textureCoords[textureA]);
-			Colour colourB = state->texture.sampleColour(state->textureCoords[textureB]);
-			Colour colourC = state->texture.sampleColour(state->textureCoords[textureC]);
-
 		   state->objects.push_back(new Triangle(state->objToWorldTransfStack.top() * state->vertices[vertA],
                                              state->objToWorldTransfStack.top() * state->vertices[vertB],
                                              state->objToWorldTransfStack.top() * state->vertices[vertC],
-															colourA,
-															//colourB,
-															//colourC,
+															state->textureCoords[textureA],
+															state->textureCoords[textureB],
+															state->textureCoords[textureC],
+															&state->texture,
 															new Material(state->diffuse, state->specular, state->emission, state->shininess)));
 
 		}
