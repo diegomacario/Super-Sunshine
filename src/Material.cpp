@@ -1,5 +1,5 @@
 #include <algorithm>
-#include <math.h>
+#include <cmath>
 
 #include "Vector.h"
 #include "Material.h"
