@@ -1,26 +1,18 @@
 #ifndef TEXTURECOORD_H
 #define TEXTURECOORD_H
 
-struct TextureCoord
+class TextureCoord
 {
-	TextureCoord()
-		: u()
-		, v()
-	{ }
+public:
 
-	TextureCoord(float u, float v)
-		: u(u)
-		, v(v)
-	{ }
+   TextureCoord();
+   TextureCoord(float u, float v);
+   ~TextureCoord();
 
+   void set(float u, float v);
 
-	void set(float u, float v)
-	{
-		TextureCoord(u, v);
-	}
-
-	float u;
-	float v;
+   float u, v;
 };
 
 #endif
+

@@ -178,9 +178,9 @@ bool FileParser::parseSetupCommands(const std::string& cmd, std::stringstream& w
 
 bool FileParser::parseGeometryCommands(const std::string& cmd, std::stringstream& wordStream, std::unique_ptr<ValidationFlags>& validationFlags, std::unique_ptr<FileParserState>& state)
 {
-   // The values array is given a size of 4 because that is the maximum number
-   // of parameters a geometry command can have (in the case of the sphere command)
-   float values[4];
+   // The values array is given a size of 6 because that is the maximum number
+   // of parameters a geometry command can have (in the case of the textureTri command)
+   float values[6];
    bool validInput = false;
 
    if (cmd == "sphere")
@@ -239,6 +239,39 @@ bool FileParser::parseGeometryCommands(const std::string& cmd, std::stringstream
                                                new Material(state->diffuse, state->specular, state->emission, state->shininess)));
       }
       return true;
+   }
+   else if (cmd == "texturedTri")
+   {
+		validInput = readValues(cmd, wordStream, 6, values);
+		if (validInput)
+		{
+         int vertA = static_cast<int>(values[0]);
+         int vertB = static_cast<int>(values[2]);
+         int vertC = static_cast<int>(values[4]);
+
+         if (((vertA >= state->maxVerts) || (vertA < 0)) || ((vertB >= state->maxVerts) || (vertB < 0)) || ((vertC >= state->maxVerts) || (vertC < 0)))
+         {
+            throw "\n A triangle was specified with a nonexistent vertex.\n";
+         }
+
+			int textureA = static_cast<int>(values[1]);
+			int textureB = static_cast<int>(values[3]);
+			int textureC = static_cast<int>(values[5]);
+
+			Colour colourA = state->texture.sampleColour(state->textureCoords[textureA]);
+			Colour colourB = state->texture.sampleColour(state->textureCoords[textureB]);
+			Colour colourC = state->texture.sampleColour(state->textureCoords[textureC]);
+
+		   state->objects.push_back(new Triangle(state->objToWorldTransfStack.top() * state->vertices[vertA],
+                                             state->objToWorldTransfStack.top() * state->vertices[vertB],
+                                             state->objToWorldTransfStack.top() * state->vertices[vertC],
+															colourA,
+															//colourB,
+															//colourC,
+															new Material(state->diffuse, state->specular, state->emission, state->shininess)));
+
+		}
+		return true;
    }
 
    return false;
@@ -374,6 +407,7 @@ bool FileParser::parseTextureCommands(const std::string& cmd, std::stringstream&
 		validInput = readValues(cmd, wordStream, 2, values);
 		if (validInput)
 		{
+			state->textureCoords.push_back(TextureCoord(values[0], values[1]));
 			Colour colour = state->texture.sampleColour(TextureCoord(values[0], values[1]));
 			state->ambient.set(colour.r, colour.g, colour.b);
 		}
@@ -573,6 +607,7 @@ FileParser::FileParserState::FileParserState()
    , ambient(static_cast<float>(0.2)) // The ambient illumination is equal to (0.2, 0.2, 0.2) by default
    , lights()
    , texture()
+   , textureCoords()
    , diffuse()
    , specular()
    , emission()

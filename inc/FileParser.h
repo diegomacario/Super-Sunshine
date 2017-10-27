@@ -76,6 +76,7 @@ private:
 
 	  // Textures
 	  Texture texture;
+	  std::vector<TextureCoord> textureCoords;
 
       // Materials
       Colour diffuse;

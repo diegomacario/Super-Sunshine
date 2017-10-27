@@ -12,6 +12,16 @@ Triangle::Triangle(const Point& vertexA, const Point& vertexB, const Point& vert
    faceNormal = Normal(vec.x, vec.y, vec.z);
 }
 
+/*Triangle::Triangle(const Point& vertexA, const Point& vertexB, const Point& vertexC, const Colour& textureA, const Colour& textureB, const Colour& textureC, Material* material)
+   : vertexA(vertexA)
+   , vertexB(vertexB)
+   , vertexC(vertexC)
+   , textureA(textureA)
+   , textureB(textureB)
+   , textureC(textureC)
+   , GeometricShape(textureA, material)
+{ }*/
+
 Triangle::~Triangle()
 { }
 

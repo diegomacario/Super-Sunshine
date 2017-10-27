@@ -23,6 +23,8 @@ class Triangle : public GeometricShape
 public:
 
    Triangle(const Point& vertexA, const Point& vertexB, const Point& vertexC, const Colour& ambient, Material* material);
+
+   //Triangle(const Point& vertexA, const Point& vertexB, const Point& vertexC, const Colour& textureA, const Colour& textureB, const Colour& textureC, Material* material);
    ~Triangle();
 
    bool isIntersected(const Ray& ray, Intersection* intersection) const;
@@ -36,6 +38,9 @@ private:
 
    // Vertices are specified CCWISE
    Point vertexA, vertexB, vertexC;
+   // Colours	
+	//Colour ambient;
+   //Colour textureA, textureB, textureC;
    Normal faceNormal;
 };
 

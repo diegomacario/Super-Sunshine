@@ -5,6 +5,7 @@
 #include "Normal.h"
 #include "Material.h"
 #include "Intersection.h"
+#include "TextureCoord.h"
 
 /*
 Description:
@@ -27,6 +28,7 @@ class GeometricShape
 public:
 
    GeometricShape(const Colour& ambient, Material* material);
+   //GeometricShape(const Colour& textureA, const Colour& textureB, const Colour& textureC, Material* material);
    virtual ~GeometricShape();
 
    virtual bool isIntersected(const Ray& ray, Intersection* intersection) const = 0;
@@ -39,6 +41,7 @@ public:
 private:
 
    Colour ambient;
+   //Colour textureA, textureB, textureC;
    Material* material;
 };
 
