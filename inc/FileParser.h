@@ -42,7 +42,7 @@ private:
       bool outputIsSpecified;
       bool cameraIsSpecified;
       bool maxVertsIsSpecified;
-	  bool textureIsSpecified;
+		bool textureIsSpecified;
    };
 
    // The destructor of a FileParserState object does not delete
@@ -74,9 +74,9 @@ private:
       Colour ambient;
       std::vector<Light*> lights;
 
-	  // Textures
-	  Texture texture;
-	  std::vector<TextureCoord> textureCoords;
+		// Textures
+		Texture texture;
+		std::vector<TextureCoord> textureCoords;
 
       // Materials
       Colour diffuse;

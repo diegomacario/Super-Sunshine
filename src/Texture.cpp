@@ -12,7 +12,7 @@ void Texture::set(const char * textureFile)
 }
 
 
-Colour Texture::sampleColour(TextureCoord textureCoord)
+Colour Texture::sampleColour(TextureCoord textureCoord) const
 {
 	if(!isImageLoaded())
 	{
@@ -33,11 +33,12 @@ Colour Texture::sampleColour(TextureCoord textureCoord)
 	return colour;
 }
 
-bool Texture::validateCoords(TextureCoord textureCoord){
+bool Texture::validateCoords(TextureCoord textureCoord) const
+{
 	return textureCoord.u >= 0 && textureCoord.u <= 1 && textureCoord.v >= 0 && textureCoord.v <= 1;
 }
 
-bool Texture::isImageLoaded()
+bool Texture::isImageLoaded() const
 {
 	return this -> imageLoaded;
 }

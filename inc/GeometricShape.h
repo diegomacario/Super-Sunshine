@@ -5,8 +5,7 @@
 #include "Normal.h"
 #include "Material.h"
 #include "Intersection.h"
-#include "TextureCoord.h"
-#include "Texture.h"
+#include "TextureDescription.h"
 
 /*
 Description:
@@ -29,7 +28,7 @@ class GeometricShape
 public:
 
    GeometricShape(const Colour& ambient, Material* material);
-   GeometricShape(const TextureCoord& textureA, const TextureCoord& textureB, const TextureCoord& textureC, Texture* texture, Material* material);
+   GeometricShape(TextureDescription* textureDescription, Material* material);
    virtual ~GeometricShape();
 
    virtual bool isIntersected(const Ray& ray, Intersection* intersection) const = 0;
@@ -37,15 +36,18 @@ public:
    virtual bool isIntersected(const Ray& ray) const = 0;
 
    Colour getAmbient() const;
-   Colour getAmbient(Point hitPoint) const;
+   Colour getAmbient(Point barycentricCoord) const;
    Material * getMaterial() const;
+
+	bool isTextured() const;
 
 private:
 
    Colour ambient;
-   TextureCoord textureA, textureB, textureC;
-	Texture* texture;
    Material* material;
+
+	bool textured;
+   TextureDescription* textureDescription;
 };
 
 #endif

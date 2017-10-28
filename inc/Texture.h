@@ -13,10 +13,10 @@ public:
 	Texture();
 	void set(const char * textureFile);
 
-	Colour sampleColour(TextureCoord textureCoord);
+	Colour sampleColour(TextureCoord textureCoord) const;
 
 	void unloadImage();
-	bool isImageLoaded();
+	bool isImageLoaded() const;
 
 private:
 
@@ -26,7 +26,7 @@ private:
 	FIBITMAP * image;
 	unsigned height, width;
 
-	bool validateCoords(TextureCoord textureCoord);
+	bool validateCoords(TextureCoord textureCoord) const;
 
 	const char * textureFile;
 

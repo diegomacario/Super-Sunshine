@@ -12,11 +12,11 @@ Triangle::Triangle(const Point& vertexA, const Point& vertexB, const Point& vert
    faceNormal = Normal(vec.x, vec.y, vec.z);
 }
 
-Triangle::Triangle(const Point& vertexA, const Point& vertexB, const Point& vertexC, const TextureCoord& textureA, const TextureCoord& textureB, const TextureCoord& textureC, Texture* texture, Material* material)
+Triangle::Triangle(const Point& vertexA, const Point& vertexB, const Point& vertexC, TextureDescription* textureDescription, Material* material)
    : vertexA(vertexA)
    , vertexB(vertexB)
    , vertexC(vertexC)
-   , GeometricShape(textureA, textureB, textureC, texture, material)
+   , GeometricShape(textureDescription, material)
 { 
    // Compute the normal
    Vector vec = cross((vertexB - vertexA), (vertexC - vertexA));
@@ -32,8 +32,7 @@ bool Triangle::isIntersected(const Ray& ray, Intersection* intersection) const
    {
       intersection->normalAtHit = faceNormal;
       intersection->materialAtHit = getMaterial();
-      intersection->ambient = getAmbient(calcBarycentricCoord(intersection->hitPoint));
-      //intersection->ambient = getAmbient();
+      intersection->ambient = isTextured()? getAmbient(calcBarycentricCoord(intersection->hitPoint)) : getAmbient();
 
       return true;
    }
