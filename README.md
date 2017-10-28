@@ -16,7 +16,7 @@ A recursive ray-tracer with a simple scene description language for easily gener
 
 ## Technical details
 
-This project started out as a final assignment for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. It has continued to grow because it provides a great environment for learning and experimenting with new computer graphics concepts. In its current form, the project consists of:
+This project started out as a final assignment for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. Since then, it has continued to grow because it provides a great environment for experimenting with new computer graphics concepts. In its current form, the project consists of:
 
 - A recursive ray-tracer.
 - A file parser designed to read scene descriptions written with a simple scene description language.
@@ -345,7 +345,7 @@ There is still so much that remains to be done! The more I read about computer g
 
 If you are interested in learning more about computer graphics, I recommend you get started in the following places:
 
-- [CSE167x](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2): This EDX course is taught by Ravi Ramamoorthi. It covers the basic linear algebra concepts you need to understand computer graphics, as well as the derivations of many fundamental equations. It uses OpenGL to illustrate the concepts discussed in the lectures, and the final project consists of building what this readme describes!
+- [CSE167x](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2): This EDX course is taught by Ravi Ramamoorthi. It covers the basic linear algebra concepts you need to understand computer graphics, as well as the derivations of many fundamental equations. It uses OpenGL to illustrate the concepts discussed in the lectures, and the final project consists of building a big part of what this readme describes!
 - [Learn OpenGL](https://learnopengl.com/): This site is maintained by Joey de Vries. It teaches computer graphics with OpenGL, and it is full of excellent examples and diagrams!
 - [Scratch a Pixel](https://www.scratchapixel.com/): This site is similar to the previous one, and it has a section that covers the basics of ray-tracing!
 - [Real-Time Rendering](http://www.realtimerendering.com/): This book, written by Tomas Akenine-Möller, Eric Haines and Naty Hoffman, is absolutely invaluable. It compiles hundreds of sources and presents them with brilliant clarity. It truly astonishes with its scope.
