@@ -89,7 +89,7 @@ The animations in this readme were edited using [FFmpeg](https://www.ffmpeg.org/
 
 As mentioned above, using the ray-tracer described in this readme involves two steps. First you must write a scene description, and then you must feed it to the ray-tracer by specifying its filename in the command-line:
  ```sh
- ray-tracer.exe scene.txt
+ ray-tracer.exe scene_description.txt
  ```
 
 The language used to write a scene description is very simple. In terms of syntax, all you need to know is that each line of a scene description can contain a single command, and that they all follow this format:
