@@ -13,7 +13,7 @@ A recursive ray-tracer with a simple scene description language for easily gener
 ## Summary
 
 <p align="center">
-  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/IMG_4771.jpg"/>
+  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/summary.jpg"/>
 </p>
 
 ## Technical details
