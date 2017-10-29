@@ -16,19 +16,10 @@ A recursive ray-tracer with a simple scene description language for easily gener
   <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/summary.jpg"/>
 </p>
 
-## Technical details
-
-This project started out as a final assignment for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. Since then, it has continued to grow because it provides a great environment for experimenting with new computer graphics concepts. In its current form, the project consists of:
-
-- A recursive ray-tracer.
-- A file parser designed to read scene descriptions written with a simple scene description language.
-- A linear algebra API for performing operations with points, vectors, normals and affine transformation matrices.
-
-All the code was written in C++, with a strong focus on making it clear and organized. The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
-
-## What is a scene description language?
+## Example
 
 Let's say we wanted to render an image of three scoops of ice cream sitting in the middle of a desert. Using the scene description language developed for this project, we would start by writing the following scene description:
+
  ```sh
 size 640 480
 output ice_cream.png
@@ -69,11 +60,11 @@ We would then give this scene description to our ray-tracer, which would read it
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream_dark.png"/>
  <p align="center">
-  <em>A simple scene composed of a single light source, two triangles and three spheres.</em>
+  <em>Dessert on a desert!</em>
  </p>
 </p>
 
-A scene description language makes it a lot easier to play with a ray-tracer, and it also allows users to generate animations by writing scripts. It is hard to believe how such a simple feature can enable users to produce such stunning results:
+As you can see, a scene description language makes it a lot easier to play with a ray-tracer, and it also enables users to generate animations through scripting. It is hard to believe how such a simple feature can lead to such stunning results:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/flower_120.gif"/>
@@ -81,6 +72,16 @@ A scene description language makes it a lot easier to play with a ray-tracer, an
   <em>A very narcissistic flower.</em>
  </p>
 </p>
+
+## Technical details
+
+This project started out as a final assignment for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. Since then, it has continued to grow because it provides a great environment for experimenting with new computer graphics concepts. In its current form, the project consists of:
+
+- A recursive ray-tracer.
+- A file parser designed to read scene descriptions written with a simple scene description language.
+- A linear algebra API for performing operations with points, vectors, normals and affine transformation matrices.
+
+All the code was written in C++, with a strong focus on making it clear and organized. The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
 
 ## Features
 
