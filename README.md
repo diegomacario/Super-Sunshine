@@ -18,7 +18,7 @@ A recursive ray-tracer with a simple scene description language for easily gener
 
 ## Example
 
-Let's say we wanted to render an image of three scoops of ice cream sitting in the middle of a desert. Using the scene description language developed for this project, we would start by writing the following scene description:
+Let's say you wanted to render an image of three scoops of ice cream sitting in the middle of a desert. Using the scene description language developed for this project, you would start by writing the following scene description:
 
  ```sh
 size 640 480
@@ -55,7 +55,7 @@ tri 0 1 2
 tri 1 3 2
  ```
  
-We would then give this scene description to our ray-tracer, which would read it and turn it into this:
+You would then give this scene description to the ray-tracer described in this readme, which would read it and turn it into this:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream_dark.png"/>
@@ -64,7 +64,7 @@ We would then give this scene description to our ray-tracer, which would read it
  </p>
 </p>
 
-As you can see, a scene description language makes it a lot easier to play with a ray-tracer, and it also enables users to generate animations through scripting. It is hard to believe how such a simple feature can lead to such stunning results:
+As you can see, the scene description language makes it easy to play with the ray-tracer, and it also enables you to generate animations through scripting. It is hard to believe how such a simple feature can lead to such stunning results:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/flower_120.gif"/>
@@ -83,11 +83,11 @@ This project started out as a final assignment for Ravi Ramamoorthi's fantastic 
 
 All the code was written in C++, with a strong focus on making it clear and organized. The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
 
-The animations in this readme were composed using [FFmpeg](https://www.ffmpeg.org/) and [ImageMagick](https://www.imagemagick.org/script/index.php).
+The animations in this readme were edited using [FFmpeg](https://www.ffmpeg.org/) and [ImageMagick](https://www.imagemagick.org/script/index.php).
 
 ## Features
 
-Using the ray-tracer described in this readme involves two steps. First you must write a scene description, and then you must feed it to the ray-tracer by specifying its filename in the command-line:
+As mentioned above, using the ray-tracer described in this readme involves two steps. First you must write a scene description, and then you must feed it to the ray-tracer by specifying its filename in the command-line:
  ```sh
  ray-tracer.exe scene.txt
  ```
