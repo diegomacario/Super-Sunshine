@@ -28,7 +28,7 @@ All the code was written in C++, with a strong focus on making it clear and orga
 
 ## What is a scene description language?
 
-A scene description language is a set of commands used to describe an image so that it can be rendered by a computer. Imagine, for example, that we wanted to render an image of "three scoops of ice cream sitting in the middle of a desert". Using the language developed for this project, we would write the following scene description:
+Let's say we wanted to render an image of three scoops of ice cream sitting in the middle of a desert. Using the scene description language developed for this project, we would start by writing the following scene description:
  ```sh
 size 640 480
 output ice_cream.png
@@ -44,7 +44,7 @@ point 0.4 3.75 -1.6 1 1 1
 diffuse 0 0.75 0
 shininess 100
 
-# Spheres
+# Scoops of ice cream (3 spheres)
 ambient 0.122 0.541 0.439
 sphere -0.6 0.375 -0.6 0.375
 ambient 0.745 0.859 0.224
@@ -52,7 +52,7 @@ sphere -0.6 1.05 -0.6 0.3
 ambient 0.9 0.9 0.102
 sphere -0.6 1.575 -0.6 0.225
 
-# Floor
+# Desert floor (2 triangles)
 specular 0 0.25 0
 ambient 0.992 0.455 0
 maxverts 4
@@ -64,7 +64,7 @@ tri 0 1 2
 tri 1 3 2
  ```
  
-The description above may not be as clear as "three scoops of ice cream in the middle of the desert", but it can be interpreted by Super-Sunshine and turned into this:
+We would then give this scene description to our ray-tracer, which would read it and turn it into this:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream_dark.png"/>
