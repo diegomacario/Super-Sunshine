@@ -205,7 +205,7 @@ You would write the following:
 
 The order of the commands might seem odd at first, but if you read them from the bottom to the top they match the verbal description of what we wanted to achieve. So if you are ever confused about the order in which transformations apply to a specific geometric primitive, you can always rely on this rule of thumb: read from the command that creates the geometric primitive to the beginning of the scene description, and apply transformations as you run into them. Also keep in mind that the order in which transformations are specified does matter: rotating and then translating is not the same as translating and then rotating.
 
-Additionally, the commands *__pushTransform__* and *__popTransform__* are also supported to imitate the syntax of old-school OpenGL. To better understand their use and the order in which transformations are applied, consider the following example:
+Additionally, the commands *__pushTransform__* and *__popTransform__* are also supported. These two commands imitate the syntax and functionality of their counterparts in old-school OpenGL, allowing you to apply transformations to specific geometric primitives without affecting others. To better understand their use and the order in which transformations are applied, consider the following example:
  ```sh
  translate 1 0 0
  
@@ -224,14 +224,16 @@ Transformations can be intimidating at first, but play around with them for a wh
 ### 5) Lights
 Three types of light sources are currently supported. One of those types is singular (*__ambient light__*) while the other two (*__point lights__* and *__directional lights__*) can be created as many times as desired.
 
-The command used to set the colour of the ambient light is:
+#### 5.1) Ambient light
+
+Ambient light exists at all points in space and is propagated with equal intensity in all directions. Because of this, there can only be one ambient light in a scene. The command used to set the colour of this type of light is:
  ```sh
  ambient r g b
  ```
 Where:
 - The *__RGB__* values, which can range from 0 to 1, determine the colour of the ambient light. If this command is not specified in a scene description, the colour of the ambient light defaults to (0.2, 0.2, 0.2).
 
-In theory, ambient light exists at all points in space and is propagated with equal intensity in all directions. Based on this definition, there should only exist one ambient light in a scene. While this is true for this ray-tracer, it also allows something rather unusual: the colour of the ambient light can be modified in between the creation of geometric primitives. In other words, users can use the ambient light to give primitives a base colour. Consider the following example, in which I create four spheres and modify the colour of the ambient light before creating each one:
+Note that even though there can only be one ambient light in a scene, it is possible to change the colour of said light in between the creation of geometric primitives. In other words, ambient light can be used to give primitives a base colour. Consider the following example, in which I create four spheres and modify the colour of the ambient light before creating each one:
  ```sh
 # Left sphere (green)
 ambient 0.2 0.4 0.1
@@ -258,9 +260,11 @@ The resulting image is:
  </p>
 </p>
 
-This behaviour is very particular, but it is convenient in the context of a ray-tracer. Just remember that settings like the ambient light, the attenuation and the material properties are all maintained by a state machine. Once they are set, they affect all the lights and geometric primitives created afterwards. If you want different lights or primitives to have different appeareances, you need to modify these settings before creating them.
+This behaviour is very particular, but it is convenient in the context of a ray-tracer. Just remember that settings like the ambient light, the attenuation and the material properties are all maintained by a state machine. Once they are set, they affect all the lights and geometric primitives created afterwards. If you want different lights or primitives to have different appeareances, you need to change these settings before creating them.
 
-In the case of point lights, these emit light in all directions from specific points in space. Because their positions are defined, point lights can be affected by three different types of attenuation: *__constant__*, *__linear__* and *__quadratic attenuation__*. The commands used to create this type of light are:
+#### 5.2) Point lights
+
+Point lights emit light in all directions from specific points in space. Because their positions are defined, point lights can be affected by three different types of attenuation: *__constant__*, *__linear__* and *__quadratic attenuation__*. The commands used to create this type of light are:
  ```sh
  attenuation constant linear quadratic
  point posx posy posz r g b
@@ -278,7 +282,9 @@ If you wanted the intensity of a point light to decrease linearly with the dista
  </p>
 </p>
 
-As for directional lights, these are considered to be placed infinitely far away, which is why they only emit light in a single direction and are not affected by attenuation. The command used to create this type of light is:
+#### 5.3) Directional lights
+
+Directional lights are considered to be placed infinitely far away, which is why they only emit light in a single direction and are not affected by attenuation. The command used to create this type of light is:
  ```sh
  directional dirx diry dirz r g b
  ```
