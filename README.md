@@ -83,6 +83,8 @@ This project started out as a final assignment for Ravi Ramamoorthi's fantastic 
 
 All the code was written in C++, with a strong focus on making it clear and organized. The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
 
+The animations in this readme were composed using [FFmpeg](https://www.ffmpeg.org/) and [ImageMagick](https://www.imagemagick.org/script/index.php).
+
 ## Features
 
 Using the ray-tracer described in this readme involves two steps. First you must write a scene description, and then you must feed it to the ray-tracer by specifying its filename in the command-line:
