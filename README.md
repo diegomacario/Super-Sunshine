@@ -12,7 +12,7 @@ A recursive ray-tracer with a simple scene description language for easily gener
 
 ## Summary
 
-This project consists of a ray-tracer that can be easily interacted with. The diagram below illustrates the manner in which this interaction is meant to occur:
+Super-Sunshine is a ray-tracer that can be easily interacted with. The diagram below illustrates the manner in which this interaction is meant to occur:
 
 <p align="center">
   <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/summary.jpg"/>
@@ -92,7 +92,7 @@ As mentioned above, using Super-Sunshine involves two steps. First you must writ
  super_sunshine.exe scene.txt
  ```
 
-The scene description language used by this project is very simple. In terms of syntax, all you need to know is that each line of a scene description can contain a single command, and that they all follow this format:
+The scene description language developed for this project is very simple. In terms of syntax, all you need to know is that each line of a scene description can contain a single command, and that they all follow this format:
  ```sh
  command parameter1 parameter2 ...
  ```
