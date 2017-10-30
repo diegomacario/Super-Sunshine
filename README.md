@@ -12,13 +12,13 @@ A recursive ray-tracer with a simple scene description language for easily gener
 
 ## Summary
 
+This project consists of a ray-tracer that can be easily interacted with. The diagram below illustrates the manner in which this interaction is meant to occur:
+
 <p align="center">
   <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/summary.jpg"/>
 </p>
 
-## Example
-
-Let's say you wanted to render an image of three scoops of ice cream sitting in the middle of a desert. Using the scene description language developed for this project, you would start by writing the following scene description:
+As an example, let's say you wanted to render an image of three scoops of ice cream sitting in the middle of a desert. Using the scene description language developed for this project, you would start by writing the following scene description:
 
  ```sh
 size 640 480
