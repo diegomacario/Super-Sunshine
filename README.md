@@ -55,7 +55,7 @@ tri 0 1 2
 tri 1 3 2
  ```
  
-You would then give this scene description to the ray-tracer described in this readme, which would read it and turn it into this:
+You would then give that scene description to Super-Sunshine, which would read it and turn it into this:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream_dark.png"/>
@@ -64,7 +64,7 @@ You would then give this scene description to the ray-tracer described in this r
  </p>
 </p>
 
-As you can see, the scene description language makes it easy to play with the ray-tracer, and it also enables you to generate animations through scripting. It is hard to believe how such a simple feature can lead to such stunning results:
+As you can see, the scene description language makes it easy to play with the ray-tracer. As an additional benefit, it also enables you to generate animations through scripting; it is hard to believe how such a simple feature can lead to such stunning results:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/flower_120.gif"/>
@@ -87,9 +87,9 @@ The animations in this readme were edited using [FFmpeg](https://www.ffmpeg.org/
 
 ## Features
 
-As mentioned above, using the ray-tracer described in this readme involves two steps. First you must write a scene description, and then you must feed it to the ray-tracer by specifying its filename in the command-line:
+As mentioned above, using Super-Sunshine involves two steps. First you must write a scene description, and then you must feed it to the ray-tracer by specifying its filename in the command-line:
  ```sh
- ray-tracer.exe scene.txt
+ super_sunshine.exe scene.txt
  ```
 
 The scene description language used by this project is very simple. In terms of syntax, all you need to know is that each line of a scene description can contain a single command, and that they all follow this format:
@@ -315,9 +315,9 @@ I think there are three visual effects that stand out in these experiments:
 2. A shiny surface presents specular highlights.
 3. A mirror surface shows the reflections of other objects.
 
-(Note that I did not mention translucency, transparency, refraction or any other effects that involve the transmission of light into different media, because they are not supported by the ray-tracer described in this readme. Come back in a few weeks and you will hopefully find an expanded discussion!)
+(Note that I did not mention translucency, transparency, refraction or any other effects that involve the transmission of light into different media, because they are not supported by Super-Sunshine yet. Come back in a few weeks and you will hopefully find an expanded discussion!)
 
-Let's break these visual effects down into their basic components (this will help me illustrate how to use the ray-tracer described in this readme, and it will give you an understanding of how it works):
+Let's break these visual effects down into their basic components (this will help me illustrate how to use Super-Sunshine, and it will give you an understanding of how it works):
 
 The first one is the simplest of the three. I like to approach it by thinking about the following situation:
 
@@ -334,7 +334,7 @@ The second parameter is the one that enables us to simulate the visual effect we
 
 Measuring this angle at every point that is struck by a ray of light, and adding up the contributions of all the light sources in a scene, allows us to determine how an entire surface is illuminated.
 
-Note that so far I have talked about varying the brightness of light sources based on the angle described above. I intentionally used the word "brightness" because it makes everything easier to visualize, but that is not how things are implemented on a computer. In the case of the ray-tracer described in this readme, instead of varying the brightness of the light sources, we vary the intensity of a particular colour, which you can define for every object you create. To set this colour, use the following command:
+Note that so far I have talked about varying the brightness of light sources based on the angle described above. I intentionally used the word "brightness" because it makes everything easier to visualize, but that is not how things are implemented on a computer. In the case of Super-Sunshine, instead of varying the brightness of the light sources, we vary the intensity of a particular colour, which you can define for every object you create. To set this colour, use the following command:
  ```sh
  diffuse r g b
  ```
@@ -361,12 +361,12 @@ If you are interested in learning more about computer graphics, I recommend you 
 - [Scratch a Pixel](https://www.scratchapixel.com/): This site is similar to the previous one, and it has a section that covers the basics of ray-tracing!
 - [Real-Time Rendering](http://www.realtimerendering.com/): This book, written by Tomas Akenine-Möller, Eric Haines and Naty Hoffman, is absolutely invaluable. It compiles hundreds of sources and presents them with brilliant clarity. It truly astonishes with its scope.
 
-I think building a ray-tracer is a really fun project because all the effort you put into it yields actual images that you can marvel at. Just the sheer excitement of generating your first image will keep you motivated while you learn new things! I felt elated when the ray-tracer described in this readme spat this out:
+I think building a ray-tracer is a really fun project because all the effort you put into it yields actual images that you can marvel at. Just the sheer excitement of generating your first image will keep you motivated while you learn new things! I felt elated when Super-Sunshine spat this out:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/first_image.png"/>
  <p align="center">
-  <em>The first image generated by the ray-tracer described in this readme.</em>
+  <em>The first image generated by Super-Sunshine.</em>
  </p>
 </p>
 
