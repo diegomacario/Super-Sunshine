@@ -18,7 +18,7 @@ Super-Sunshine is a ray-tracer that can be easily interacted with. The diagram b
   <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/summary_B&W.jpg"/>
 </p>
 
-As an example, let's say you wanted to render an image of three scoops of ice cream sitting in the middle of a desert. Using the scene description language developed for this project, you would start by writing the following scene description:
+As an example, let's say you wanted to render an image of three scoops of ice cream sitting in the middle of a desert. Using the scene description language developed for this project, you would start by writing a scene description like the following:
 
  ```sh
 # Setup
@@ -60,7 +60,7 @@ tri 0 1 2
 tri 1 3 2
  ```
  
-You would then give that scene description to Super-Sunshine, which would read it and turn it into this:
+You would then give your scene description to Super-Sunshine, which would use it to generate an image like the one below:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream_dark.png"/>
