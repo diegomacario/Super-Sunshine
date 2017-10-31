@@ -21,17 +21,18 @@ Super-Sunshine is a ray-tracer that can be easily interacted with. The diagram b
 As an example, let's say you wanted to render an image of three scoops of ice cream sitting in the middle of a desert. Using the scene description language developed for this project, you would start by writing the following scene description:
 
  ```sh
+# Setup
 size 640 480
 output ice_cream.png
 
 # Camera
 camera 1.5 3.5 1.5 -0.5 0 -0.5 0 1 0 45
 
-# Light
+# Point light
 attenuation 0 1 0
 point 0.4 3.75 -1.6 1 1 1
 
-# Material
+# Common material
 diffuse 0 0.75 0
 shininess 100
 
@@ -43,14 +44,18 @@ sphere -0.6 1.05 -0.6 0.3
 ambient 0.9 0.9 0.102
 sphere -0.6 1.575 -0.6 0.225
 
-# Desert floor (2 triangles)
+# Reflective material
 specular 0 0.25 0
-ambient 0.992 0.455 0
+
+# Vertices
 maxverts 4
 vertex 0.7125 0 0.7125
 vertex 0.7125 0 -1.9125
 vertex -1.9125 0 0.7125
 vertex -1.9125 0 -1.9125
+
+# Desert floor (2 triangles)
+ambient 0.992 0.455 0
 tri 0 1 2
 tri 1 3 2
  ```
