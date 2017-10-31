@@ -87,7 +87,7 @@ The animations in this readme were edited using [FFmpeg](https://www.ffmpeg.org/
 
 ## Features
 
-As mentioned above, using Super-Sunshine involves two steps. First you must write a scene description, and then you must feed it to the ray-tracer by specifying its filename in the command-line:
+As mentioned above, using Super-Sunshine involves two steps; first you must write a scene description, and then you must feed it to the ray-tracer by specifying its filename in the command-line:
  ```sh
  super_sunshine.exe scene.txt
  ```
