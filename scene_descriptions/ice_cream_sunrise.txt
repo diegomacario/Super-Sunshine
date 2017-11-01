@@ -1,0 +1,56 @@
+size 640 480
+output ice_cream_sunrise.png
+
+# --- --- --- --- -- CAMERA -- --- --- --- ---
+
+
+camera 1.5 3.5 1.5 -0.5 0 -0.5 0 1 0 45
+
+# --- --- --- --- -- LIGHTS -- --- --- --- ---
+
+attenuation 0 1 0
+point 0.4 1 -1.6 1 1 1
+
+# --- --- --- --- - GEOMETRY - --- --- --- ---
+
+maxverts 4
+
+translate -0.6 0 -0.6
+
+# Scoops of ice cream
+# --- --- --- --- --- --- --- --- ---
+
+
+
+# Non-reflective material
+diffuse 0 0.75 0
+
+# Base (blue)
+ambient 0.122 0.541 0.439
+sphere 0 0.375 0 0.375
+
+# Middle (green)
+ambient 0.745 0.859 0.224
+sphere 0 1.05 0 0.3
+
+# Top (Yellow)
+ambient 0.9 0.9 0.102
+sphere 0 1.575 0 0.225
+
+# Desert floor
+# --- --- --- --- --- --- --- --- ---
+
+
+
+# Reflective material (orange)
+ambient 0.992 0.455 0
+specular 0 0.25 0
+shininess 100
+
+vertex 1.3125 0 1.3125
+vertex 1.3125 0 -1.3125
+vertex -1.3125 0 1.3125
+vertex -1.3125 0 -1.3125
+
+tri 0 1 2
+tri 1 3 2

@@ -1,0 +1,52 @@
+size 640 480
+output single_sphere_w_mirror.png
+
+# --- --- --- --- -- CAMERA -- --- --- --- ---
+
+
+camera 0 0 1 0 0 0 0 1 0 40
+
+# --- --- --- --- -- LIGHTS -- --- --- --- ---
+
+
+ambient 0.1 0.1 0.1
+point -0.5 1 1 0.9 0.9 0.9
+
+# --- --- --- --- - GEOMETRY - --- --- --- ---
+
+maxverts 3
+
+
+# Sphere
+
+# --- --- --- --- --- --- --- --- ---
+
+
+
+# Non-reflective material (purple)
+diffuse 0.5 0.14 0.8
+specular 0 0 0
+shininess 1000
+
+sphere 0 0 0 0.175
+
+# Mirror
+# --- --- --- --- --- --- --- --- ---
+
+
+
+# Reflective material (mirror-like)
+diffuse 0.1 0.1 0.1
+specular 1 1 1
+
+vertex 0.15 0 0
+vertex 0 0.2598 0
+vertex -0.15 0 0
+
+rotate 0 1 0 60
+rotate 1 0 0 10
+rotate 0 0 1 60
+translate 0 0 -0.25
+scale 1.5 1.5 1.5
+
+tri 0 1 2

@@ -1,0 +1,114 @@
+size 640 480
+output trafalmadore_light.png
+
+# --- --- --- --- -- CAMERA -- --- --- --- ---
+
+camera 0 0 1 0 0 0 0 1 0 40
+
+# --- --- --- --- -- LIGHTS -- --- --- --- ---
+
+point -0.5 1 1 0.9 0.9 0.9
+point -0.5 -1 1 0.9 0.9 0.9
+
+# --- --- --- --- - GEOMETRY - --- --- --- ---
+
+# Planet
+# --- --- --- --- --- --- --- --- ---
+
+
+
+ambient 0.1 0.1 0.1
+diffuse 0.247059 0.0431373 0.105882
+
+sphere 0 0 0 0.175
+
+# Rings
+# --- --- --- --- --- --- --- --- ---
+
+
+
+pushTransform
+
+# Tilt the rings
+rotate 0 0 1 -15
+rotate 1 0 0 15
+
+# First ring (inner)
+diffuse 0.478431 0.0862745 0.192157
+pushTransform
+   scale 0.8 0.016875 0.8
+   sphere 0 0 0 0.3
+popTransform
+
+# Second ring
+diffuse 0.811765 0.258824 0.235294
+pushTransform
+   scale 0.86 0.0140625 0.86
+   sphere 0 0 0 0.3
+popTransform
+
+# Third ring
+diffuse 0.988235 0.490196 0.286275
+pushTransform
+   scale 0.93 0.009375 0.93
+   sphere 0 0 0 0.3
+popTransform
+
+# Fourth ring (outter)
+diffuse 1 0.831373 0.384314
+pushTransform
+   scale 1 0.0046875 1
+   sphere 0 0 0 0.3
+popTransform
+
+popTransform
+
+# Stars
+# --- --- --- --- --- --- --- --- ---
+
+
+
+diffuse 0 0 0
+ambient 1 1 1
+
+# CCWISE quadrants
+sphere 0.3 0.2 0 0.004
+sphere -0.3 0.2 0 0.004
+sphere -0.3 -0.2 0 0.004
+sphere 0.3 -0.2 0 0.004
+
+# CCWISE quadrants shifted left
+sphere 0.2 0.3 0 0.004
+sphere -0.2 0.3 0 0.004
+sphere -0.2 -0.3 0 0.004
+sphere 0.2 -0.3 0 0.004
+
+# CCWISE quadrants shifted left (low)
+sphere 0.15 0.19 0 0.004
+sphere -0.15 0.19 0 0.004
+sphere -0.15 -0.19 0 0.004
+sphere 0.15 -0.19 0 0.004
+
+# CCWISE axes
+sphere 0.4 0 0 0.004
+sphere 0 0.3 0 0.004
+sphere -0.4 0 0 0.004
+sphere 0 -0.3 0 0.004
+
+# CCWISE corners
+sphere 0.4 0.3 0 0.004
+sphere -0.4 0.3 0 0.004
+sphere -0.4 -0.3 0 0.004
+sphere 0.4 -0.3 0 0.004
+
+# CCWISE corners (low)
+sphere 0.4 0.15 0 0.004
+sphere -0.4 0.15 0 0.004
+sphere -0.4 -0.15 0 0.004
+sphere 0.4 -0.15 0 0.004
+
+# CCWISE axes shifted left
+sphere 0.25 0.075 0 0.004
+#sphere -0.25 0.075 0 0.004
+sphere -0.25 -0.075 0 0.004
+#sphere 0.25 -0.075 0 0.004

@@ -1,0 +1,114 @@
+size 640 480
+output flower.png
+
+# --- --- --- --- -- CAMERA -- --- --- --- ---
+
+camera 0 1.5 2.25 0 0 0.5 0 1 0 60
+
+# --- --- --- --- -- LIGHTS -- --- --- --- ---
+
+point 0 1 -10 1 1 1
+point 0 1 1 0.2 0.2 0.2
+directional 0 -1 -1 0.75 0.5 0
+directional 0 1 1 0.75 0.5 0
+
+# --- --- --- --- - GEOMETRY - --- --- --- ---
+
+maxverts 4
+
+# Flower
+# --- --- --- --- --- --- --- --- ---
+
+# Red
+ambient 0.1 0.1 0.1
+diffuse 0.5 0 0
+
+# Petals
+# --- --- --- --- ---
+
+# Petal-pair 1
+pushTransform 
+scale 1.0 0.15 0.25 
+sphere 0 0 0 0.8
+popTransform
+
+# Petal-pair 2
+pushTransform 
+rotate 0 1 0 90
+scale 1.0 0.15 0.25 
+sphere 0 0 0 0.8
+popTransform
+
+# Petal-pair 3
+pushTransform 
+rotate 0 1 0 45
+scale 1.0 0.15 0.25 
+sphere 0 0 0 0.8
+popTransform
+
+# Petal-pair 4
+pushTransform 
+rotate 0 1 0 -45
+scale 1.0 0.15 0.25 
+sphere 0 0 0 0.8
+popTransform
+
+# Center
+# --- --- --- --- ---
+
+# Yellow
+diffuse 0.75 0.5 0
+
+pushTransform 
+scale 0.225 0.20 0.225 
+sphere 0 0 0 1
+popTransform
+
+# Trunk
+# --- --- --- --- ---
+
+# Green
+diffuse 0 0.75 0
+
+pushTransform 
+translate  0 -1.3 0
+scale 0.09 0.75 0.09 
+sphere 0 0 0 2
+popTransform
+
+# Mirrors
+# --- --- --- --- --- --- --- --- ---
+
+# Reflective material
+diffuse 0.1 0.1 0.1
+specular 1 1 1
+shininess 20
+
+vertex 1.5 0 1.5
+vertex 1.5 0 -1.5
+vertex -1.5 0 1.5
+vertex -1.5 0 -1.5
+
+# Mirror 1
+# --- --- --- --- ---
+
+pushTransform
+translate -1 -1 -1
+rotate 0 1 0 45
+rotate 1 0 0 45
+scale 0.5 0.5 0.5
+tri 0 1 2
+tri 1 3 2
+popTransform
+
+# Mirror 2
+# --- --- --- --- ---
+
+pushTransform
+translate 1 0 -1
+rotate 0 1 0 -45
+rotate 1 0 0 90
+scale 0.5 0.5 0.5
+tri 0 1 2
+tri 1 3 2
+popTransform
