@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/sword_light_360_frames_50_fps.gif"/>
+  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/sword_white_bg_360_frames_50_fps.gif"/>
 </p>
 
 # Super-Sunshine
@@ -15,7 +15,7 @@ A recursive ray-tracer with a simple scene description language for easily gener
 Super-Sunshine is a ray-tracer that can be easily interacted with. The diagram below illustrates the manner in which this interaction is meant to occur:
 
 <p align="center">
-  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/summary_B&W.jpg"/>
+  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/summary.jpg"/>
 </p>
 
 As an example, let's say you wanted to render an image of three scoops of ice cream sitting in the middle of a desert. Using the scene description language developed for this project, you would start by writing a scene description like the following:
@@ -63,7 +63,7 @@ tri 1 3 2
 You would then give your scene description to Super-Sunshine, which would use it to generate an image like the one below:
 
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream_dark.png"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream_noon.png"/>
  <p align="center">
   <em>Dessert on a desert!</em>
  </p>
@@ -72,7 +72,7 @@ You would then give your scene description to Super-Sunshine, which would use it
 As you can see, the scene description language makes it easy to play with the ray-tracer. As an additional benefit, it also enables you to generate animations through scripting; it is hard to believe how such a simple feature can lead to such stunning results:
 
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/flower_120.gif"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/flower_120_degrees.gif"/>
  <p align="center">
   <em>A very narcissistic flower.</em>
  </p>
@@ -129,7 +129,7 @@ Where:
 In the animation below, the *__from__* point is rotated along a 45° arc while the *__at__* point remains fixed at the center of the pyramid's base.
 
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_green_centered_big.gif"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_green_big.gif"/>
  <p align="center">
   <em>A lonely pyramid.</em>
  </p>
@@ -181,7 +181,7 @@ Where:
 The image below illustrates a simple use case of these transformations:
 
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/trafalmadore.png"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/tralfamadore.png"/>
  <p align="center">
   <em>The planet Tralfamadore.</em>
  </p>
