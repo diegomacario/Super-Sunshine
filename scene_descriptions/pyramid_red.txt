@@ -39,8 +39,6 @@ popTransform
 # Pyramid
 # --- --- --- --- --- --- --- --- ---
 
-
-
 # Yellow
 diffuse 0 0.75 0
 specular 0 0.25 0
