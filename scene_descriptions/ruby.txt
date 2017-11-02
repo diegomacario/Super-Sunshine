@@ -1,132 +1,65 @@
 size 640 480 
 output ruby.png
 
-
-
 # --- --- --- --- -- CAMERA -- --- --- --- ---
-
-
 
 camera 0 5 0 0 0 0 0 0 -1 45
 
-
-
 # --- --- --- --- -- LIGHTS -- --- --- --- ---
 
-
-
 attenuation 0 1 0
-
 point 1 1 -1 1 1 1
-
-
 
 # --- --- --- --- - GEOMETRY - --- --- --- ---
 
 maxverts 13
 
-
-
-
 # Red
 ambient 0.5 0.1 0.1
 diffuse 0.5 0 0
-
 specular 0.25 0 0
-
+shininess 100
 maxdepth 5
 
-shininess 100
-
-
-
-
 # Outter face
-
 # --- --- --- --- --- --- --- --- ---
 
-
-
 vertex 0 0 0
-
 vertex 0 0 1.5
-
 vertex 1.299 0 0.75
-
 vertex 1.299 0 -0.75
-
 vertex 0 0 -1.5
-
 vertex -1.299 0 -0.75
-
 vertex -1.299 0 0.75
-
-
 
 scale 0.75 0.75 0.85
 
-
-
-pushTransform
-
 tri 0 1 2
-
 tri 0 2 3
-
 tri 0 3 4
-
 tri 0 4 5
-
 tri 0 5 6
-
 tri 0 6 1
-popTransform
-
-
 
 # Inner face
-
 # --- --- --- --- --- --- --- --- ---
-
-
 
 vertex 0           -1 2.25
 vertex 1.94855716  -1 1.125
-
 vertex 1.94855716  -1 -1.125
-
 vertex 0           -1 -2.25
-
 vertex -1.94855716 -1 -1.125
-
 vertex -1.94855716 -1 1.125
 
-
-
-pushTransform
-
 tri 7 2 1
-
 tri 7 8 2
-
 tri 8 3 2
-
 tri 8 9 3
-
 tri 9 4 3
-
 tri 9 10 4
-
 tri 10 5 4
-
 tri 10 11 5
-
 tri 11 6 5
-
 tri 11 12 6
-
 tri 12 1 6
-
 tri 12 7 1
-
-popTransform
