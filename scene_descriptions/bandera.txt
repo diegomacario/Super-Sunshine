@@ -22,8 +22,6 @@ maxdepth 5
 # Ground
 # --- --- --- --- --- --- --- --- ---
 
-
-
 # Green
 ambient 0 0.3 0.3
 
@@ -40,8 +38,6 @@ popTransform
 
 # Pole
 # --- --- --- --- --- --- --- --- ---
-
-
 
 # Gray
 ambient 0.355 0.375 0.371
@@ -101,8 +97,6 @@ popTransform
 
 # Base of monument
 # --- --- --- --- --- --- --- --- ---
-
-
 
 # Marble
 ambient 0.465 0.547 0.477
@@ -276,8 +270,6 @@ popTransform
 
 # Flag
 # --- --- --- --- --- --- --- --- ---
-
-
 
 # Amarillo
 # --- --- --- --- --- ---
@@ -464,8 +456,6 @@ popTransform
 
 # Stars
 # --- --- --- --- --- --- --- --- ---
-
-
 
 ambient 1 1 1
 
