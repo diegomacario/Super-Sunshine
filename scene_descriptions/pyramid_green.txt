@@ -17,8 +17,6 @@ maxverts 7
 # Floor
 # --- --- --- --- --- --- --- --- ---
 
-
-
 # Green
 ambient 0 0.3 0.3
 diffuse 0 0.75 0
@@ -41,8 +39,6 @@ popTransform
 
 # Pyramid
 # --- --- --- --- --- --- --- --- ---
-
-
 
 # Yellow
 diffuse 0 0.75 0
