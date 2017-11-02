@@ -3,8 +3,6 @@ output ice_cream_noon_hexagon.png
 
 # --- --- --- --- -- CAMERA -- --- --- --- ---
 
-
-
 camera 1.5 3.5 1.5 -0.5 0 -0.5 0 1 0 45
 
 # --- --- --- --- -- LIGHTS -- --- --- --- ---
@@ -18,8 +16,6 @@ maxverts 7
 
 # Scoops of ice cream
 # --- --- --- --- --- --- --- --- ---
-
-
 
 # Non-reflective material
 diffuse 0 0.75 0
@@ -38,8 +34,6 @@ sphere -0.6 1.575 -0.6 0.225
 
 # Desert floor
 # --- --- --- --- --- --- --- --- ---
-
-
 
 # Reflective material (orange)
 ambient 0.992 0.455 0
