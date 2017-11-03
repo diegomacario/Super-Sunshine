@@ -42,8 +42,6 @@ int main(int argc, char* argv[])
    // The SampleGenerator updates a Sample object to specify the coordinates of the center of each pixel on the image plane
    SampleGenerator sampleGenerator(sceneDesc->getWidth(), sceneDesc->getHeight());
 
-   Sample sample;
-
    // The RayGenerator updates a Ray object so that it passes through the center of each pixel on the image plane
    RayGenerator rayGenerator(sceneDesc->getWidth(),
                              sceneDesc->getHeight(),
@@ -52,12 +50,12 @@ int main(int argc, char* argv[])
                              sceneDesc->getUpVec(),
                              sceneDesc->getFovy());
 
-   Ray ray(sceneDesc->getEye(), Vector(0, 0, 0));
-
    // The Film object stores the final colour of each pixel and coverts it from the [0, 1.0] range to the [0, 255] range,
    // so that it can be used to generate an image with the FreeImage library
    Film film(sceneDesc->getWidth(), sceneDesc->getHeight());
 
+   Sample sample;
+   Ray ray(sceneDesc->getEye(), Vector(0, 0, 0));
    Intersection intersection;
 
    // Loop over all the pixels in the image plane
