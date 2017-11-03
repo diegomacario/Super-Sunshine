@@ -62,7 +62,6 @@ int main(int argc, char* argv[])
    while(sampleGenerator.sampleIsAvailable())
    {
       sampleGenerator.generateSample(sample);
-
       rayGenerator.generateRay(sample, ray);
 
       // If the current ray intersects an object, we calculate the lighting at the intersection point and store the colour
