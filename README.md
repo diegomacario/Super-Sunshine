@@ -4,7 +4,7 @@
 
 # Super-Sunshine
 
-A recursive ray-tracer with a simple scene description language for easily generating beautiful images.
+A ray-tracer with a simple scene description language for easily generating beautiful images.
 
 <p align="center">
   <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/castle.gif"/>
@@ -60,7 +60,7 @@ tri 0 1 2
 tri 1 3 2
  ```
  
-You would then give your scene description to Super-Sunshine, which would use it to generate an image like the one below:
+You would then give your scene description to Super-Sunshine, which would read it and turn it into an image like the one below:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream_noon.png"/>
@@ -88,13 +88,11 @@ This project started out as a final assignment for Ravi Ramamoorthi's fantastic 
 
 All the code was written in C++, with a strong focus on making it clear and organized. The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
 
-The animations in this readme were edited using [FFmpeg](https://www.ffmpeg.org/) and [ImageMagick](https://www.imagemagick.org/script/index.php).
-
 ## Features
 
-As mentioned above, using Super-Sunshine involves two steps: first you must write a scene description, and then you must feed it to the ray-tracer by specifying its filename in the command-line.
+As mentioned above, using Super-Sunshine involves two steps: first you must write a scene description, and then you must give it to the ray-tracer by specifying its filename in the command-line.
  ```sh
- super_sunshine.exe scene.txt
+ super_sunshine scene.txt
  ```
 
 The scene description language developed for this project is very simple. In terms of syntax, all you need to know is that each line of a scene description can contain a single command, and that they all follow this format:
@@ -227,7 +225,7 @@ Additionally, the commands *__pushTransform__* and *__popTransform__* are also s
 Transformations can be intimidating at first, but play around with them for a while and they will start to make sense!
 
 ### 5) Lights
-Three types of light sources are currently supported. One of those types is singular (*__ambient light__*) while the other two (*__point lights__* and *__directional lights__*) can be created as many times as desired.
+Three types of light sources are currently supported. One of those types is singular (*__ambient light__*), while the other two (*__point lights__* and *__directional lights__*) can be created as many times as desired.
 
 #### 5.1) Ambient light
 
