@@ -96,7 +96,7 @@ The scene description language developed for this project is very simple. In ter
  ```
 Where each parameter is separated by at least one space.
 
-Once you are done writing a scene description, you can give it to the ray-tracer by specifying its filename in the command-line:
+Once you are done writing a scene description, you can give it to the ray-tracer by specifying its filename as a command-line parameter:
 ```sh
  super_sunshine scene.txt
  ```
