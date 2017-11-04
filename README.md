@@ -94,7 +94,7 @@ The scene description language developed for this project is very simple. In ter
 
 - Comments start with the number sign.
  ```sh
- # This is a comment!
+ # This is a comment.
  ```
 
 - Commands consist of a keyword followed by a series of parameters, each separated by at least one space.
