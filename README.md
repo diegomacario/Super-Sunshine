@@ -99,7 +99,7 @@ The scene description language developed for this project is very simple. In ter
 
 - Commands consist of a keyword followed by a series of parameters, each separated by at least one space.
  ```sh
- command parameter1 parameter2 ...
+ keyword parameter1 parameter2 ...
  ```
 
 Below you will find information on all the commands that are currently supported. They are separated into six different categories: Setup, Camera, Geometry, Transformations, Lights and Materials.
