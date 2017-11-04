@@ -98,7 +98,7 @@ Where each parameter is separated by at least one space.
 
 Once you are done writing a scene description, you can give it to the ray-tracer by specifying its filename as a command-line parameter:
 ```sh
- super_sunshine scene.txt
+ $ super_sunshine scene.txt
  ```
 
 Below you will find information on all the commands that are currently supported. They are separated into six different categories: Setup, Camera, Geometry, Transformations, Lights and Materials.
