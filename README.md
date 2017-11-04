@@ -92,12 +92,12 @@ All the code was written in C++, with a strong focus on making it clear and orga
 
 The scene description language developed for this project is very simple. In terms of syntax, you only need to know two things:
 
-- Comments start with a number sign.
+- Comments start with a number sign:
  ```sh
  # This is a comment.
  ```
 
-- Commands consist of a keyword followed by a series of parameters, each separated by at least one space.
+- Commands consist of a keyword followed by a series of parameters, each separated by at least one space:
  ```sh
  keyword parameter1 parameter2 ...
  ```
