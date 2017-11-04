@@ -102,7 +102,7 @@ The scene description language developed for this project is very simple. In ter
  keyword parameter1 parameter2 ...
  ```
 
-Below you will find information on all the commands that are currently supported. They are separated into six different categories: Setup, Camera, Geometry, Transformations, Lights and Materials.
+Below you will find information on all the commands that are currently supported. They are separated into six different categories: *__Setup__*, *__Camera__*, *__Geometry__*, *__Transformations__*, *__Lights__* and *__Materials__*.
 
 Note that once you are done writing a scene description, you can give it to the ray-tracer by specifying its filename as a command-line parameter:
  ```sh
