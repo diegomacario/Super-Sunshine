@@ -90,16 +90,16 @@ All the code was written in C++, with a strong focus on making it clear and orga
 
 ## Features
 
-As mentioned above, using Super-Sunshine involves two steps: first you must write a scene description, and then you must give it to the ray-tracer by specifying its filename in the command-line.
- ```sh
- super_sunshine scene.txt
- ```
-
 The scene description language developed for this project is very simple. In terms of syntax, all you need to know is that each line of a scene description can contain a single command, and that they all follow this format:
  ```sh
  command parameter1 parameter2 ...
  ```
 Where each parameter is separated by at least one space.
+
+Once you are done writing a scene description, you can give it to the ray-tracer by specifying its filename in the command-line:
+```sh
+ super_sunshine scene.txt
+ ```
 
 Below you will find information on all the commands that are currently supported. They are separated into six different categories: Setup, Camera, Geometry, Transformations, Lights and Materials.
 
