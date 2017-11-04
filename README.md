@@ -92,7 +92,7 @@ All the code was written in C++, with a strong focus on making it clear and orga
 
 The scene description language developed for this project is very simple. In terms of syntax, you only need to know two things:
 
-- Comments start with the number sign.
+- Comments start with a number sign.
  ```sh
  # This is a comment.
  ```
