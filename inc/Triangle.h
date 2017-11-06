@@ -23,7 +23,6 @@ class Triangle : public GeometricShape
 public:
 
    Triangle(const Point& vertexA, const Point& vertexB, const Point& vertexC, const Colour& ambient, Material* material);
-
    Triangle(const Point& vertexA, const Point& vertexB, const Point& vertexC, TextureDescription* textureDescription, Material* material);
    ~Triangle();
 
