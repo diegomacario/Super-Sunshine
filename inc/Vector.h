@@ -9,8 +9,8 @@ Description:
 
 Possible improvements:
 
-   - There are 3 versions of the dot() function. Two are provided here and one inside Point.h.
-     A template could be created to unify them and reduce code duplication.
+   - There are 3 versions of the dot() function. Two are provided here, and two inside Point.h.
+     A template could be created to unify them, reducing code duplication.
 */
 
 class Point;
