@@ -231,18 +231,20 @@ Additionally, the commands *__pushTransform__* and *__popTransform__* are also s
 Transformations can be intimidating at first, but play around with them for a while and they will start to make sense!
 
 ### 5) Lights
-Three types of light sources are currently supported. One of those types is singular (*__ambient light__*), while the other two (*__point lights__* and *__directional lights__*) can be created as many times as desired.
+Three different types of light sources are currently supported: *__ambient light__*, *__point lights__* and *__directional lights__*.
 
 #### 5.1) Ambient light
 
-Ambient light exists at all points in space and is propagated with equal intensity in all directions. Because of this, there can only be one ambient light in a scene. The command used to set the colour of this type of light is:
+Ambient light is the simplest type of light source. It models light that has been scattered and reflected many times by illuminating all the objects in a scene with equal intensity, regardless of their positions in space.
+
+The command used to set the colour of this type of light is:
  ```sh
  ambient r g b
  ```
 Where:
 - The *__RGB__* values, which can range from 0 to 1, determine the colour of the ambient light. If this command is not specified in a scene description, the colour of the ambient light defaults to (0.2, 0.2, 0.2).
 
-Note that even though there can only be one ambient light in a scene, it is possible to change the colour of said light in between the creation of geometric primitives. In other words, ambient light can be used to give primitives a base colour. Consider the following example, in which I create four spheres and modify the colour of the ambient light before creating each one:
+Since ambient light does not originate from a specific point in space or in a specific direction, one could say that there can only be one ambient light in a scene. If this is true, then what happens if you use the *__ambient__* command more than once in a scene description? The answer is simple: the colour of the ambient light changes, but the new colour only affects the geometric primitives created afterwards. For example, let's say I create four spheres and modify the colour of the ambient light before creating each one:
  ```sh
 # Left sphere (green)
 ambient 0.2 0.4 0.1
