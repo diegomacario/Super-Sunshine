@@ -235,16 +235,16 @@ Three types of light sources are currently supported: *__ambient light__*, *__po
 
 #### 5.1) Ambient light
 
-Ambient light is the simplest type of light source. It models light that has been scattered and reflected many times by illuminating all the objects in a scene with equal intensity, regardless of their positions in space.
+Ambient light is the simplest type of light source available. It illuminates all the objects in a scene with equal intensity, regardless of their positions or orientations in space. By doing this, it models the uniform illumination produced by rays of light that have been reflected many times.
 
-The command used to set the colour of this type of light is:
+The command used to set the colour of this type of light source is:
  ```sh
  ambient r g b
  ```
 Where:
-- The *__RGB__* values, which can range from 0 to 1, determine the colour of the ambient light. If this command is not specified in a scene description, the colour of the ambient light defaults to (0.2, 0.2, 0.2).
+- The *__RGB__* values, which can range from 0 to 1, determine the colour of the ambient light. Note that if this command is not specified in a scene description, the colour of the ambient light defaults to (0.2, 0.2, 0.2).
 
-Since ambient light does not originate from a specific point in space or in a specific direction, one could say that there can only be one ambient light in a scene. If this is true, then what happens if you use the *__ambient__* command more than once in a scene description? The answer is simple: the colour of the ambient light changes, but the new colour only affects the geometric primitives created afterwards. For example, let's say I create four spheres and modify the colour of the ambient light before creating each one:
+Now you might be wondering what would happen if you used the *__ambient__* command more than once in a scene description. After all, ambient light does not originate from a specific point in space or in a specific direction, so how could there be more than one ambient light in a scene? The answer is simple: each time you use the *__ambient__* command, you change the colour of the ambient light, but only for the geometric primitives created afterwards. For example, let's say I wrote a scene description where I create four spheres while I modify the colour of the ambient light:
  ```sh
 # Left sphere (green)
 ambient 0.2 0.4 0.1
@@ -263,7 +263,7 @@ ambient 0 0.262 0.344
 sphere 0 0.75 -2 0.5
  ```
 
-The resulting image is:
+The resulting image would look like this:
 <p align="center">
 <img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/four_spheres_ambient.png"/>
  <p align="center">
