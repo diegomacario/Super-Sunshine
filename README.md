@@ -231,7 +231,7 @@ Additionally, the commands *__pushTransform__* and *__popTransform__* are also s
 Transformations can be intimidating at first, but play around with them for a while and they will start to make sense!
 
 ### 5) Lights
-Three types of light sources are currently supported: *__ambient light__*, *__point lights__* and *__directional lights__*.
+Three types of light sources are currently supported:
 
 #### 5.1) Ambient light
 
@@ -242,7 +242,7 @@ The command used to set the colour of this type of light source is:
  ambient r g b
  ```
 Where:
-- The *__RGB__* values, which can range from 0 to 1, determine the colour of the ambient light. Note that if this command is not specified in a scene description, the colour of the ambient light defaults to (0.2, 0.2, 0.2).
+- The *__RGB__* values, which can range from 0 to 1, determine the colour of the ambient light.
 
 Now you might be wondering what would happen if you used the *__ambient__* command more than once in a scene description. After all, ambient light does not originate from a specific point in space or in a specific direction, so how could there be more than one ambient light in a scene? The answer is simple: each time you use the *__ambient__* command, you change the colour of the ambient light, but only for the geometric primitives created afterwards. For example, let's say I wrote a scene description where I create four spheres while I modify the colour of the ambient light:
  ```sh
