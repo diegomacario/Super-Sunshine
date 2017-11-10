@@ -231,10 +231,20 @@ Additionally, the commands *__pushTransform__* and *__popTransform__* are also s
 Transformations can be intimidating at first, but play around with them for a while and they will start to make sense!
 
 ### 5) Lights
-Three types of light sources are currently supported:
+
+<p align="center">
+  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/luggage3.png"/>
+</p>
+
+> __Salesman__: Have you thought much about luggage, Mr. Banks?
+
+> __Joe__: No, I never really have.
+
+> __Salesman__: It is the central preoccupation of my life.
+
+Replace the word *__luggage__* by *__light__*, and I quickly become the salesman in [that](https://www.youtube.com/watch?v=keuhmY3tQ1A) hilarious scene. I am obsessed with light, and with the perfection of electromagnetic waves in general, which is why I had a lot of fun learning to simulate ambient light, point lights and directional lights.
 
 #### 5.1) Ambient light
-
 Ambient light is the simplest type of light source available. It illuminates all the objects in a scene with equal intensity, regardless of their positions or orientations in space. By doing this, it models the uniform illumination produced by rays of light that have been reflected many times.
 
 The command used to set the colour of this type of light source is:
