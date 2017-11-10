@@ -245,7 +245,7 @@ Transformations can be intimidating at first, but play around with them for a wh
   <strong><em>Salesman</strong>: It is the central preoccupation of my life.</em>
 </p>
 
-Replace the word *__luggage__* by *__light__*, and I quickly become the salesman in [that](https://www.youtube.com/watch?v=keuhmY3tQ1A) hilarious scene. I am obsessed with light, and with the perfection of electromagnetic waves in general, which is why I had a lot of fun learning to simulate ambient light, point lights and directional lights.
+Replace the word *__luggage__* with the word *__light__*, and I quickly become the salesman in [that](https://www.youtube.com/watch?v=keuhmY3tQ1A) scene. I am obsessed with light, and with the perfection of electromagnetic waves in general, which is why I had a lot of fun learning to simulate ambient light, point lights and directional lights.
 
 #### 5.1) Ambient light
 Ambient light is the simplest type of light source available. It illuminates all the objects in a scene with equal intensity, regardless of their positions or orientations in space. By doing this, it models the uniform illumination produced by rays of light that have been reflected many times.
