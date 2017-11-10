@@ -239,11 +239,11 @@ Transformations can be intimidating at first, but play around with them for a wh
   <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/luggage3.png"/>
 </p>
 
-> __Salesman__: Have you thought much about luggage, Mr. Banks?
-
-> __Joe__: No, I never really have.
-
-> __Salesman__: It is the central preoccupation of my life.
+<p align="center">
+  <strong>Salesman</strong>: Have you thought much about luggage, Mr. Banks?<br />
+  <strong>Mr. Banks</strong>: No, I never really have.<br />
+  <strong>Salesman</strong>: It is the central preoccupation of my life.
+</p>
 
 Replace the word *__luggage__* by *__light__*, and I quickly become the salesman in [that](https://www.youtube.com/watch?v=keuhmY3tQ1A) hilarious scene. I am obsessed with light, and with the perfection of electromagnetic waves in general, which is why I had a lot of fun learning to simulate ambient light, point lights and directional lights.
 
