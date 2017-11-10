@@ -1,23 +1,26 @@
+<!---
 <p align="center">
   <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/sword_white_bg_360_frames_50_fps.gif"/>
 </p>
+-->
 
 # Super-Sunshine
 
 A ray-tracer with a simple scene description language for easily generating beautiful images.
-
+<!---
 <p align="center">
   <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/castle.gif"/>
 </p>
+-->
 
 ## Summary
 
 Super-Sunshine is a ray-tracer that can be easily interacted with. The diagram below illustrates the manner in which this interaction is meant to occur:
-
+<!---
 <p align="center">
   <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/summary.jpg"/>
 </p>
-
+-->
 As an example, let's say you wanted to render an image of three scoops of ice cream sitting in the middle of a desert. Using the scene description language developed for this project, you would start by writing a scene description like the following:
 
  ```sh
@@ -61,23 +64,23 @@ tri 1 3 2
  ```
  
 You would then give your scene description to Super-Sunshine, which would read it and turn it into an image like the one below:
-
+<!---
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream_noon.png"/>
  <p align="center">
   <em>Dessert on a desert!</em>
  </p>
 </p>
-
+-->
 As you can see, the scene description language makes it easy to play with the ray-tracer. As an additional benefit, it also enables you to generate animations through scripting; it is hard to believe how such a simple feature can lead to such stunning results:
-
+<!---
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/flower_120_degrees.gif"/>
  <p align="center">
   <em>A very narcissistic flower.</em>
  </p>
 </p>
-
+-->
 ## Technical details
 
 This project started out as a final assignment for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. Since then, it has continued to grow because it provides a great environment for experimenting with new computer graphics concepts. In its current form, the project consists of:
@@ -131,24 +134,24 @@ Where:
 - *__fovy__* is the field of view in the Y direction.
 
 In the animation below, the *__from__* point is rotated along a 45° arc while the *__at__* point remains fixed at the center of the pyramid's base.
-
+<!---
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/pyramid_green_big.gif"/>
  <p align="center">
   <em>A lonely pyramid.</em>
  </p>
 </p>
-
+-->
 ### 3) Geometry
 Two geometric primitives are currently supported: *__spheres__* and *__triangles__*. Two doesn't sound like much, but remember you can make any shape with just triangles:
-
+<!---
 <p align="center">
 <img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/stanford_dragon.png"/>
  <p align="center">
   <em>This rendering of the Stanford Dragon is made out of 100 thousand triangles (scene description from CSE167x).</em>
  </p>
 </p>
-
+-->
 A sphere is created using this command:
  ```sh
  sphere centerx centery centerz radius
@@ -183,14 +186,14 @@ Where:
  - *__scale__* scales a geometric primitive by *__x__*, *__y__* and *__z__* units along the X, Y and Z axes, respectively.
  
 The image below illustrates a simple use case of these transformations:
-
+<!---
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/tralfamadore.png"/>
  <p align="center">
   <em>The planet Tralfamadore.</em>
  </p>
 </p>
-
+-->
 You might be surprised to learn that...
 
 - The rings are made out of spheres that were squashed along the Y axis using the scale command.
@@ -295,14 +298,14 @@ Where:
 - *__point__* is the command used to create a point light at point *__pos__*. The colour of the emitted light is determined by the *__RGB__* values.
 
 If you wanted the intensity of a point light to decrease linearly with the distance from its origin, you would set the attenuation coefficients to (0, 1, 0). If you wanted it to decrease quadratically, you would use (0, 0, 1). Note that you can also combine the different forms of attenuation and use coefficients larger than 1 to make the intensity of a point light decrease even faster. The animation below contains two quadratically-attenuated point lights (one at the upper-left corner and the other at the lower-right corner):
-
+<!---
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/rupee_360_frames_50_fps.gif"/>
  <p align="center">
   <em>A green rupee from Ocarina of Time!</em>
  </p>
 </p>
-
+-->
 #### 5.3) Directional lights
 
 Directional lights are considered to be placed infinitely far away, which is why they only emit light in a single direction and are not affected by attenuation. The command used to create this type of light is:
@@ -383,18 +386,19 @@ If you are interested in learning more about computer graphics, I recommend you 
 - [Real-Time Rendering](http://www.realtimerendering.com/): This book, written by Tomas Akenine-Möller, Eric Haines and Naty Hoffman, is absolutely invaluable. It compiles hundreds of sources and presents them with brilliant clarity. It truly astonishes with its scope.
 
 I think building a ray-tracer is a really fun project because all the effort you put into it yields actual images that you can marvel at. Just the sheer excitement of generating your first image will keep you motivated while you learn new things! I felt elated when Super-Sunshine spat this out:
-
+<!---
 <p align="center">
 <img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/first_image.png"/>
  <p align="center">
   <em>The first image generated by Super-Sunshine.</em>
  </p>
 </p>
-
+-->
 ## Dedication
 
 This last image is for Venezuela and all of its citizens.
-
+<!---
 <p align="center">
 <img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/bandera.png"/>
 </p>
+-->
