@@ -240,9 +240,9 @@ Transformations can be intimidating at first, but play around with them for a wh
 </p>
 
 <p align="center">
-  <strong>Salesman</strong>: Have you thought much about luggage, Mr. Banks?<br />
-  <strong>Mr. Banks</strong>: No, I never really have.<br />
-  <strong>Salesman</strong>: It is the central preoccupation of my life.
+  <strong><em>Salesman</strong>: Have you thought much about luggage, Mr. Banks?</em><br />
+  <strong><em>Mr. Banks</strong>: No, I never really have.</em><br />
+  <strong><em>Salesman</strong>: It is the central preoccupation of my life.</em>
 </p>
 
 Replace the word *__luggage__* by *__light__*, and I quickly become the salesman in [that](https://www.youtube.com/watch?v=keuhmY3tQ1A) hilarious scene. I am obsessed with light, and with the perfection of electromagnetic waves in general, which is why I had a lot of fun learning to simulate ambient light, point lights and directional lights.
