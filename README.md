@@ -288,7 +288,7 @@ The resulting image looks like this:
  </p>
 </p>
 
-This behaviour is very particular, but it is convenient in the context of a ray-tracer. Just remember that when you create a geometric primitive, it stores the current colour of the ambient light, just as it stores the current transformations and material properties.
+This behaviour is very particular, but it is convenient in the context of a ray-tracer. Just remember that when you create a geometric primitive, it stores the current colour of the ambient light, just as it stores the current transformations and material properties. Also note that if you do not specify the colour of the ambient light, it defaults to (0.2, 0.2, 0.2).
 
 #### 5.2) Point lights
 
