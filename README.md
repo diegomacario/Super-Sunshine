@@ -297,7 +297,7 @@ A point light is a light source with two defining characteristics:
 - It emits light in all directions from a specific point in space.
 - The intensity of the light it emits decreases with the distance from its origin.
 
-The second bullet point describes what is known as distance falloff or attenuation, which is a phenomenon that you see every day: objects that are close to a light source are illuminated brightly, while those that are far away are not. In nature, this reduction of intensity happens quadratically. In Super-Sunshine, you can choose to have no attenuation, or to have it happen in a constant, linear or quadratic manner.
+The second bullet point describes what is known as distance falloff or attenuation, which is a phenomenon that you see every day: objects that are close to a light source are illuminated brightly, while those that are far away are not. In nature, this reduction of intensity happens quadratically. In Super-Sunshine, you can choose to have no attenuation, or to have it act in a constant, linear or quadratic manner.
 
 The commands used to create a point light are:
  ```sh
