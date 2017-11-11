@@ -252,16 +252,16 @@ Thankfully, we don't have to worry about those equations, because a ray-tracer's
 These are all light sources with different behaviours, which is why each one is modeled differently. The three subsections below will give you some background on how this is done, and they will teach you how to create light sources like the ones described above.
 
 #### 5.1) Ambient light
-Ambient light is the simplest type of light source available. It illuminates all the objects in a scene with equal intensity, regardless of their positions or orientations in space. By doing this, it models the uniform illumination produced by rays of light that have been reflected many times.
+Ambient light is the simplest light source available. Once included in a scene, it illuminates all geometric primitives with equal intensity, regardless of their positions or orientations in space. By doing this, it models the uniform illumination produced by rays of light that have been reflected many times.
 
-The command used to set the colour of this type of light source is:
+The command used to set the colour of this light source is:
  ```sh
  ambient r g b
  ```
 Where:
 - The *__RGB__* values, which can range from 0 to 1, determine the colour of the ambient light.
 
-Now you might be wondering what would happen if you used the *__ambient__* command more than once in a scene description. After all, ambient light does not originate from a specific point in space or in a specific direction, so how could there be more than one ambient light in a scene? The answer is simple: each time you use the *__ambient__* command, you change the colour of the ambient light, but only for the geometric primitives created afterwards. For example, let's say I wrote a scene description where I create four spheres while I modify the colour of the ambient light:
+Once the colour is set, it applies to all the geometric primitives created afterwards. Unless, of course, you change it using the *__ambient__* command again, in which case the new colour begins to apply. As an example of this, consider the following snippet, in which I create four spheres under four different ambient light colours:
  ```sh
 # Left sphere (green)
 ambient 0.2 0.4 0.1
@@ -280,7 +280,7 @@ ambient 0 0.262 0.344
 sphere 0 0.75 -2 0.5
  ```
 
-The resulting image would look like this:
+The resulting image looks like this:
 <p align="center">
 <img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/four_spheres_ambient.png"/>
  <p align="center">
@@ -288,7 +288,7 @@ The resulting image would look like this:
  </p>
 </p>
 
-This behaviour is very particular, but it is convenient in the context of a ray-tracer. Just remember that settings like the ambient light, the attenuation and the material properties are all maintained by a state machine. Once they are set, they affect all the lights and geometric primitives created afterwards. If you want different lights or primitives to have different appearances, you need to change these settings before creating them.
+This behaviour is very particular, but it is convenient in the context of a ray-tracer. Just remember that when you create a geometric primitive, it stores the current colour of the ambient light, just as it stores the current transformations and material properties.
 
 #### 5.2) Point lights
 
