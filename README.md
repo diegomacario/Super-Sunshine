@@ -247,7 +247,7 @@ Transformations can be intimidating at first, but play around with them for a wh
 
 Replace the word *__luggage__* with the word *__light__*, and you could say that I am the salesman in [that](https://www.youtube.com/watch?v=keuhmY3tQ1A) scene. My obsession with light is so bad, in fact, that I had to rewrite this section about a dozen times, because I kept going off track talking about Maxwell’s equations.
 
-Thankfully, we don't have to worry about those equations, because a ray-tracer's approach to modeling light is very simple. What we do have to worry about are the different types of light sources that we can have in a scene. As an experiment, look around and count the number light sources that you see. Perhaps you are sitting next to a window, and sunlight is pouring in through it. Maybe there's a lamp close by with a warm lightbulb. Or a few shiny surfaces that reflect the light emitted by other sources.
+Thankfully, we don't have to worry about those equations, because a ray-tracer's approach to modeling light is very simple. What we do have to worry about are the different types of light sources that we can have in a scene. As an experiment, look around and count the number light sources that you see. Perhaps you are sitting next to a window, and sunlight is pouring in through it. Maybe there's a lamp close by with a warm light bulb. Or a few shiny surfaces that reflect the light emitted by other sources.
 
 These are all light sources with different behaviours, which is why each one is modeled differently. The three subsections below will give you some background on how this is done, and they will teach you how to create light sources like the ones described above.
 
@@ -288,7 +288,7 @@ The resulting image would look like this:
  </p>
 </p>
 
-This behaviour is very particular, but it is convenient in the context of a ray-tracer. Just remember that settings like the ambient light, the attenuation and the material properties are all maintained by a state machine. Once they are set, they affect all the lights and geometric primitives created afterwards. If you want different lights or primitives to have different appeareances, you need to change these settings before creating them.
+This behaviour is very particular, but it is convenient in the context of a ray-tracer. Just remember that settings like the ambient light, the attenuation and the material properties are all maintained by a state machine. Once they are set, they affect all the lights and geometric primitives created afterwards. If you want different lights or primitives to have different appearances, you need to change these settings before creating them.
 
 #### 5.2) Point lights
 
