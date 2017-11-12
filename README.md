@@ -245,7 +245,7 @@ Transformations can be intimidating at first, but play around with them for a wh
   <strong><em>Salesman</strong>: It is the central preoccupation of my life.</em>
 </p>
 
-Replace the word *__luggage__* with the word *__light__*, and you could say that I am the salesman in [that](https://www.youtube.com/watch?v=keuhmY3tQ1A) scene. My obsession with light is so bad, in fact, that I had to rewrite this section about a dozen times, because I kept going off track talking about Maxwell’s equations. Thankfully, we don't have to worry about those equations, because a ray-tracer's approach to modeling light is very simple.
+Replace the word *__luggage__* with the word *__light__*, and you could say that I am the salesman in [that](https://www.youtube.com/watch?v=keuhmY3tQ1A) scene. My obsession with light is so bad, in fact, that I had to rewrite this section about a dozen times, because I kept going off track talking about Maxwell’s equations. Thankfully, we do not have to worry about those equations, because a ray-tracer's approach to modeling light is very simple.
 
 What we do have to worry about are the different types of light sources that we can have in a scene. As an experiment, look around you and take note of all the light sources that you see. Perhaps you are sitting next to a window, and sunlight is pouring in through it. Maybe there is a lamp close by with a warm light bulb. Or a few shiny surfaces that reflect the light emitted by other sources. These are all light sources with different behaviours, which is why each one is modeled differently. The three subsections below will give you some background on how this is achieved, and they will teach you how to create light sources like the ones you observed around you.
 
@@ -336,7 +336,7 @@ Before moving on to the material properties, consider this question: what type o
 When I was first asked that question, my answer was: "Well ambient light of course! When you are outside, the sun illuminates everything around you uniformly". This seemed natural to me, but let's think about it carefully: 
 
 - The sun is 149.6 million kilometers away from earth. Because this distance is so large, we can think of the sun as a point light that has been placed infinitely far away (at least until humanity figures out how to travel at the speed of light, in which case no distance will be too large).
-- The position of the sun affects the way it illuminates objects. Things don't look the same at dawn and at noon, do they?
+- The position of the sun affects the way it illuminates objects. Things do not look the same at dawn and at noon, do they?
 
 Now it seems a lot more natural to use a directional light!
 
