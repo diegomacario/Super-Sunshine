@@ -343,6 +343,7 @@ When I was first asked that question, my answer was: "Well ambient light of cour
 Now it seems a lot more natural to use a directional light!
 
 ### 6) Materials
+Super-Sunshine uses the Blinn-Phong shading model to compute the colour of each point in a scene. The focus of this section is to provide you with practical information on how to generate images using the commands that control said model. If you are interested in the theory behind it, I recommend that you read [these](https://courses.cs.washington.edu/courses/cse457/11au/lectures/markup/shading_wide-markup.pdf) slides.
 
 ## Future Improvements
 
@@ -361,7 +362,7 @@ If you are interested in learning more about computer graphics, I recommend you 
 - [CSE167x](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2): This EDX course is taught by Ravi Ramamoorthi. It covers the basic linear algebra concepts you need to understand computer graphics, as well as the derivations of many fundamental equations. It uses OpenGL to illustrate the concepts discussed in the lectures, and the final project consists of building a big part of what this readme describes!
 - [Learn OpenGL](https://learnopengl.com/): This site is maintained by Joey de Vries. It teaches computer graphics with OpenGL, and it is full of excellent examples and diagrams!
 - [Scratch a Pixel](https://www.scratchapixel.com/): This site is similar to the previous one, and it has a section that covers the basics of ray-tracing!
-- [Real-Time Rendering](http://www.realtimerendering.com/): This book, written by Tomas Akenine-Möller, Eric Haines and Naty Hoffman, is absolutely invaluable. It compiles hundreds of sources and presents them with brilliant clarity. It truly astonishes with its scope.
+- [Real-Time Rendering](http://www.realtimerendering.com/): This book, written by Tomas Akenine-Möller, Eric Haines and Naty Hoffman, is absolutely invaluable. It compiles hundreds of sources and presents them with brilliant clarity.
 
 I think building a ray-tracer is a really fun project because all the effort you put into it yields actual images that you can marvel at. Just the sheer excitement of generating your first image will keep you motivated while you learn new things! I felt elated when Super-Sunshine spat this out:
 <!---
