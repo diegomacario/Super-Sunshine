@@ -343,7 +343,7 @@ When I was first asked that question, my answer was: "Well ambient light of cour
 Now it seems a lot more natural to use a directional light!
 
 ### 6) Materials
-Super-Sunshine uses the *__Blinn-Phong shading model__* to compute the colour of each point in a scene. This model divides lighting calculations into four independent terms (*__emissivity__*, *__ambient light__*, *__diffuse reflection__* and *__specular reflection__*), which are added to render the final appearance of a geometric primitive.
+Super-Sunshine uses the *__Blinn-Phong shading model__* to compute the colour of each point in a scene. This model divides lighting calculations into four independent terms (*__emissivity__*, *__ambient light__*, *__diffuse reflection__* and *__specular reflection__*), which are added to render the final appearance of a scene.
 
 The three subsections below will teach you how to modify the variables that the Blinn-Phong shading model uses to perform lighting calculations. If you are interested in the theory behind this model, I recommend that you read [these](https://courses.cs.washington.edu/courses/cse457/11au/lectures/markup/shading_wide-markup.pdf) slides.
 
@@ -358,7 +358,9 @@ Where:
 When the Blinn-Phong model is computing the colour of a specific point on a geometric primitive, it starts by adding up the ambient light colour and the emissivity associated with that primitive.
 
 #### 6.2) Diffuse reflection
+Using the ambient light and the emissivity, we are able to render geometric primitives that are coloured uniformly. While this is nice, everything does look totally flat! What we need now is some depth perception. This is where the diffuse colour comes into play:
 
+Picture a ray of light being emitted by a point light and striking a geometric primitive at a specific point. By measuring the angle between the incident ray of light and the normal of the surface at the point, we can determine how the point is illuminated. If the angle is equal to 0°, the normal and the ray align, which means that the surface faces the light source directly at the point. In this scenario, the point would be illuminated with the maximum brightness that the light source can provide at the given distance. If the angle is equal to 90°, the normal and the ray are perpendicular, which means that the surface is parallel to the light source at the point. In this scenario, the point would not be illuminated at all.
 
 #### 6.3) Specular reflection
 
