@@ -289,7 +289,6 @@ The resulting image looks like this:
 This behaviour is very particular, but it is convenient in the context of a ray-tracer. Just remember that when you create a geometric primitive, it stores the current colour of the ambient light, just as it stores the current transformations and material properties. Also note that if you do not specify the colour of the ambient light, it defaults to (0.2, 0.2, 0.2).
 
 #### 5.2) Point lights
-
 A point light is a light source with two defining characteristics:
 
 - It emits light in all directions from a specific point in space.
@@ -319,23 +318,27 @@ The animation below contains two quadratically-attenuated point lights (one at t
  </p>
 </p>
 -->
-#### 5.3) Directional lights
 
-Directional lights are considered to be placed infinitely far away, which is why they only emit light in a single direction and are not affected by attenuation. The command used to create this type of light is:
+#### 5.3) Directional lights
+A directional light is commonly viewed as an unattenuated point light that has been placed infinitely far away. Because this point light is so far away, the rays of light it emits arrive parallel to each other at any given scene. This means that a directional light has one defining characteristic: it only emits light in a single direction.
+
+The command used to create a directional light is:
  ```sh
  directional dirx diry dirz r g b
  ```
 Where:
 - *__dir__* is the vector that defines the direction in which light is emitted, while the *__RGB__* values determine the colour of the light.
 
+---
+
 Before moving on to the material properties, consider this question: what type of light source would you use to model sunlight?
 
-When I was first asked that question, my answer was: "Well ambient light of course! When you are outside, the sun illuminates everything around you uniformly". This seemed natural to me, but let's think about it scientifically: 
+When I was first asked that question, my answer was: "Well ambient light of course! When you are outside, the sun illuminates everything around you uniformly". This seemed natural to me, but let's think about it carefully: 
 
-- The sun is 149.6 million kilometers away from earth. Because this distance is so large, we can think of the sun as a light source that is placed infinitely far away (at least until humanity figures out how to travel at the speed of light, in which case no distance will be too large).
+- The sun is 149.6 million kilometers away from earth. Because this distance is so large, we can think of the sun as a point light that has been placed infinitely far away (at least until humanity figures out how to travel at the speed of light, in which case no distance will be too large).
 - The position of the sun affects the way it illuminates objects. Things don't look the same at dawn and at noon, do they?
 
-Now it seems a lot more natural to use a directional light! It's fun to think about things scientifically. Another fun question: why is the sky blue?
+Now it seems a lot more natural to use a directional light!
 
 ### 6) Materials
 If you have ever taken a class that covered electromagnetic waves, you are probably familiar with this description of what happens when a ray of light hits a surface:
