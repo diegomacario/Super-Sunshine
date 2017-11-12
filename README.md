@@ -343,7 +343,7 @@ When I was first asked that question, my answer was: "Well ambient light of cour
 Now it seems a lot more natural to use a directional light!
 
 ### 6) Materials
-Super-Sunshine uses the *__Blinn-Phong shading model__* to compute the colour of each point in a scene. This model breaks down lighting calculations into four independent terms (*__emissivity__*, *__ambient light__*, *__diffuse reflection__* and *__specular reflection__*), which are added to render the final appearance of a geometric primitive.
+Super-Sunshine uses the *__Blinn-Phong shading model__* to compute the colour of each point in a scene. This model divides lighting calculations into four independent terms (*__emissivity__*, *__ambient light__*, *__diffuse reflection__* and *__specular reflection__*), which are added to render the final appearance of a geometric primitive.
 
 The three subsections below will teach you how to modify the variables that the Blinn-Phong shading model uses to perform lighting calculations. If you are interested in the theory behind this model, I recommend that you read [these](https://courses.cs.washington.edu/courses/cse457/11au/lectures/markup/shading_wide-markup.pdf) slides.
 
