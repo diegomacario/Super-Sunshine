@@ -343,46 +343,6 @@ When I was first asked that question, my answer was: "Well ambient light of cour
 Now it seems a lot more natural to use a directional light!
 
 ### 6) Materials
-If you have ever taken a class that covered electromagnetic waves, you are probably familiar with this description of what happens when a ray of light hits a surface:
-
-> A part of the incident ray is absorbed by the surface, while another part is reflected off of it. If the surface is smooth, the angle of incidence is equal to the angle of reflection. If it is rough, the direction of the reflected ray depends on the micro structure of the material that makes up the surface. Some of the incident light is also transmitted into the surface, where it gets refracted and continues propagating.
-
-This is a very simple, yet powerful model. By specifying material properties such as indices of refraction, attenuation coefficients and reflection coefficients, among many others, it enables us to trace the path of a ray of light as it propagates through different media. It is also very flexible in terms of its applications, commonly being used as a tool in optical design. The application we are interested in, however, is image generation. So we need to ask ourselves: how can this model be adapted to produce "realistic" images on a computer? One good way to approach this question is to start with the results we wish to obtain, and work our way backwards. So let's look at what happens in nature:
-
-Hold an apple in front of you and think about how light interacts with it. What details depend on the position of the light sources? Do any of them depend on your position as an observer? Now try this experiment again with something shinier. Do you notice any reflections?
-
-I think there are three visual effects that stand out in these experiments:
-
-1. A surface that faces a light source is brighter than one that is angled with respect to the light source.
-2. A shiny surface presents specular highlights.
-3. A mirror surface shows the reflections of other objects.
-
-(Note that I did not mention translucency, transparency, refraction or any other effects that involve the transmission of light into different media, because they are not supported by Super-Sunshine yet. Come back in a few weeks and you will hopefully find an expanded discussion!)
-
-Let's break these visual effects down into their basic components (this will help me illustrate how to use Super-Sunshine, and it will give you an understanding of how it works):
-
-The first one is the simplest of the three. I like to approach it by thinking about the following situation:
-
-Imagine you have a scene that contains a single light source and a single surface. Now let's say you choose a point on the surface. How do you determine how brightly the light source illuminates that point?
-
-To answer this question, we need to take two parameters into account:
-
-- The distance between the light source and the point.
-- The orientation of the surface with respect to the light source at the point.
-
-The consequences of the first parameter are already taken care of by the attenuation associated with the light source: as the distance between the light source and the point increases, the brightness of the light decreases.
-
-The second parameter is the one that enables us to simulate the visual effect we are examining. Picture a ray of light being emitted by the light source and striking the surface at the point you chose. By measuring the angle between the incident ray of light and the normal of the surface at the point, we can determine how the point is illuminated. If the angle is equal to 0°, the normal and the ray align, which means that the surface faces the light source directly at the point. In this scenario, the point would be illuminated with the maximum brightness that the light source can provide at the given distance. If the angle is equal to 90°, the normal and the ray are perpendicular, which means that the surface is parallel to the light source at the point. In this scenario, the point would not be illuminated at all.
-
-Measuring this angle at every point that is struck by a ray of light, and adding up the contributions of all the light sources in a scene, allows us to determine how an entire surface is illuminated.
-
-Note that so far I have talked about varying the brightness of light sources based on the angle described above. I intentionally used the word "brightness" because it makes everything easier to visualize, but that is not how things are implemented on a computer. In the case of Super-Sunshine, instead of varying the brightness of the light sources, we vary the intensity of a particular colour, which you can define for every object you create. To set this colour, use the following command:
- ```sh
- diffuse r g b
- ```
-Note that the name *__diffuse__* comes from the official name of the model behind this effect: *__The Lambertian or Diffuse Reflectance Model__*. Using this model we can achieve images like the ones presented below:
-
-The second effect is a little more complicated than the first one. When I asked you to look at an apple a few minutes ago, you might have noticed that the positions of its specular highlights depended on your position as an observer. If you haven't eaten your apple yet, place it on a table and walk around it. You will see the specular highlights "slide" on its surface as you walk. This means that to simulate this effect we need to take into account the positions of the light sources and of the camera.
 
 ## Future Improvements
 
