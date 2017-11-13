@@ -258,9 +258,9 @@ The command used to set the colour of this light source is:
  ```sh
  ambient r g b
  ```
-Where the *__RGB__* values, which can range from 0 to 1, determine the colour of the ambient light.
+Where the *__RGB__* values can range from 0 to 1.
 
-Once the colour is set, it applies to all the geometric primitives created afterwards. Unless, of course, you change it using the *__ambient__* command again, in which case the new colour begins to apply. As an example of this, consider the following snippet, in which I create four spheres under four different ambient light colours:
+Once the colour is set, it begins to apply to all the geometric primitives created afterwards. Unless, of course, you change it by using the *__ambient__* command again, in which case the new colour begins to apply. As an example of this, consider the following snippet, in which I create four spheres under four different ambient light colours:
  ```sh
 # Left sphere (green)
 ambient 0.2 0.4 0.1
