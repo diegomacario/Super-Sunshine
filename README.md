@@ -298,7 +298,7 @@ A point light is a light source with two defining characteristics:
 
 The second bullet point describes what is known as *__distance falloff__* or *__attenuation__*, which is a phenomenon that you see every day: objects that are close to a light source are illuminated brightly, while those that are far away are not.
 
-In nature, this reduction in the intensity of a ray of light occurs quadratically, that is, with the square of the distance from the ray's origin. In Super-Sunshine, you can choose to have the intensity not decrease at all, or to have it decrease in a constant, linear or quadratic manner.
+In nature, this reduction in the intensity of a ray of light occurs quadratically, that is, with the square of the distance from its origin. In Super-Sunshine, you can choose to have the intensity not decrease at all, or to have it decrease in a constant, linear or quadratic manner.
 
 The commands used to create a point light with a specific form of attenuation are:
  ```sh
