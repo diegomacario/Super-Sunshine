@@ -385,7 +385,7 @@ Picture a ray of light being emitted by a point light and striking a geometric p
 </p>
 
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_specular.png"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_specular_10.png"/>
  <p align="center">
   <em>4</em>
  </p>
