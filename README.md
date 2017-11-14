@@ -295,7 +295,7 @@ A point light is a light source with two defining characteristics:
 - It emits light in all directions from a specific point in space.
 - The intensity of the light it emits decreases with the distance from its origin.
 
-The second bullet point describes what is known as *__distance falloff__* or *__attenuation__*, which is a phenomenon that you see every day: objects that are close to a light source are illuminated brightly, while those that are far away are not. In nature, this reduction in the intensity of a ray of light occurs quadratically, that is, with the square of the distance from its origin. In Super-Sunshine, you can choose to have the intensity not decrease at all, or to have it decrease in a constant, linear or quadratic manner.
+The second bullet point describes what is known as *__distance falloff__* or *__attenuation__*, which is a phenomenon whose consequences you see every day: objects that are close to a light source are illuminated brightly, while those that are far away are not. In nature, this reduction in the intensity of a ray of light occurs quadratically, that is, with the square of the distance from its origin. In Super-Sunshine, you can choose to have the intensity not decrease at all, or to have it decrease in a constant, linear or quadratic manner.
 
 The commands used to create a point light with a specific form of attenuation are:
  ```sh
@@ -303,7 +303,7 @@ The commands used to create a point light with a specific form of attenuation ar
  point posx posy posz r g b
  ```
 Where:
-- *__attenuation__* is the command used to define the way in which the intensity of light decreases. A point light with no attenuation has a *__constant__* coefficient of 1, and *__linear__*/*__quadratic__* coefficients of 0 (these are the default values, just as in OpenGl).
+- *__attenuation__* is the command used to define the way in which light is attenuated. By default, there is no attenuation, which means that the attenuation coefficients are equal to (1, 0, 0).
 - *__point__* is the command used to create a point light at point *__pos__*. The colour of the emitted light is determined by the *__RGB__* values.
 
 If you wanted the intensity of the light emitted by a point light to decrease linearly with the distance from its origin, you would set the attenuation coefficients to (0, 1, 0). If you wanted it to decrease quadratically, you would use (0, 0, 1). Note that you can also combine the different forms of attenuation and use coefficients larger than 1 to make the intensity decrease even faster. Also note that you can create multiple point lights with different attenuations by changing the attenuation before creating each one.
