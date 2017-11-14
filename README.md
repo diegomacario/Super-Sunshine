@@ -363,6 +363,69 @@ Picture a ray of light being emitted by a point light and striking a geometric p
 
 #### 6.3) Specular reflection
 
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_ambient_&_emission.png"/>
+ <p align="center">
+  <em>1</em>
+ </p>
+</p>
+
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse.png"/>
+ <p align="center">
+  <em>2</em>
+ </p>
+</p>
+
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_ambient_&_emission_&_diffuse.png"/>
+ <p align="center">
+  <em>3</em>
+ </p>
+</p>
+
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_specular.png"/>
+ <p align="center">
+  <em>4</em>
+ </p>
+</p>
+
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_full_10.png"/>
+ <p align="center">
+  <em>5</em>
+ </p>
+</p>
+
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_full_1000.png"/>
+ <p align="center">
+  <em>6</em>
+ </p>
+</p>
+
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/four_spheres_single_reflections_all.png"/>
+ <p align="center">
+  <em>7</em>
+ </p>
+</p>
+
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/four_spheres_multiple_reflections_all.png"/>
+ <p align="center">
+  <em>8</em>
+ </p>
+</p>
+
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/four_spheres_multiple_reflections_only_blue.png"/>
+ <p align="center">
+  <em>9</em>
+ </p>
+</p>
+
 
 ## Future Improvements
 
