@@ -342,33 +342,32 @@ When I was first asked that question, my answer was: "Well ambient light of cour
 Now it seems a lot more natural to use a directional light!
 
 ### 6) Materials
-Super-Sunshine uses the *__Blinn-Phong shading model__* to compute the colour of each point in a scene. This model divides lighting calculations into four independent terms (*__emissivity__*, *__ambient light__*, *__diffuse reflection__* and *__specular reflection__*), which are added to render the final appearance of a scene.
+Super-Sunshine uses the *__Blinn-Phong shading model__* to compute the colours of the geometric primitives in a scene. In this section, I will illustrate how this model works by walking you through the steps that are carried out to render the following scene:
 
-The three subsections below will teach you how to modify the variables that the Blinn-Phong shading model uses to perform lighting calculations. If you are interested in the theory behind this model, I recommend that you read [these](https://courses.cs.washington.edu/courses/cse457/11au/lectures/markup/shading_wide-markup.pdf) slides.
+As you can see, the scene is composed of a single point light and a single sphere. The poing light emits white light, which means that its colour is (1, 1, 1), and it is not affected by any form of attenuation. For the material properties, I will unveil them as we run into them. So let's get to it!
 
-#### 6.1) Emissivity and ambient light
-Remember ambient light from section 5.1? Well emissivity acts exactly like it, but it represents something entirely different: while ambient light models the illumination produced by rays of light that have been reflected many times, emissivity is simply the intrinsic colour of an object. The command used to set this property is:
+#### Step 1: Ambient light and emissivity.
+
+The first thing we need to do is check if the sphere has an associated ambient light colour and emissivity. You already know where the ambient light colour comes from and how it behaves, but what about the emissivity? This material property models the intrinsic colour of an object. It behaves exactly like ambient light, and it is set using the following command:
  ```sh
  emission r g b
  ```
-Where:
- - The *__RGB__* values determine the colour of the emissivity.
+Where the *__RGB__* values determine the colour of the emissivity.
 
-When the Blinn-Phong model is computing the colour of a specific point on a geometric primitive, it starts by adding up the ambient light colour and the emissivity associated with that primitive.
+Let's say that the sphere in our scene has an ambient light colour of (0, 0, 0.125) and an equal emissivity. These two values added together form the base colour of the entire sphere. Since the addition of colours is performed component-wise, the result is (0, 0, 0.25), which corresponds to dark blue.
 
-#### 6.2) Diffuse reflection
-Using the ambient light and the emissivity, we are able to render geometric primitives that are coloured uniformly. While this is nice, everything does look totally flat! What we need now is some depth perception. This is where the diffuse colour comes into play:
-
-Picture a ray of light being emitted by a point light and striking a geometric primitive at a specific point. By measuring the angle between the incident ray of light and the normal of the surface at the point, we can determine how the point is illuminated. If the angle is equal to 0°, the normal and the ray align, which means that the surface faces the light source directly at the point. In this scenario, the point would be illuminated with the maximum brightness that the light source can provide at the given distance. If the angle is equal to 90°, the normal and the ray are perpendicular, which means that the surface is parallel to the light source at the point. In this scenario, the point would not be illuminated at all.
-
-#### 6.3) Specular reflection
+The image below illustrates what the sphere looks like under the conditions we have specified so far:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_ambient_&_emission.png"/>
  <p align="center">
-  <em>1</em>
+  <em>Ambient light + Emissivity</em>
  </p>
 </p>
+
+#### Step 2: Diffuse reflections.
+
+#### Step 3: Specular reflections.
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse.png"/>
