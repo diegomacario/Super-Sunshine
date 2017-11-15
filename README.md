@@ -354,7 +354,7 @@ The first thing we need to do is check if the sphere has an associated ambient l
  ```
 Where the *__RGB__* values determine the colour of the emissivity.
 
-Let's say that the sphere in our scene has an ambient light colour of (0, 0, 0.125) and an equal emissivity. These two values added together form the base colour of the entire sphere. Since the addition of colours is performed component-wise, the result is (0, 0, 0.25), which corresponds to dark blue.
+Let's say that the sphere in our scene has an ambient light colour of (0, 0, 0.125) and an equal emissivity. These two values added together form the base colour of the entire sphere. Since colour addition is performed component-wise, the result is (0, 0, 0.25), which corresponds to dark blue.
 
 The image below illustrates what the sphere looks like under the conditions we have specified so far:
 
@@ -367,7 +367,7 @@ The image below illustrates what the sphere looks like under the conditions we h
 
 #### Step 2: Diffuse reflections.
 
-The image above is pretty, but things look a little flat, don't they? This is where we need to ask ourselves a fundamental question: how can we enable depth perception? The answer is surprisingly simple: we need the parts of the sphere that are exposed to the point light to be illuminated brightly, and the ones that are not to be in shadows. But how do we do this on a computer?
+The image above is pretty, but things look a little flat, don't they? This is where we need to ask ourselves a fundamental question: how can we enable depth perception? The answer is surprisingly simple: we need the parts of the sphere that are exposed to the point light to be illuminated brightly, and the ones that are not to be in shadows. But how do we achieve this on a computer?
 
 The best way to approach this question is to only consider a single point on the sphere, so let's say we wanted to determine how brightly the point at the very top of the sphere is illuminated. The diagram below illustrates how said point is struck by a ray of light:
 
