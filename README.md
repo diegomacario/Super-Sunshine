@@ -367,7 +367,7 @@ The image below illustrates what the sphere looks like under the conditions we h
 
 #### Step 2: Diffuse reflections.
 
-The image above is pretty, but things look a little flat, don't they? This is where we need to ask ourselves a fundamental question: how can we enable depth perception? The answer is surprisingly simple: we need the parts of the sphere that are exposed to the point light to be illuminated brightly, and the ones that are not to be in shadows. But how do we achieve this on a computer?
+The image above is pretty, but things look a little flat, don't they? This is where we need to ask ourselves a fundamental question: how can we enable depth perception? The answer is surprisingly simple: we need the parts of the sphere that are exposed to the point light to be illuminated brightly, and the ones that are not to be in shadows. But how do we quantify how exposed a point is to the point light?
 
 The best way to approach this question is to only consider a single point on the sphere, so let's say we wanted to determine how brightly the point at the very top of the sphere is illuminated. The diagram below illustrates how said point is struck by a ray of light:
 
