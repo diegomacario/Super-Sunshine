@@ -376,14 +376,14 @@ As you can see, the angle between the normal at the point and the incident ray o
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse.png"/>
  <p align="center">
-  <em>2</em>
+  <em>Diffuse reflections</em>
  </p>
 </p>
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_ambient_&_emission_&_diffuse.png"/>
  <p align="center">
-  <em>3</em>
+  <em>Ambient light + Emissivity + Diffuse reflections</em>
  </p>
 </p>
 
@@ -392,21 +392,21 @@ As you can see, the angle between the normal at the point and the incident ray o
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_specular_10.png"/>
  <p align="center">
-  <em>4</em>
+  <em>Specular reflections</em>
  </p>
 </p>
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_full_10.png"/>
  <p align="center">
-  <em>5</em>
+  <em>Ambient light + Emissivity + Diffuse reflections + Specular reflections</em>
  </p>
 </p>
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_full_1000.png"/>
  <p align="center">
-  <em>6</em>
+  <em>Ambient light + Emissivity + Diffuse reflections + Specular reflections</em>
  </p>
 </p>
 
