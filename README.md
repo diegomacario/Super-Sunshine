@@ -344,7 +344,7 @@ Now it seems a lot more natural to use a directional light!
 ### 6) Materials
 Super-Sunshine uses the *__Blinn-Phong shading model__* to compute the colours of the geometric primitives in a scene. In this section, I will illustrate how this model works by walking you through the steps that are carried out to render the following scene:
 
-As you can see, the scene is composed of a single point light and a single sphere. The poing light emits white light, which means that its colour is (1, 1, 1), and it is not affected by any form of attenuation. For the material properties, I will unveil them as we run into them. So let's get to it!
+As you can see, the scene is composed of a single point light and a single sphere. The poing light emits white light, which means that its colour is (1, 1, 1), and it is not affected by any form of attenuation. As for the material properties, I will unveil them as we run into them. So let's get to it!
 
 #### Step 1: Ambient light and emissivity.
 
