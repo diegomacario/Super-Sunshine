@@ -367,7 +367,11 @@ The image below illustrates what the sphere looks like under the conditions we h
 
 #### Step 2: Diffuse reflections.
 
-#### Step 3: Specular reflections.
+The image above is pretty, but things look a little flat, don't they? This is where we need to ask ourselves a fundamental question: how can we enable depth perception? The answer is surprisingly simple: we need the parts of the sphere that are exposed to the point light to be illuminated brightly, and the ones that are not to be in shadows. But how do we do this on a computer?
+
+The best way to approach this question is to only consider a single point on the sphere, so let's say we wanted to determine how brightly the point at the very top of the sphere is illuminated. The diagram below illustrates how said point is struck by a ray of light:
+
+As you can see, the angle between the normal at the point and the incident ray of light is 45°. The Blinn-Phong shading model uses the cosine of this angle to determine the intensity of the incident ray of light at the point. If the angle was 0°, the ray would be striking the point head-on, so it would retain its original colour of (1, 1, 1). It if was 90°, the ray would be tangential to the point, so it would not illuminate it at all.
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse.png"/>
@@ -382,6 +386,8 @@ The image below illustrates what the sphere looks like under the conditions we h
   <em>3</em>
  </p>
 </p>
+
+#### Step 3: Specular reflections.
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_specular_10.png"/>
