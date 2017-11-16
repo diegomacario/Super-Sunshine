@@ -236,7 +236,7 @@ Transformations can be intimidating at first, but play around with them for a wh
 ### 5) Lights
 
 <p align="center">
-  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/luggage4.png"/>
+  <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/luggage.png"/>
 </p>
 
 <p align="center">
