@@ -342,19 +342,21 @@ When I was first asked that question, my answer was: "Well ambient light of cour
 Now it seems a lot more natural to use a directional light!
 
 ### 6) Materials
-Super-Sunshine uses the *__Blinn-Phong shading model__* to compute the colours of the geometric primitives in a scene. In this section, I will illustrate how this model works by walking you through the steps that are carried out to render the following scene:
+Super-Sunshine uses the *__Blinn-Phong shading model__* to compute the colours of the geometric primitives in a scene. In this section, I will illustrate how this model works by detailing the steps it follows to render a simple scene: a single sphere illuminated by a single point light.
 
-As you can see, the scene is composed of a single point light and a single sphere. The poing light emits white light, which means that its colour is (1, 1, 1), and it is not affected by any form of attenuation. As for the material properties, I will unveil them as we run into them. So let's get to it!
+The diagram below illustrates how the scene is arranged:
+
+The poing light emits white light, which means that its colour is (1, 1, 1), and it is not affected by any form of attenuation. As for the material properties, I will reveal them as we run into them. So let's get to it!
 
 #### Step 1: Ambient light and emissivity.
 
-The first thing we need to do is check if the sphere has an associated ambient light colour and emissivity. You already know where the ambient light colour comes from and how it behaves, but what about the emissivity? This material property models the intrinsic colour of an object. It behaves exactly like ambient light, and it is set using the following command:
+The first thing the shading model does is check if the sphere has an associated ambient light colour and emissivity. You already know where the ambient light colour comes from and how it behaves, but what about the emissivity? This material property models the intrinsic colour of an object. It behaves exactly like ambient light, and it is set using the following command:
  ```sh
  emission r g b
  ```
 Where the *__RGB__* values determine the colour of the emissivity.
 
-Let's say that the sphere in our scene has an ambient light colour of (0, 0, 0.125) and an equal emissivity. These two values added together form the base colour of the entire sphere. Since colour addition is performed component-wise, the result is (0, 0, 0.25), which corresponds to dark blue.
+Let's say that the sphere in our scene has an ambient light colour of (0, 0, 0.125) and an equal emissivity. These two values added together form the base colour of the entire sphere. Since colour addition is performed component-wise, the result is (0, 0, 0.25), which corresponds to a dark shade of blue.
 
 The image below illustrates what the sphere looks like under the conditions we have specified so far:
 
