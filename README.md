@@ -234,16 +234,18 @@ Additionally, the commands *__pushTransform__* and *__popTransform__* are also s
 Transformations can be intimidating at first, but play around with them for a while and they will start to make sense!
 
 ### 5) Lights
-
+<!---
 <p align="center">
   <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/luggage.png"/>
 </p>
-
+-->
+<!--
 <p align="center">
   <strong><em>Salesman</strong>: Have you thought much about luggage, Mr. Banks?</em><br />
   <strong><em>Mr. Banks</strong>: No, I never really have.</em><br />
   <strong><em>Salesman</strong>: It is the central preoccupation of my life.</em>
 </p>
+-->
 
 Replace the word *__luggage__* with the word *__light__*, and you could say that I am the salesman in [that](https://www.youtube.com/watch?v=keuhmY3tQ1A) scene. My obsession with light is so bad, in fact, that I had to rewrite this section about a dozen times, because I kept going off track talking about Maxwell’s equations. Thankfully, we do not have to worry about those equations, because a ray-tracer's approach to modeling light is very simple.
 
@@ -280,12 +282,14 @@ sphere 0 0.75 -2 0.5
  ```
 
 The resulting image looks like this:
+<!---
 <p align="center">
 <img src="https://github.com/diegomacario/Manta-Ray-Tracer/blob/master/readme_images/four_spheres_ambient.png"/>
  <p align="center">
   <em>One ambient light shining four different colours.</em>
  </p>
 </p>
+-->
 
 This behaviour is very particular, but it is convenient in the context of a ray-tracer. Just remember that when you create a geometric primitive, it stores the current colour of the ambient light, just as it stores the current transformations and material properties. Also note that if you do not specify the colour of the ambient light, it defaults to (0.2, 0.2, 0.2).
 
