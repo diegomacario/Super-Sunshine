@@ -371,7 +371,11 @@ Things look a little flat, don't they?
 
 The next thing we need to do is create the illusion of depth. To achieve this, we need the parts of the sphere that face the point light to be illuminated brightly, the ones that are angled with respect to it to be partially illuminated, and the ones that face away from it to be in shadows.
 
-But how do we generate this colour gradient? The answer is surprisingly simple: we need to vary the intensity of the rays of light that strike the sphere depending on how they strike it.
+But how do we generate this colour gradient? The answer is surprisingly simple: we need to vary the intensity of the rays of light that strike the sphere depending on the angle at which they strike it. As an example of this, take a look at the diagram below, which illustrates three points on the sphere being struck by rays of light:
+
+Consider point A. The angle between its normal and the incident ray of light is 0°, which means that it faces the point light directly. Because of this, it should be coloured with the full intensity of the point light. Ignoring the ambient light colour and the emissivity, the colour of this point would then be (1, 1, 1), or white.
+
+Now consider point B. The angle between its normal and the incident ray of light is 90°, which means that the ray is tangent to it. We consider this to be equivalent to the ray not striking the point, which is why it should not be illuminated at all. Ignoring the ambient light colour and the emissivity, the colour of this point would then be (0, 0, 0), or black. 
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse.png"/>
