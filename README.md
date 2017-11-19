@@ -348,7 +348,7 @@ Now it seems a lot more natural to use a directional light!
 ### 6) Materials
 Super-Sunshine uses the *__Blinn-Phong shading model__* to compute the colours of the geometric primitives in a scene. In this section, I will illustrate how this model works by detailing the steps it follows to render a simple scene: a single sphere illuminated by a single point light. The diagram below depicts how the scene is arranged:
 <p align="center">
-<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/example.jpg"/>
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/example_1.png"/>
 </p>
 
 We will assume that the point light emits white light, which means that its colour is (1, 1, 1), and that it is not affected by any form of attenuation. As for the material properties, I will reveal them as we run into them. So let's get to it!
