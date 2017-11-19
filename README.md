@@ -382,9 +382,16 @@ Finally, consider point C. The angle between its normal and the incident ray of 
 For any other point on the sphere, we simply need to scale the intensity of the point light with the cosine of the angle formed between the normal at the point and the incident ray of light, which is exactly what I did for the three points above.
 
 <p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse_natural.png"/>
+ <p align="center">
+  <em>Diffuse reflections without a colour filter.</em>
+ </p>
+</p>
+
+<p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse.png"/>
  <p align="center">
-  <em>Diffuse reflections</em>
+  <em>Diffuse reflections with a colour filter.</em>
  </p>
 </p>
 
