@@ -466,7 +466,7 @@ Now that's better! I do, however, like shiny objects, so let's increase the shin
  </p>
 </p>
 
-As you can see, the Blinn-Phong shading model offers tremendous flexbility. It can even support multiple light sources without effort: It simply computes their contributions separately and adds them together at the end.
+As you can see, the Blinn-Phong shading model offers tremendous flexbility. It can even support multiple light sources without effort: it simply computes their contributions separately and adds them together at the end.
 
 You should also know that if a geometric primitive has a nonzero specular reflection coefficient, the rays of light that strike it will be reflected off of its surface. And if those reflected rays strike other geometric primitives, their reflections will be displayed on the surface of the first one. This is illustrated in the image below, which contains four spheres with extremely large reflection coefficients:
 
@@ -477,17 +477,27 @@ You should also know that if a geometric primitive has a nonzero specular reflec
  </p>
 </p>
 
+But that's not all! We can allow rays to continue reflecting off of the spheres in the scene, creating a hall of mirrors effect. The number of times we permit rays to be reflected is defined with the command-below:
+ ```sh
+ maxdepth depth
+ ```
+Where the *__depth__* value sets the upper limit for the number of times rays can be reflected. By default, it is equal to five.
+
+In the previous image, I set the maximum depth equal to one. In the one below, I left it at the default value of five:
+
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/four_spheres_multiple_reflections_all.png"/>
  <p align="center">
-  <em>8</em>
+  <em>Multiple reflections.</em>
  </p>
 </p>
+
+I think the previous image doesn't do this effect justice, so I included a close-up:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/four_spheres_multiple_reflections_only_blue.png"/>
  <p align="center">
-  <em>9</em>
+  <em>One doesn't get to use the word "kaleidoscopic" very often, which is why I am very pleased to say this image is totally kaleidoscopic.</em>
  </p>
 </p>
 
