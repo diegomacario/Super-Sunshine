@@ -395,13 +395,13 @@ The image below illustrates what the sphere would look like if we performed the 
  </p>
 </p>
 
-Now that's what I call depth! We can even add an additional degree of freedom through what is called the *__diffuse reflection coefficient__*. This material property models the way an object absorbs certain wavelengths and reflects others. We can use it to filter the colour of incident rays of light, so that only specific proportions of their RGB values are considered during the calculations described above. It is set using the following command:
+Now that's what I call depth! We can even add an additional degree of freedom through what is called the *__diffuse reflection coefficient__*. This material property models the way an object absorbs certain wavelengths and reflects others. We can use it to filter the colours of incident rays of light, so that only specific proportions of their RGB values are considered during the calculations described above. It is set using the following command:
  ```sh
  diffuse r g b
  ```
 Where the *__RGB__* values define how incident rays of light are filtered.
 
-Let's say that we wanted the sphere to completely ignore the green component of the rays of light that strike it, and that we wanted it to only consider 50% of their red and blue components. To achieve this, we would set the diffuse reflection coefficient to (0.5, 0, 0.5). Since the colour of the point light is (1, 1, 1), all the rays striking our sphere would then have a colour of (0.5, 0, 0.5), or purple. The image below illustrates what the sphere would look like under these conditions (ignoring the ambient light and the emissivity):
+Let's say that we wanted the sphere to completely ignore the green component of the rays of light that strike it, and that we wanted it to only consider 50% of their red and blue components. To achieve this, we would set the diffuse reflection coefficient to (0.5, 0, 0.5). Since the colour of the point light is (1, 1, 1), all the rays striking our sphere would then have a colour of (0.5, 0, 0.5), or purple. The image below illustrates what the sphere would look like with this diffuse reflection coefficient (ignoring the ambient light and the emissivity):
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse.png"/>
