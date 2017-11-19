@@ -381,6 +381,8 @@ Finally, consider point C. The angle between its normal and the incident ray of 
 
 For any other point on the sphere, we simply need to scale the intensity of the point light with the cosine of the angle formed between the normal at the point and the incident ray of light, which is exactly what I did for the three points above.
 
+The image below illustrates what the sphere would look like if we performed the calculations described above for every point on its surface:
+
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse_natural.png"/>
  <p align="center">
