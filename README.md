@@ -391,7 +391,7 @@ The image below illustrates what the sphere would look like if we performed the 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse_natural.png"/>
  <p align="center">
-  <em>Diffuse reflections without a colour filter.</em>
+  <em>(1) Diffuse reflections without a colour filter.</em>
  </p>
 </p>
 
@@ -406,16 +406,16 @@ Let's say that we wanted the sphere to completely ignore the green component of 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse.png"/>
  <p align="center">
-  <em>Diffuse reflections with a colour filter.</em>
+  <em>(2) Diffuse reflections with a colour filter.</em>
  </p>
 </p>
 
-Putting the ambient light, emissivity and diffuse reflection coefficient together, we obtain the following image:
+Putting the ambient light, emissivity and diffuse reflection coefficient together, we obtain the image below:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_ambient_&_emission_&_diffuse.png"/>
  <p align="center">
-  <em>Ambient light + Emissivity + Diffuse reflections</em>
+  <em>(3) Ambient light + Emissivity + Diffuse reflections</em>
  </p>
 </p>
 
