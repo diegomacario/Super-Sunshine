@@ -346,6 +346,9 @@ When I was first asked that question, my answer was: "Well ambient light of cour
 Now it seems a lot more natural to use a directional light!
 
 ### 6) Materials
+Super-Sunshine uses the *__Blinn-Phong shading model__* to compute the colours of the geometric primitives in a scene. In this section, I will illustrate how this model works by detailing the steps it follows to render a simple scene: a single sphere illuminated by a single point light. The diagram below depicts how the scene is arranged:
+
+We will assume that the point light emits white light, which means that its colour is (1, 1, 1), and that it is not affected by any form of attenuation. As for the material properties, I will reveal them as we run into them. So let's get to it!
 
 #### Step 1: Ambient light and emissivity.
 The first thing we need to do is check if the sphere has an associated ambient light colour and *__emissivity__*. You already know where the ambient light colour comes from and how it behaves, but what about the emissivity? This material property models the intrinsic colour of an object. It behaves exactly like ambient light, and it is set using the following command:
@@ -368,7 +371,6 @@ The image below illustrates what the sphere looks like under the conditions we h
 Things look a little flat, don't they?
 
 #### Step 2: Diffuse reflections.
-
 The next thing we need to do is create the illusion of depth. To achieve this, we need the parts of the sphere that face the point light to be illuminated brightly, the ones that are angled with respect to it to be partially illuminated, and the ones that face away from it to be in shadows.
 
 But how do we generate this colour gradient? This is where the Blinn-Phong shading model is exceedingly clever. It establishes two conditions:
@@ -420,7 +422,6 @@ Putting the ambient light, emissivity and diffuse reflection coefficient togethe
 </p>
 
 #### Step 3: Specular reflections.
-
 The last thing we need to do to increase the realism of the scene is to add a specular highlight to the sphere. The calculations required to determine its position are elaborate, since they take the locations of the point light and the camera into account. For this reason, I have decided not to describe them in detail. Instead, I will limit this section to showing you how to control the colour and the size of the specular highlight.
 
 The colour is controlled through what is called the *__specular reflection coefficient__*. Just like the diffuse reflection coefficient, this material property acts like a filter of incident rays of light. It is set using the following command:
@@ -500,7 +501,6 @@ I think the previous image doesn't do this effect justice, so I included a close
   <em>One doesn't get to use the word "kaleidoscopic" very often, which is why I am very pleased to say this image is totally kaleidoscopic.</em>
  </p>
 </p>
-
 
 ## Future Improvements
 
