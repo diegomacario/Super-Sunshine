@@ -410,7 +410,7 @@ Let's say that we wanted the sphere to completely ignore the green component of 
  </p>
 </p>
 
-Putting the ambient light, emissivity and diffuse reflection coefficient together, we obtain the image below:
+Putting the ambient light, emissivity and diffuse reflection coefficient together, the sphere begins to look very beautiful:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_ambient_&_emission_&_diffuse.png"/>
