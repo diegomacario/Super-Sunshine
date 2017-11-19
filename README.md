@@ -378,7 +378,7 @@ But how do we generate this colour gradient? This is where the Blinn-Phong shadi
 
 To illustrate these concepts, take a look at the diagram below, which depicts three points on the sphere being struck by rays of light:
 
-Let's calculate the colour of each of the three points, ignoring the ambient light colour and the emissivity:
+Let's calculate the colour of each of the three points (ignoring the ambient light and the emissivity):
 
 - *__Point A__*: The angle between its normal and the incident ray of light is 0°, which means that it faces the point light directly. Because of this, it should be illuminated with the full intensity of the point light. The colour of this point would then be (1, 1, 1), or white.
 - *__Point B__*: The angle between its normal and the incident ray of light is 90°, which means that the ray is tangent to it. We consider this to be equivalent to the ray not striking the point, which is why it should not be illuminated at all. The colour of this point would then be (0, 0, 0), or black.
@@ -386,7 +386,7 @@ Let's calculate the colour of each of the three points, ignoring the ambient lig
 
 For any other point on the sphere, we simply need to scale the intensity of the point light with the cosine of the angle formed between the normal at the point and the incident ray of light, which is exactly what I did for points A, B and C.
 
-The image below illustrates what the sphere would look like if we performed the calculations described above for every point on its surface:
+The image below illustrates what the sphere would look like if we performed the calculations described above for every point on its surface (ignoring the ambient light and the emissivity):
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse_natural.png"/>
@@ -403,7 +403,7 @@ The diffuse reflection coefficient is set using the following command:
  ```
 Where the *__RGB__* values determine how incident rays of light are filtered.
 
-Let's say that we wanted the sphere to completely ignore the green component of the rays of light that strike it, and that we wanted it to only consider 50% of their red and blue components. To achieve this, we would set the diffuse reflection coefficient to (0.5, 0, 0.5). Since the colour of the point light is (1, 1, 1), all the rays striking our sphere would then have a colour of (0.5, 0, 0.5), or purple. The image below illustrates what the sphere would look like under these conditions:
+Let's say that we wanted the sphere to completely ignore the green component of the rays of light that strike it, and that we wanted it to only consider 50% of their red and blue components. To achieve this, we would set the diffuse reflection coefficient to (0.5, 0, 0.5). Since the colour of the point light is (1, 1, 1), all the rays striking our sphere would then have a colour of (0.5, 0, 0.5), or purple. The image below illustrates what the sphere would look like under these conditions (ignoring the ambient light and the emissivity):
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse.png"/>
