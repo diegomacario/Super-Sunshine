@@ -453,7 +453,7 @@ A bit weird, eh? But if we combine all the material properties we have discussed
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_full_10.png"/>
  <p align="center">
-  <em>Ambient light + Emissivity + Diffuse reflections + Specular reflections</em>
+  <em>Rough sphere.</em>
  </p>
 </p>
 
@@ -462,16 +462,18 @@ Now that's better! I do, however, like shiny objects, so let's increase the shin
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_full_1000.png"/>
  <p align="center">
-  <em>Ambient light + Emissivity + Diffuse reflections + Specular reflections</em>
+  <em>Shiny sphere.</em>
  </p>
 </p>
 
-And that, my friends, is the final appearance of the sphere.
+As you can see, the Blinn-Phong shading model offers tremendous flexbility. It can even support multiple light sources without effort: It simply computes their contributions separately and adds them together at the end.
+
+You should also know that if a geometric primitive has a nonzero specular reflection coefficient, the rays of light that strike it will be reflected off of its surface. And if those reflected rays strike other geometric primitives, their reflections will be displayed on the surface of the first one. This is illustrated in the image below, which contains four spheres with extremely large reflection coefficients:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/four_spheres_single_reflections_all.png"/>
  <p align="center">
-  <em>7</em>
+  <em>Single reflections.</em>
  </p>
 </p>
 
