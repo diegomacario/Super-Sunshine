@@ -347,6 +347,7 @@ Now it seems a lot more natural to use a directional light!
 
 ### 6) Materials
 Super-Sunshine uses the *__Blinn-Phong shading model__* to compute the colours of the geometric primitives in a scene. In this section, I will illustrate how this model works by detailing the steps it follows to render a simple scene: a single sphere illuminated by a single point light. The diagram below depicts how the scene is arranged:
+
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/example_1.png"/>
 </p>
@@ -382,6 +383,10 @@ But how do we generate this colour gradient? This is where the Blinn-Phong shadi
 - The intensity of a ray of light varies depending on the angle at which it strikes the sphere. 
 
 To illustrate these concepts, take a look at the diagram below, which depicts three points on the sphere being struck by rays of light:
+
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/example_2.png"/>
+</p>
 
 Let's calculate the colour of each of the three points (ignoring the ambient light and the emissivity):
 
