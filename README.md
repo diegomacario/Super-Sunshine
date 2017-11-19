@@ -348,7 +348,7 @@ Now it seems a lot more natural to use a directional light!
 ### 6) Materials
 
 #### Step 1: Ambient light and emissivity.
-The first thing we need to do is check if the sphere has an associated ambient light colour and emissivity. You already know where the ambient light colour comes from and how it behaves, but what about the emissivity? This material property models the intrinsic colour of an object. It behaves exactly like ambient light, and it is set using the following command:
+The first thing we need to do is check if the sphere has an associated ambient light colour and *__emissivity__*. You already know where the ambient light colour comes from and how it behaves, but what about the emissivity? This material property models the intrinsic colour of an object. It behaves exactly like ambient light, and it is set using the following command:
  ```sh
  emission r g b
  ```
@@ -379,7 +379,7 @@ Now consider point B. The angle between its normal and the incident ray of light
 
 Finally, consider point C. The angle between its normal and the incident ray of light is 45°. Because of this, it should be illuminated with half of the intensity of the point light. Ignoring the ambient light colour and the emissivity, the colour of this point would then be (0.5, 0.5, 0.5), or grey.
 
-For any other point on the sphere, we simply need to scale the intensity of the point light with the cosine of the angle formed between the normal at the point and the incident ray of light, which is exactly what I did for the three points above.
+For any other point on the sphere, we simply need to scale the intensity of the point light with the cosine of the angle formed between the normal at the point and the incident ray of light, which is exactly what I did for points A, B and C.
 
 The image below illustrates what the sphere would look like if we performed the calculations described above for every point on its surface:
 
@@ -389,6 +389,16 @@ The image below illustrates what the sphere would look like if we performed the 
   <em>Diffuse reflections without a colour filter.</em>
  </p>
 </p>
+
+Now that's what I call depth! We can even add an additional degree of freedom through what is called the *__diffuse reflection coefficient__*. This material property is used to model the way objects absorb certain wavelengths and reflect others. We can use it to filter the colour of incident rays of light, so that only specific proportions of their RGB values are considered during the calculations described above.
+
+The diffuse reflection coefficient is set using the following command:
+ ```sh
+ diffuse r g b
+ ```
+Where the *__RGB__* values determine how incident rays of light are filtered.
+
+Let's say that we wanted the sphere to completely ignore the green component of the rays of light that strike it, and that we wanted it to only consider 50% of their red and blue components. To achieve this, we would set the diffuse reflection coefficient to (0.5, 0, 0.5). Since the colour of the point light is (1, 1, 1), all the rays striking our sphere would have a colour of (0.5, 0, 0.5), or purple. The image below illustrates what the sphere would look like under these conditions:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse.png"/>
