@@ -371,13 +371,18 @@ Things look a little flat, don't they?
 
 The next thing we need to do is create the illusion of depth. To achieve this, we need the parts of the sphere that face the point light to be illuminated brightly, the ones that are angled with respect to it to be partially illuminated, and the ones that face away from it to be in shadows.
 
-But how do we generate this colour gradient? The answer is surprisingly simple: we need to vary the intensity of the rays of light that strike the sphere depending on the angle at which they strike it. As an example of this, take a look at the diagram below, which illustrates three points on the sphere being struck by rays of light:
+But how do we generate this colour gradient? This is where the Blinn-Phong shading model is exceedingly clever. It establishes two conditions:
 
-Consider point A. The angle between its normal and the incident ray of light is 0°, which means that it faces the point light directly. Because of this, it should be illuminated with the full intensity of the point light. Ignoring the ambient light colour and the emissivity, the colour of this point would then be (1, 1, 1), or white.
+- When a point on the sphere is struck by a ray of light, the colour of the light is added to the colour of the point.
+- The colour of a ray of light varies depending on the angle at which it strikes the sphere. 
 
-Now consider point B. The angle between its normal and the incident ray of light is 90°, which means that the ray is tangent to it. We consider this to be equivalent to the ray not striking the point, which is why it should not be illuminated at all. Ignoring the ambient light colour and the emissivity, the colour of this point would then be (0, 0, 0), or black.
+To illustrate these concepts, take a look at the diagram below, which depicts three points on the sphere being struck by rays of light:
 
-Finally, consider point C. The angle between its normal and the incident ray of light is 45°. Because of this, it should be illuminated with half of the intensity of the point light. Ignoring the ambient light colour and the emissivity, the colour of this point would then be (0.5, 0.5, 0.5), or grey.
+Let's calculate the colour of each of the three points, ignoring the ambient light colour and the emissivity:
+
+- *__Point A__*: The angle between its normal and the incident ray of light is 0°, which means that it faces the point light directly. Because of this, it should be illuminated with the full intensity of the point light. The colour of this point would then be (1, 1, 1), or white.
+- *__Point B__*: The angle between its normal and the incident ray of light is 90°, which means that the ray is tangent to it. We consider this to be equivalent to the ray not striking the point, which is why it should not be illuminated at all. The colour of this point would then be (0, 0, 0), or black.
+- *__Point C__*: The angle between its normal and the incident ray of light is 45°. Because of this, it should be illuminated with half of the intensity of the point light. The colour of this point would then be (0.5, 0.5, 0.5), or grey.
 
 For any other point on the sphere, we simply need to scale the intensity of the point light with the cosine of the angle formed between the normal at the point and the incident ray of light, which is exactly what I did for points A, B and C.
 
