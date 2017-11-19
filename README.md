@@ -391,7 +391,7 @@ The image below illustrates what the sphere would look like if we performed the 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse_natural.png"/>
  <p align="center">
-  <em>(1) Diffuse reflections without a colour filter.</em>
+  <em>Diffuse reflections without a colour filter.</em>
  </p>
 </p>
 
@@ -406,7 +406,7 @@ Let's say that we wanted the sphere to completely ignore the green component of 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse.png"/>
  <p align="center">
-  <em>(2) Diffuse reflections with a colour filter.</em>
+  <em>Diffuse reflections with a colour filter.</em>
  </p>
 </p>
 
@@ -415,18 +415,40 @@ Putting the ambient light, emissivity and diffuse reflection coefficient togethe
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_ambient_&_emission_&_diffuse.png"/>
  <p align="center">
-  <em>(3) Ambient light + Emissivity + Diffuse reflections</em>
+  <em>Ambient light + Emissivity + Diffuse reflections</em>
  </p>
 </p>
 
 #### Step 3: Specular reflections.
 
+The last thing we need to do to increase the realism of the scene is to add a specular highlight to the sphere. The calculations required to determine its position are elaborate, since they take the locations of the point light and the camera into account. For this reason, I have decided not to describe them in detail. Instead, I will limit this section to showing you how to control the colour and the size of the specular highlight.
+
+The colour is controlled through what is called the *__specular reflection coefficient__*. Just like the diffuse reflection coefficient, this material property acts like a filter of incident rays of light. It is set using the following command:
+ ```sh
+ specular r g b
+ ```
+Where the *__RGB__* values define how incident rays of light are filtered.
+
+As for the size of the specular highlight, it is controlled with the *__shininess coefficient__*. This material property determines how shiny an object is. It can be set to any number greater than or equal to 0, and it works like this:
+- The smaller it is, the more rough an object is, and consequently the bigger its specular highlight is.
+- The bigger it is, the more shiny an object is, and consequently, the smaller its specular highlight is.
+
+This material property is set using the following command:
+ ```sh
+ shininess coefficient 
+ ```
+Where the *__coefficient__* value determines how shiny an object is.
+
+Let's say that we wanted a specular highlight that was large and dark red. First we would need to set the specular reflection coefficient to (0.5, 0, 0), which would make us ignore the green and blue components of incident rays of light while only using 50% of their red components in our highlight calculations. Then we would need to set the shininess coefficient to a small value like 10. With only these material properties, the sphere would look like this:
+
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_specular_10.png"/>
  <p align="center">
-  <em>Specular reflections</em>
+  <em>A specular highlight by itself.</em>
  </p>
 </p>
+
+A bit weird, eh? But if we combine all the material properties we have discussed so far, we get a glimpse at the final appearance of the sphere:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_full_10.png"/>
@@ -434,6 +456,8 @@ Putting the ambient light, emissivity and diffuse reflection coefficient togethe
   <em>Ambient light + Emissivity + Diffuse reflections + Specular reflections</em>
  </p>
 </p>
+
+Now that's better! I do, however, like shiny objects, so let's increase the shininess coefficient to 100:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_full_1000.png"/>
