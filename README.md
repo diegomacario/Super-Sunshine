@@ -466,6 +466,8 @@ Now that's better! I do, however, like shiny objects, so let's increase the shin
  </p>
 </p>
 
+And that, my friends, is the final appearance of the sphere.
+
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/four_spheres_single_reflections_all.png"/>
  <p align="center">
