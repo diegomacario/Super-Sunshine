@@ -374,7 +374,7 @@ The next thing we need to do is create the illusion of depth. To achieve this, w
 But how do we generate this colour gradient? This is where the Blinn-Phong shading model is exceedingly clever. It establishes two conditions:
 
 - When a point on the sphere is struck by a ray of light, the colour of the light is added to the colour of the point.
-- The colour of a ray of light varies depending on the angle at which it strikes the sphere. 
+- The intensity of a ray of light varies depending on the angle at which it strikes the sphere. 
 
 To illustrate these concepts, take a look at the diagram below, which depicts three points on the sphere being struck by rays of light:
 
