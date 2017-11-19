@@ -398,7 +398,7 @@ The diffuse reflection coefficient is set using the following command:
  ```
 Where the *__RGB__* values determine how incident rays of light are filtered.
 
-Let's say that we wanted the sphere to completely ignore the green component of the rays of light that strike it, and that we wanted it to only consider 50% of their red and blue components. To achieve this, we would set the diffuse reflection coefficient to (0.5, 0, 0.5). Since the colour of the point light is (1, 1, 1), all the rays striking our sphere would have a colour of (0.5, 0, 0.5), or purple. The image below illustrates what the sphere would look like under these conditions:
+Let's say that we wanted the sphere to completely ignore the green component of the rays of light that strike it, and that we wanted it to only consider 50% of their red and blue components. To achieve this, we would set the diffuse reflection coefficient to (0.5, 0, 0.5). Since the colour of the point light is (1, 1, 1), all the rays striking our sphere would then have a colour of (0.5, 0, 0.5), or purple. The image below illustrates what the sphere would look like under these conditions:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_diffuse.png"/>
@@ -406,6 +406,8 @@ Let's say that we wanted the sphere to completely ignore the green component of 
   <em>Diffuse reflections with a colour filter.</em>
  </p>
 </p>
+
+Putting the ambient light colour, emissivity and diffuse reflection coefficient together, we obtain the following image:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/single_sphere_ambient_&_emission_&_diffuse.png"/>
