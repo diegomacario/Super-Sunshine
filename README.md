@@ -439,8 +439,8 @@ The colour is controlled through what is called the *__specular reflection coeff
 Where the *__RGB__* values define how incident rays of light are filtered.
 
 As for the size of the specular highlight, it is controlled with the *__shininess coefficient__*. This material property determines how shiny an object is. It can be set to any number greater than or equal to 0, and it works like this:
-- The smaller it is, the more rough an object is, and consequently the bigger its specular highlight is.
-- The bigger it is, the more shiny an object is, and consequently, the smaller its specular highlight is.
+- The smaller the shininess coefficient is, the rougher an object is, and consequently the bigger its specular highlight is.
+- The bigger the shininess coefficient is, the shinier an object is, and consequently, the smaller its specular highlight is.
 
 This material property is set using the following command:
  ```sh
@@ -475,7 +475,7 @@ Now that's better! I do, however, like shiny objects, so let's increase the shin
  </p>
 </p>
 
-As you can see, the Blinn-Phong shading model offers tremendous flexbility. It can even support multiple light sources without effort: it simply computes their contributions separately and adds them together at the end.
+As you can see, the Blinn-Phong shading model offers fantastic flexbility. It can even support multiple light sources without effort: it simply computes their contributions separately and adds them together at the end.
 
 You should also know that if a geometric primitive has a nonzero specular reflection coefficient, the rays of light that strike it will be reflected off of its surface. And if those reflected rays strike other geometric primitives, their reflections will be displayed on the surface of the first one. This is illustrated in the image below, which contains four spheres with extremely large reflection coefficients:
 
