@@ -395,7 +395,7 @@ The image below illustrates what the sphere would look like if we performed the 
  </p>
 </p>
 
-Now that's what I call depth! We can even add an additional degree of freedom through what is called the *__diffuse reflection coefficient__*. This material property models the way objects absorb certain wavelengths and reflect others. We can use it to filter the colour of incident rays of light, so that only specific proportions of their RGB values are considered during the calculations described above. It is set using the following command:
+Now that's what I call depth! We can even add an additional degree of freedom through what is called the *__diffuse reflection coefficient__*. This material property models the way an object absorbs certain wavelengths and reflects others. We can use it to filter the colour of incident rays of light, so that only specific proportions of their RGB values are considered during the calculations described above. It is set using the following command:
  ```sh
  diffuse r g b
  ```
