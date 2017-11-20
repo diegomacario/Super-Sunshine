@@ -505,7 +505,7 @@ I think the previous image doesn't do this effect justice, so I included a close
 </p>
 
 ### 7) Textures
-This section is currently being written. Thanks to [Yarden Arane](https://github.com/YArane) for writing the code to support textures and colour interpolation!
+This section is currently being written. Thanks to [Yarden Arane](https://github.com/YArane) for writing the code to support textures and colour interpolation, and for generating the really cool image below!
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/face.png"/>
