@@ -88,7 +88,7 @@ This project started out as a final assignment for Ravi Ramamoorthi's fantastic 
 
 All the code was written in C++, with a strong focus on making it clear and organized. The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
 
-If you are interested in using Super-Sunshine on macOS or Linux, you should be able to easily compile it using the Makefile included in this repository (thanks to [Yarden Arane](https://github.com/YArane) and [Daniel Macario](https://github.com/macadev) for helping with the cross-platform support!).
+To compile the project in macOS or Linux, simply use the Makefile included in this repository (thanks to [Yarden Arane](https://github.com/YArane) and [Daniel Macario](https://github.com/macadev) for helping with the cross-platform support!).
 
 ## Features
 
@@ -505,7 +505,7 @@ I think the previous image doesn't do this effect justice, so I included a close
 </p>
 
 ### 7) Textures
-This section is currently being written. Thanks to [Yarden Arane](https://github.com/YArane) for writing the code to support textures and colour interpolation, and for generating the really cool image below!
+This section is currently under development (thanks to [Yarden Arane](https://github.com/YArane) for writing the code to support textures and colour interpolation, and for generating the really cool image below!).
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/face.png"/>
