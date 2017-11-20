@@ -518,7 +518,7 @@ This section is currently being written. Thanks to [Yarden Arane](https://github
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/face.png"/>
  <p align="center">
-  <em>A very sad man at a nightclub.</em>
+  <em>A man who just lost his eyes at a nightclub.</em>
  </p>
 </p>
 
