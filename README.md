@@ -91,6 +91,8 @@ This project started out as a final assignment for Ravi Ramamoorthi's fantastic 
 
 All the code was written in C++, with a strong focus on making it clear and organized. The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
 
+You should be able to easily compile the project in macOS and Linux using the Makefile included with it (thanks to [Yarden Arane](https://github.com/YArane) and [Daniel Macario](https://github.com/macadev) for writing it!).
+
 ## Features
 
 The scene description language developed for this project is very simple. In terms of syntax, you only need to know two things:
@@ -105,7 +107,7 @@ The scene description language developed for this project is very simple. In ter
  keyword parameter1 parameter2 ...
  ```
 
-Below you will find information on all the commands that are currently supported. They are separated into six different categories: *__Setup__*, *__Camera__*, *__Geometry__*, *__Transformations__*, *__Lights__* and *__Materials__*.
+Below you will find information on all the commands that are currently supported. They are separated into seven different categories: *__Setup__*, *__Camera__*, *__Geometry__*, *__Transformations__*, *__Lights__*, *__Materials__* and *__Textures__*.
 
 Note that once you are done writing a scene description, you can give it to the ray-tracer by specifying its filename as a command-line parameter:
  ```sh
@@ -507,6 +509,16 @@ I think the previous image doesn't do this effect justice, so I included a close
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/four_spheres_multiple_reflections_only_blue.png"/>
  <p align="center">
   <em>One doesn't get to use the word "kaleidoscopic" very often, which is why I am very pleased to say this image is totally kaleidoscopic.</em>
+ </p>
+</p>
+
+### 7) Textures
+This section is currently being written. Thanks to [Yarden Arane](https://github.com/YArane) for writing the code to support textures and colour interpolation!
+
+<p align="center">
+<img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/face.png"/>
+ <p align="center">
+  <em>A very sad man at a nightclub.</em>
  </p>
 </p>
 
