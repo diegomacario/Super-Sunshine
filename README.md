@@ -424,7 +424,7 @@ Putting the ambient light, emissivity and diffuse reflection coefficient togethe
 </p>
 
 #### Step 3: Specular reflections.
-The last thing we need to do to increase the realism of the scene is to add a specular highlight to the sphere. The calculations required to determine its position are elaborate, since they take the locations of the point light and the camera into account. For this reason, I have decided not to describe them in detail. Instead, I will limit this section to showing you how to control the colour and the size of the specular highlight.
+The last thing we need to do to increase the realism of the scene is to add a specular highlight to the sphere. The calculations involved in determining the position of a specular highlight are elaborate, since they take into account the positions of both the light source that produces the highlight and the camera. For this reason, I have decided not to describe them in detail. Instead, I will limit this section to showing you how to control the colour and the size of a specular highlight.
 
 The colour is controlled through what is called the *__specular reflection coefficient__*. Just like the diffuse reflection coefficient, this material property acts like a filter of incident rays of light. It is set using the following command:
  ```sh
