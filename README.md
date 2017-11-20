@@ -508,7 +508,7 @@ I think the previous image doesn't do this effect justice, so I included a close
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/four_spheres_multiple_reflections_only_blue.png"/>
  <p align="center">
-  <em>One doesn't get to use the word "kaleidoscopic" very often, which is why I am very pleased to say this image is totally kaleidoscopic.</em>
+  <em>One doesn't get to use the word "kaleidoscopic" very often, which is why I am very pleased to say that this image is totally kaleidoscopic.</em>
  </p>
 </p>
 
