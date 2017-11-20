@@ -91,7 +91,7 @@ This project started out as a final assignment for Ravi Ramamoorthi's fantastic 
 
 All the code was written in C++, with a strong focus on making it clear and organized. The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
 
-You should be able to easily compile the project in macOS and Linux using the Makefile included with it (thanks to [Yarden Arane](https://github.com/YArane) and [Daniel Macario](https://github.com/macadev) for writing it!).
+You should be able to easily compile the project in macOS and Linux using the Makefile included with it. Thanks to [Yarden Arane](https://github.com/YArane) and [Daniel Macario](https://github.com/macadev) for helping with the cross-platform support!
 
 ## Features
 
