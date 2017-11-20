@@ -477,7 +477,7 @@ Now that's better! I do, however, like shiny objects, so let's increase the shin
  </p>
 </p>
 
-As you can see, the Blinn-Phong shading model offers fantastic flexbility. It can even support multiple light sources without effort: it simply computes their contributions separately and adds them together at the end.
+As you can see, the Blinn-Phong shading model offers fantastic flexibility. It can even support multiple light sources without effort: it simply computes their contributions separately and adds them together at the end.
 
 You should also know that if a geometric primitive has a nonzero specular reflection coefficient, the rays of light that strike it will be reflected off of its surface. And if those reflected rays strike other geometric primitives, their reflections will be displayed on the surface of the first one. This is illustrated in the image below, which contains four spheres with extremely large reflection coefficients:
 
