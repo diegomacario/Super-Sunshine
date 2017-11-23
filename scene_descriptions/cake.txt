@@ -1,0 +1,276 @@
+size 640 480 
+output cake.png
+
+# --- --- --- --- -- CAMERA -- --- --- --- ---
+
+# Full cake
+camera 0 2 4.5 0 -0.7 0 0 0 -1 45
+
+# Close-up of candle
+#camera 0 0.625 1.25 0 0.428571 0 0 0 -1 45
+
+# --- --- --- --- -- LIGHTS -- --- --- --- ---
+
+attenuation 0 1 0
+point 0 1 0 0.75 0.4 0
+
+# --- --- --- --- - GEOMETRY - --- --- --- ---
+
+maxverts 13
+
+# No reflections
+specular 0 0 0
+maxdepth 0
+
+# Top hexagon
+vertex  0      0.142857   0
+vertex  0      0.142857   1.5
+vertex  1.299  0.142857   0.75
+vertex  1.299  0.142857  -0.75
+vertex  0      0.142857  -1.5
+vertex -1.299  0.142857  -0.75
+vertex -1.299  0.142857   0.75
+
+# Bottom hexagon
+vertex  0      0  1.5
+vertex  1.299  0  0.75
+vertex  1.299  0 -0.75
+vertex  0      0 -1.5
+vertex -1.299  0 -0.75
+vertex -1.299  0  0.75
+
+# Layers (listed from bottom to top)
+# --- --- --- --- --- --- --- --- ---
+
+# Frosting 1
+# --- --- ---
+
+ambient 0.35 0.35 0.35
+diffuse 1 1 1
+
+pushTransform
+translate 0 -1 0
+
+tri 0 1 2
+tri 0 2 3
+tri 0 3 4
+tri 0 4 5
+tri 0 5 6
+tri 0 6 1
+
+tri 7 2 1
+tri 7 8 2
+tri 8 3 2
+tri 8 9 3
+tri 9 4 3
+tri 9 10 4
+tri 10 5 4
+tri 10 11 5
+tri 11 6 5
+tri 11 12 6
+tri 12 1 6
+tri 12 7 1
+popTransform
+
+# Chocolate 1
+# --- --- ---
+
+ambient 0.1 0.05 0
+diffuse 1 1 1
+
+pushTransform
+translate 0 -0.857143 0
+scale 1 2 1
+
+tri 0 1 2
+tri 0 2 3
+tri 0 3 4
+tri 0 4 5
+tri 0 5 6
+tri 0 6 1
+
+tri 7 2 1
+tri 7 8 2
+tri 8 3 2
+tri 8 9 3
+tri 9 4 3
+tri 9 10 4
+tri 10 5 4
+tri 10 11 5
+tri 11 6 5
+tri 11 12 6
+tri 12 1 6
+tri 12 7 1
+popTransform
+
+# Frosting 2
+# --- --- ---
+
+ambient 0.35 0.35 0.35
+diffuse 1 1 1
+
+pushTransform
+translate 0 -0.571429 0
+
+tri 0 1 2
+tri 0 2 3
+tri 0 3 4
+tri 0 4 5
+tri 0 5 6
+tri 0 6 1
+
+tri 7 2 1
+tri 7 8 2
+tri 8 3 2
+tri 8 9 3
+tri 9 4 3
+tri 9 10 4
+tri 10 5 4
+tri 10 11 5
+tri 11 6 5
+tri 11 12 6
+tri 12 1 6
+tri 12 7 1
+popTransform
+
+# Chocolate 2
+# --- --- ---
+
+ambient 0.1 0.05 0
+diffuse 1 1 1
+
+pushTransform
+translate 0 -0.428572 0
+scale 1 2 1
+
+tri 0 1 2
+tri 0 2 3
+tri 0 3 4
+tri 0 4 5
+tri 0 5 6
+tri 0 6 1
+
+tri 7 2 1
+tri 7 8 2
+tri 8 3 2
+tri 8 9 3
+tri 9 4 3
+tri 9 10 4
+tri 10 5 4
+tri 10 11 5
+tri 11 6 5
+tri 11 12 6
+tri 12 1 6
+tri 12 7 1
+popTransform
+
+# Frosting 3
+# --- --- ---
+
+ambient 0.5 0.5 0.5
+diffuse 1 1 1
+
+pushTransform
+translate 0 -0.142857 0
+
+tri 0 1 2
+tri 0 2 3
+tri 0 3 4
+tri 0 4 5
+tri 0 5 6
+tri 0 6 1
+
+ambient 0.35 0.35 0.35
+
+tri 7 2 1
+tri 7 8 2
+tri 8 3 2
+tri 8 9 3
+tri 9 4 3
+tri 9 10 4
+tri 10 5 4
+tri 10 11 5
+tri 11 6 5
+tri 11 12 6
+tri 12 1 6
+tri 12 7 1
+popTransform
+
+# Strawberries
+# --- --- --- --- --- --- --- --- ---
+
+ambient 0.5 0 0
+diffuse 1 1 1
+
+pushTransform
+sphere 0.77425 0 0 0.1
+popTransform
+
+pushTransform
+rotate 0 1 0 60
+sphere 0.77425 0 0 0.1
+popTransform
+
+pushTransform
+rotate 0 1 0 120
+sphere 0.77425 0 0 0.1
+popTransform
+
+pushTransform
+rotate 0 1 0 180
+sphere 0.77425 0 0 0.1
+popTransform
+
+pushTransform
+rotate 0 1 0 240
+sphere 0.77425 0 0 0.1
+popTransform
+
+pushTransform
+rotate 0 1 0 300
+sphere 0.77425 0 0 0.1
+popTransform
+
+# Candle
+# --- --- --- --- --- --- --- --- ---
+
+ambient  0 0.4  0.4
+diffuse  0.3 0.5 0.5
+
+pushTransform
+scale 0.05 3 0.05
+
+tri 0 1 2
+tri 0 2 3
+tri 0 3 4
+tri 0 4 5
+tri 0 5 6
+tri 0 6 1
+
+tri 7 2 1
+tri 7 8 2
+tri 8 3 2
+tri 8 9 3
+tri 9 4 3
+tri 9 10 4
+tri 10 5 4
+tri 10 11 5
+tri 11 6 5
+tri 11 12 6
+tri 12 1 6
+tri 12 7 1
+popTransform
+
+# Flame
+# --- --- --- --- --- --- --- --- ---
+
+ambient 0.9 0.375 0
+diffuse 0.9 0.375 0
+specular 1 1 1
+
+pushTransform
+translate 0 -0.0125 0
+scale 0.61 1 0.61
+
+sphere 0 0.428571 0 0.1
+popTransform
