@@ -15,10 +15,11 @@ Description:
    It specifies three pure virtual functions which must be implemented by the classes that inherit from it.
    These functions are common to all geometric shapes, but implemented differently for each type of geometric shape.
 
-   It also provides two common member variables:
+   It also provides three common member variables:
 
    - The ambient illumination.
    - The material.
+   - The texture.
 */
 
 class Ray;
@@ -36,17 +37,17 @@ public:
    virtual bool isIntersected(const Ray& ray) const = 0;
 
    Colour getAmbient() const;
-   Colour getAmbient(Point barycentricCoord) const;
+   Colour getAmbient(const Point& barycentricCoord) const;
    Material * getMaterial() const;
 
-	bool isTextured() const;
+   bool isTextured() const;
 
 private:
 
    Colour ambient;
    Material* material;
 
-	bool textured;
+   bool textured;
    TextureDescription* textureDescription;
 };
 

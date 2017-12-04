@@ -27,6 +27,6 @@ Colour Material::getSpecular()
 Colour Material::calculateDiffuseAndSpecularLighting(const Normal& normalAtHit, const Vector& lightVec, const Vector& halfVec)
 {
    // The first term below corresponds to the diffuse contribution, while the second one corresponds to the specular contribution
-   return ((diffuse * std::max(dot(lightVec, normalAtHit), static_cast<float>(0))) + (specular * std::pow(std::max(dot(halfVec, normalAtHit), static_cast<float>(0)), shininess)));
+   return ((diffuse * std::max(dot(lightVec, normalAtHit), 0.0f)) + (specular * std::pow(std::max(dot(halfVec, normalAtHit), 0.0f), shininess)));
 }
 

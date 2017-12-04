@@ -5,31 +5,31 @@
 #include "Colour.h"
 #include "FreeImage.h"
 
-
-class Texture 
+class Texture
 {
 public:
 
-	Texture();
-	void set(const char * textureFile);
+   Texture();
+   ~Texture();
 
-	Colour sampleColour(TextureCoord textureCoord) const;
+   void set(const char * textureFile);
 
-	void unloadImage();
-	bool isImageLoaded() const;
+   bool isImageLoaded() const;
+   void unloadImage();
+
+   Colour sampleColour(const TextureCoord& textureCoord) const;
 
 private:
 
-	bool imageLoaded = false;
-	bool loadImage();
+   const char * textureFile;
+   FIBITMAP * image;
+   unsigned int height, width;
+   bool imageLoaded = false;
 
-	FIBITMAP * image;
-	unsigned height, width;
+   bool loadImage();
 
-	bool validateCoords(TextureCoord textureCoord) const;
-
-	const char * textureFile;
-
+   bool validateCoords(const TextureCoord& textureCoord) const;
 };
 
 #endif
+

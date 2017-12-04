@@ -32,7 +32,7 @@ bool Triangle::isIntersected(const Ray& ray, Intersection* intersection) const
    {
       intersection->normalAtHit = faceNormal;
       intersection->materialAtHit = getMaterial();
-      intersection->ambient = isTextured()? getAmbient(calcBarycentricCoord(intersection->hitPoint)) : getAmbient();
+      intersection->ambient = isTextured() ? getAmbient(calculateBarycentricCoordinates(intersection->hitPoint)) : getAmbient();
 
       return true;
    }
@@ -65,17 +65,17 @@ bool Triangle::isIntersected(const Ray& ray) const
    return false;
 }
 
-Point Triangle::calcBarycentricCoord(Point& hitPoint) const{
+Point Triangle::calculateBarycentricCoordinates(Point& hitPoint) const{
 
-	Vector vectorA(vertexC.x-vertexA.x, vertexB.x-vertexA.x, vertexA.x-hitPoint.x);
-	Vector vectorB(vertexC.y-vertexA.y, vertexB.y-vertexA.y, vertexA.y-hitPoint.y);
-	Vector crossProduct = cross(vectorA, vectorB);
+   Vector vectorA(vertexC.x-vertexA.x, vertexB.x-vertexA.x, vertexA.x-hitPoint.x);
+   Vector vectorB(vertexC.y-vertexA.y, vertexB.y-vertexA.y, vertexA.y-hitPoint.y);
+   Vector crossProduct = cross(vectorA, vectorB);
 
-	float x = 1.0f - (crossProduct.x + crossProduct.y)/crossProduct.z;
-	float y = crossProduct.y / crossProduct.z;
-	float z = crossProduct.x / crossProduct.z;
+   float x = 1.0f - (crossProduct.x + crossProduct.y)/crossProduct.z;
+   float y = crossProduct.y / crossProduct.z;
+   float z = crossProduct.x / crossProduct.z;
 
-	return Point(x, y, z);
+   return Point(x, y, z);
 }
 
 // This function implements the triangle intersection algorithm

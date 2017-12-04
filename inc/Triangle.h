@@ -33,7 +33,7 @@ public:
 private:
 
    bool triangleIsIntersected(const Ray& ray, float& distAlongRayToHit, Point& hitPoint) const;
-   Point calcBarycentricCoord(Point& hitPoint) const;
+   Point calculateBarycentricCoordinates(Point& hitPoint) const;
 
    // Vertices are specified CCWISE
    Point vertexA, vertexB, vertexC;

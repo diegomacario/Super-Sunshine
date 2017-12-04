@@ -39,9 +39,9 @@ bool Sphere::isIntersected(const Ray& ray, Intersection* intersection) const
 
 bool Sphere::isIntersected(const Ray& ray, float& distAlongRayToIntersection) const
 {
-   Point transformedHitPoint;	
+   Point transformedHitPoint;
    Normal temporaryNormal;
-	
+
    if (sphereIsIntersected(ray, transformedHitPoint, temporaryNormal))
    {
       // We apply M to the intersection point to bring it back into the appropriate coordinate system

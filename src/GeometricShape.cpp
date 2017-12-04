@@ -4,13 +4,13 @@
 GeometricShape::GeometricShape(const Colour& ambient, Material* material)
    : ambient(ambient)
    , material(material)
-	, textured(false)
+   , textured(false)
 { }
 
 GeometricShape::GeometricShape(TextureDescription* textureDescription, Material* material)
    : textureDescription(textureDescription)
    , material(material)
-	, textured(true)
+   , textured(true)
 { }
 
 GeometricShape::~GeometricShape()
@@ -26,15 +26,15 @@ Colour GeometricShape::getAmbient() const
    return ambient;
 }
 
-Colour GeometricShape::getAmbient(Point barycentricCoord) const
+Colour GeometricShape::getAmbient(const Point& barycentricCoord) const
 {
-	Point uValues = Point(textureDescription->textureCoordA.u, textureDescription->textureCoordB.u, textureDescription->textureCoordC.u);
-	Point vValues = Point(textureDescription->textureCoordA.v, textureDescription->textureCoordB.v, textureDescription->textureCoordC.v);
+   Point uValues = Point(textureDescription->textureCoordA.u, textureDescription->textureCoordB.u, textureDescription->textureCoordC.u);
+   Point vValues = Point(textureDescription->textureCoordA.v, textureDescription->textureCoordB.v, textureDescription->textureCoordC.v);
 
    float interpolatedU = dot(uValues, barycentricCoord);
    float interpolatedV = dot(vValues, barycentricCoord);
 
-	TextureCoord interpolatedCoord(interpolatedU, interpolatedV);
+   TextureCoord interpolatedCoord(interpolatedU, interpolatedV);
 
    Colour colour = textureDescription->texture.sampleColour(interpolatedCoord);
    return colour;
@@ -47,5 +47,6 @@ Material * GeometricShape::getMaterial() const
 
 bool GeometricShape::isTextured() const
 {
-	return this->textured;
+   return textured;
 }
+

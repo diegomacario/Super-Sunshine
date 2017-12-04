@@ -19,4 +19,3 @@ void TextureCoord::set(float u, float v)
    this->v = v;
 }
 
-
