@@ -46,7 +46,7 @@ void SampleGenerator::displayProgress(const float y)
    static bool beginning = true;
 
    // The initial goal is 10% of the image
-   static float goalInPercent = static_cast<float>(0.1);
+   static float goalInPercent = 0.1f;
    static float goalInLines = height * goalInPercent;
 
    if (beginning)
@@ -65,7 +65,7 @@ void SampleGenerator::displayProgress(const float y)
       }
 
       // Increase the goal by 10%
-      goalInPercent += static_cast<float>(0.1);
+      goalInPercent += 0.1f;
       goalInLines = height * goalInPercent;
    }
 }

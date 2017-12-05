@@ -2,7 +2,7 @@
 
 namespace Constants
 {
-   extern const float pi = static_cast<float>(3.14159265);
-   extern const float shadowBias = static_cast<float>(0.01);
+   extern const float pi = 3.14159265f;
+   extern const float shadowBias = 0.01f;
 }
 

@@ -47,3 +47,8 @@ float dot(const Point& lhsPoint, const Normal& rhsNormal)
    return ((lhsPoint.x * rhsNormal.x) + (lhsPoint.y * rhsNormal.y) + (lhsPoint.z * rhsNormal.z));
 }
 
+float dot(const Point& lhsPoint, const Point& rhsPoint)
+{
+   return ((lhsPoint.x * rhsPoint.x) + (lhsPoint.y * rhsPoint.y) + (lhsPoint.z * rhsPoint.z));
+}
+

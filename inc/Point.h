@@ -9,8 +9,8 @@ Description:
 
 Possible improvements:
 
-   - There are 3 versions of the dot() function. One is provided here and two inside Vector.h.
-     A template could be created to unify them and reduce code duplication.
+   - There are 4 versions of the dot() function. Two are provided here, and two inside Vector.h.
+     A template could be created to unify them, reducing code duplication.
 */
 
 class Vector;
@@ -37,6 +37,7 @@ public:
 };
 
 float dot(const Point& lhsPoint, const Normal& rhsNormal);
+float dot(const Point& lhsPoint, const Point& rhsPoint);
 
 #endif
 
