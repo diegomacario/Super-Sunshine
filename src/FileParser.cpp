@@ -1,14 +1,14 @@
+#include <memory>
 #include <iostream>
 #include <sstream>
-#include <memory>
 
 #include "Triangle.h"
 #include "Sphere.h"
 #include "PointLight.h"
 #include "DirectionalLight.h"
-#include "FileParser.h"
-#include "SceneDescription.h"
 #include "TextureDescription.h"
+#include "SceneDescription.h"
+#include "FileParser.h"
 
 FileParser::FileParser(const char* filename)
 {
@@ -258,11 +258,6 @@ bool FileParser::parseGeometryCommands(const std::string& cmd, std::stringstream
          int textureA = static_cast<int>(values[1]);
          int textureB = static_cast<int>(values[3]);
          int textureC = static_cast<int>(values[5]);
-
-         TextureCoord textureCoords[3];
-         textureCoords[0] = state->textureCoords[textureA];
-         textureCoords[1] = state->textureCoords[textureB];
-         textureCoords[2] = state->textureCoords[textureC];
 
          state->objects.push_back(new Triangle(state->objToWorldTransfStack.top() * state->vertices[vertA],
                                                state->objToWorldTransfStack.top() * state->vertices[vertB],
@@ -544,13 +539,13 @@ void FileParser::parameterPreValidation(std::string cmd, std::unique_ptr<Validat
       throw "\n The maximum depth can only be specified once.\n";
    }
 
-   // "texture" must be specified before any textureCoords are defined
+   // "texture" must be specified before any texture coordinates are defined
    else if (!validationFlags->textureIsSpecified && (cmd == "textureCoord"))
    {
       throw "\n A texture file must be specified before any texture coordinates are defined.\n";
    }
 
-   // "texture" must be specified before any textured shapes are defined
+   // "texture" must be specified before any textured triangles are created
    else if (!validationFlags->textureIsSpecified && (cmd == "texturedTri"))
    {
       throw "\n A texture file must be specified before any textured triangles are created.\n";

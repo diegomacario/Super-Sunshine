@@ -94,10 +94,7 @@ private:
 
    bool readValues(const std::string& cmd, std::stringstream& wordStream, const int numValues, float* values);
 
-   void parameterPreValidation(std::string cmd,
-                               std::unique_ptr<ValidationFlags>& validationFlags,
-                               const std::unique_ptr<FileParserState>& state);
-
+   void parameterPreValidation(std::string cmd, std::unique_ptr<ValidationFlags>& validationFlags, const std::unique_ptr<FileParserState>& state);
    void parameterPostValidation(const std::unique_ptr<ValidationFlags>& validationFlags);
 
    void cleanExceptionExit(std::unique_ptr<FileParserState>& state);

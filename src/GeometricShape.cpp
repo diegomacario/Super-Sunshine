@@ -1,5 +1,4 @@
 #include "GeometricShape.h"
-#include <iostream>
 
 GeometricShape::GeometricShape(const Colour& ambient, Material* material)
    : ambient(ambient)
@@ -36,8 +35,7 @@ Colour GeometricShape::getAmbient(const Point& barycentricCoord) const
 
    TextureCoord interpolatedCoord(interpolatedU, interpolatedV);
 
-   Colour colour = textureDescription->texture.sampleColour(interpolatedCoord);
-   return colour;
+   return textureDescription->texture.sampleColour(interpolatedCoord);
 }
 
 Material * GeometricShape::getMaterial() const

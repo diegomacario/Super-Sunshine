@@ -65,8 +65,8 @@ bool Triangle::isIntersected(const Ray& ray) const
    return false;
 }
 
-Point Triangle::calculateBarycentricCoordinates(Point& hitPoint) const{
-
+Point Triangle::calculateBarycentricCoordinates(const Point& hitPoint) const
+{
    Vector vectorA(vertexC.x-vertexA.x, vertexB.x-vertexA.x, vertexA.x-hitPoint.x);
    Vector vectorB(vertexC.y-vertexA.y, vertexB.y-vertexA.y, vertexA.y-hitPoint.y);
    Vector crossProduct = cross(vectorA, vectorB);

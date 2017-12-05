@@ -38,6 +38,7 @@ public:
 
    Colour getAmbient() const;
    Colour getAmbient(const Point& barycentricCoord) const;
+
    Material * getMaterial() const;
 
    bool isTextured() const;

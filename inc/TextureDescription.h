@@ -13,8 +13,8 @@ struct TextureDescription
       , textureCoordC(textureCoordC)
    { }
 
-	Texture texture;
-	TextureCoord textureCoordA, textureCoordB, textureCoordC;
+   Texture texture;
+   TextureCoord textureCoordA, textureCoordB, textureCoordC;
 };
 
 #endif
