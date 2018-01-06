@@ -1,0 +1,5 @@
+## Ignore files used by Visual Studio Code to compile, run and debug
+
+c_cpp_properties.json
+tasks.json
+launch.json
