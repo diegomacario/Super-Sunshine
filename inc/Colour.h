@@ -10,6 +10,12 @@ Description:
 
    After the RGB values of a pixel are determined, they are multiplied by 255 and clamped if necessary by the Film class.
    This is done because the FreeImage library requires colours to range from 0 to 255 in order to generate a PNG.
+
+Possible improvements:
+
+   - Currently, users can only specify colours using the [0, 1.0] range. It would be great if users could choose between
+     that range and the [0, 255] range, since most of the websites that provide colour palettes specify the colours using
+     the latter range.
 */
 
 class Colour
