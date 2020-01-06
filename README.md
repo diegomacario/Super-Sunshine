@@ -78,7 +78,7 @@ As you can see, the scene description language makes it easy to play with the ra
  </p>
 </p>
 
-## Technical details
+## Technical Details
 
 This project started out as a final assignment for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. Since then, it has continued to grow because it provides a great environment for experimenting with new computer graphics concepts. In its current form, the project consists of:
 
