@@ -78,7 +78,7 @@ As you can see, the scene description language makes it easy to play with the ra
  </p>
 </p>
 
-## Technical Details
+## Technical details
 
 This project started out as a final assignment for Ravi Ramamoorthi's fantastic [course](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) on computer graphics. Since then, it has continued to grow because it provides a great environment for experimenting with new computer graphics concepts. In its current form, the project consists of:
 
@@ -514,7 +514,7 @@ This section is currently under development (thanks to [Yarden Arane](https://gi
  </p>
 </p>
 
-## Future Improvements
+## Future improvements
 
 There is still so much that remains to be done! The more I read about computer graphics, the more I want to continue exploring this field. I really wish my job involved anything related to graphics, or at least a little linear algebra. For now I will continue reading graphics textbooks on my super long commute. If you ever see a guy programming on a bus or metro in Montreal, it is probably me, and I will probably be working on implementing:
 
@@ -524,7 +524,7 @@ There is still so much that remains to be done! The more I read about computer g
 - Surfaces with interpolated normals (this feature will allow users to generate things like [RGB triangles](http://math.hws.edu/graphicsbook/c3/opengl-rgb-triangle.png)).
 - Colour bleeding (it would be really cool to generate a [Cornell Box](https://upload.wikimedia.org/wikipedia/commons/2/24/Cornell_box.png)).
 
-## Learning Resources
+## Learning resources
 
 If you are interested in learning more about computer graphics, I recommend you get started in the following places:
 
