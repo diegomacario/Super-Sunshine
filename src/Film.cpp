@@ -18,10 +18,9 @@ Film::~Film()
 
 void Film::exposePixel(Colour pixelColour)
 {
-   // BGR
-   pixels[pixelCounter] = static_cast<unsigned int>(std::min(255 * pixelColour.b, 255.0f));
+   pixels[pixelCounter] = static_cast<unsigned int>(std::min(255 * pixelColour.r, 255.0f));
    pixels[pixelCounter + 1] = static_cast<unsigned int>(std::min(255 * pixelColour.g, 255.0f));
-   pixels[pixelCounter + 2] = static_cast<unsigned int>(std::min(255 * pixelColour.r, 255.0f));
+   pixels[pixelCounter + 2] = static_cast<unsigned int>(std::min(255 * pixelColour.b, 255.0f));
 }
 
 void Film::prepareNextPixel()
