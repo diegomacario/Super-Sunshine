@@ -60,7 +60,13 @@ tri 0 1 2
 tri 1 3 2
  ```
  
-You would then give your scene description to Super-Sunshine, which would read it and turn it into an image like the one below:
+You would then give your scene description to Super-Sunshine:
+
+```
+Super-Sunshine.exe "ice_cream.txt"
+```
+
+And it would read it and turn it into an image like the one below:
 
 <p align="center">
 <img src="https://github.com/diegomacario/Ray-Tracer/blob/master/readme_images/ice_cream_noon.png"/>
