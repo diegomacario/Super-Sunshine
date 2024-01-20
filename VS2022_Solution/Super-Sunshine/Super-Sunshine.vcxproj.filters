@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Super-Sunshine">
+      <UniqueIdentifier>{c2356254-925b-47e5-a4d7-195bbef1bb92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Super-Sunshine\Header Files">
+      <UniqueIdentifier>{83dfcbce-55de-4b3c-b2d2-728954e7105d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Super-Sunshine\Source Files">
+      <UniqueIdentifier>{3d3fa873-eaef-4713-971c-63a64a1c7350}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\inc\Affine.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Colour.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Constants.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\DirectionalLight.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\FileParser.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Film.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\GeometricShape.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Intersection.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Light.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Material.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Normal.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Point.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\PointLight.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Ray.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\RayGenerator.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Sample.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\SampleGenerator.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Scene.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\SceneDescription.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Sphere.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Triangle.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\Vector.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\inc\stb_image_write.h">
+      <Filter>Super-Sunshine\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Affine.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Colour.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Constants.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\DirectionalLight.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\FileParser.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Film.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\GeometricShape.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Light.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\main.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Material.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Normal.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Point.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\PointLight.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Ray.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\RayGenerator.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SampleGenerator.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Scene.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\SceneDescription.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Sphere.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Triangle.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Vector.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\stb_image_write.cpp">
+      <Filter>Super-Sunshine\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

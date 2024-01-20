@@ -6,7 +6,6 @@
 #include "Sphere.h"
 #include "PointLight.h"
 #include "DirectionalLight.h"
-#include "TextureDescription.h"
 #include "SceneDescription.h"
 #include "FileParser.h"
 
@@ -42,7 +41,7 @@ void FileParser::readFile(std::unique_ptr<SceneDescription>& sceneDesc, std::uni
                // Pre-validation
                parameterPreValidation(cmd, validationFlags, state);
 
-               // The parseGeometryCommands() function is the only one out of the 6 parsing functions that can throw
+               // The parseGeometryCommands() function is the only one out of the 5 parsing functions that can throw
                cmdParsed = parseGeometryCommands(cmd, wordStream, validationFlags, state);
             }
             catch(const char* errorMsg)
@@ -68,10 +67,6 @@ void FileParser::readFile(std::unique_ptr<SceneDescription>& sceneDesc, std::uni
                else if (parseMaterialCommands(cmd, wordStream, state))
                {
                   // Material
-               }
-               else if (parseTextureCommands(cmd, wordStream, validationFlags, state))
-               {
-                  // Textures
                }
                else
                {
@@ -179,9 +174,9 @@ bool FileParser::parseSetupCommands(const std::string& cmd, std::stringstream& w
 
 bool FileParser::parseGeometryCommands(const std::string& cmd, std::stringstream& wordStream, std::unique_ptr<ValidationFlags>& validationFlags, std::unique_ptr<FileParserState>& state)
 {
-   // The values array is given a size of 6 because that is the maximum number
-   // of parameters a geometry command can have (in the case of the texturedTri command)
-   float values[6];
+   // The values array is given a size of 4 because that is the maximum number
+   // of parameters a geometry command can have (in the case of the sphere command)
+   float values[4];
    bool validInput = false;
 
    if (cmd == "sphere")
@@ -237,35 +232,6 @@ bool FileParser::parseGeometryCommands(const std::string& cmd, std::stringstream
                                                state->objToWorldTransfStack.top() * state->vertices[vertB],
                                                state->objToWorldTransfStack.top() * state->vertices[vertC],
                                                state->ambient,
-                                               new Material(state->diffuse, state->specular, state->emission, state->shininess)));
-      }
-      return true;
-   }
-   else if (cmd == "texturedTri")
-   {
-      validInput = readValues(cmd, wordStream, 6, values);
-      if (validInput)
-      {
-         int vertA = static_cast<int>(values[0]);
-         int vertB = static_cast<int>(values[2]);
-         int vertC = static_cast<int>(values[4]);
-
-         if (((vertA >= state->maxVerts) || (vertA < 0)) || ((vertB >= state->maxVerts) || (vertB < 0)) || ((vertC >= state->maxVerts) || (vertC < 0)))
-         {
-            throw "\n A textured triangle was specified with a nonexistent vertex.\n";
-         }
-
-         int textureA = static_cast<int>(values[1]);
-         int textureB = static_cast<int>(values[3]);
-         int textureC = static_cast<int>(values[5]);
-
-         state->objects.push_back(new Triangle(state->objToWorldTransfStack.top() * state->vertices[vertA],
-                                               state->objToWorldTransfStack.top() * state->vertices[vertB],
-                                               state->objToWorldTransfStack.top() * state->vertices[vertC],
-                                               new TextureDescription(state->texture,
-                                                                      state->textureCoords[textureA],
-                                                                      state->textureCoords[textureB],
-                                                                      state->textureCoords[textureC]),
                                                new Material(state->diffuse, state->specular, state->emission, state->shininess)));
       }
       return true;
@@ -424,49 +390,6 @@ bool FileParser::parseMaterialCommands(const std::string& cmd, std::stringstream
    return false;
 }
 
-bool FileParser::parseTextureCommands(const std::string& cmd, std::stringstream& wordStream, std::unique_ptr<ValidationFlags>& validationFlags, std::unique_ptr<FileParserState>& state)
-{
-   // The values array is given a size of 2 because that is the maximum number
-   // of parameters a texture command can have (in the case of the textureCoord command)
-   float values[2];
-   bool validInput = false;
-
-   if (cmd == "texture")
-   {
-      std::string file;
-      wordStream >> file;
-
-      state->texture.unloadImage();
-      state->texture.set(file.c_str());
-
-      if (!state->texture.isImageLoaded())
-      {
-         std::cout << "\n Could not load the following texture file: " << file << "\n";
-         validationFlags->textureIsSpecified = false;
-      }
-      else
-      {
-         validationFlags->textureIsSpecified = true;
-      }
-
-      return true;
-   }
-   else if (cmd == "textureCoord")
-   {
-      validInput = readValues(cmd, wordStream, 2, values);
-      if (validInput)
-      {
-         state->textureCoords.push_back(TextureCoord(values[0], values[1]));
-
-         Colour colour = state->texture.sampleColour(TextureCoord(values[0], values[1]));
-         state->ambient.set(colour.r, colour.g, colour.b);
-      }
-      return true;
-   }
-
-   return false;
-}
-
 bool FileParser::readValues(const std::string& cmd, std::stringstream& wordStream, const int numValues, float* values)
 {
    for (int i = 0; i < numValues; i++)
@@ -538,18 +461,6 @@ void FileParser::parameterPreValidation(std::string cmd, std::unique_ptr<Validat
    {
       throw "\n The maximum depth can only be specified once.\n";
    }
-
-   // "texture" must be specified before any texture coordinates are defined
-   else if (!validationFlags->textureIsSpecified && (cmd == "textureCoord"))
-   {
-      throw "\n A texture file must be specified before any texture coordinates are defined.\n";
-   }
-
-   // "texture" must be specified before any textured triangles are created
-   else if (!validationFlags->textureIsSpecified && (cmd == "texturedTri"))
-   {
-      throw "\n A texture file must be specified before any textured triangles are created.\n";
-   }
 }
 
 void FileParser::parameterPostValidation(const std::unique_ptr<ValidationFlags>& validationFlags)
@@ -595,7 +506,6 @@ FileParser::ValidationFlags::ValidationFlags()
    , cameraIsSpecified(false)
    , maxVertsIsSpecified(false)
    , maxDepthIsSpecified(false)
-   , textureIsSpecified(false)
 { }
 
 FileParser::FileParserState::FileParserState()
@@ -620,8 +530,6 @@ FileParser::FileParserState::FileParserState()
    , specular()
    , emission()
    , shininess(0)
-   , texture()
-   , textureCoords()
 {
    // Initialize both stacks with unit matrices
    objToWorldTransfStack.push(Affine(1, 1, 1, SCALE));
