@@ -6,7 +6,6 @@
 #include "RayGenerator.h"
 #include "Film.h"
 #include "SceneDescription.h"
-
 #include "stb_image_write.h"
 
 bool validateCmdLineArguments(const int numOfArgs);
