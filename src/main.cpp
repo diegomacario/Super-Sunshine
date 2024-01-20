@@ -7,6 +7,8 @@
 #include "Film.h"
 #include "SceneDescription.h"
 
+#include "stb_image_write.h"
+
 bool validateCmdLineArguments(const int numOfArgs);
 
 int main(int argc, char* argv[])
@@ -69,6 +71,8 @@ int main(int argc, char* argv[])
 
       film.prepareNextPixel();
    }
+
+   stbi_write_png("test.png", sceneDesc->getWidth(), sceneDesc->getHeight(), 3, &(film.getExposedFilm()[0]), sceneDesc->getWidth() * 3);
 
    return 0;
 }
