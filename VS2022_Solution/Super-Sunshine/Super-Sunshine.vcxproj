@@ -159,6 +159,8 @@
     <ClInclude Include="..\..\inc\Scene.h" />
     <ClInclude Include="..\..\inc\SceneDescription.h" />
     <ClInclude Include="..\..\inc\Sphere.h" />
+    <ClInclude Include="..\..\inc\stb_image.h" />
+    <ClInclude Include="..\..\inc\stb_image_write.h" />
     <ClInclude Include="..\..\inc\Triangle.h" />
     <ClInclude Include="..\..\inc\Vector.h" />
   </ItemGroup>
@@ -182,6 +184,8 @@
     <ClCompile Include="..\..\src\Scene.cpp" />
     <ClCompile Include="..\..\src\SceneDescription.cpp" />
     <ClCompile Include="..\..\src\Sphere.cpp" />
+    <ClCompile Include="..\..\src\stb_image.cpp" />
+    <ClCompile Include="..\..\src\stb_image_write.cpp" />
     <ClCompile Include="..\..\src\Triangle.cpp" />
     <ClCompile Include="..\..\src\Vector.cpp" />
   </ItemGroup>
