@@ -1,6 +1,5 @@
 #include <memory>
 #include <iostream>
-#include <sstream>
 
 #include "Triangle.h"
 #include "Sphere.h"
@@ -9,9 +8,9 @@
 #include "SceneDescription.h"
 #include "FileParser.h"
 
-FileParser::FileParser(const char* filename)
+FileParser::FileParser(const std::string& sceneDescription)
 {
-   lineStream.open(filename);
+   lineStream = std::istringstream(sceneDescription);
 }
 
 FileParser::~FileParser()
@@ -19,99 +18,91 @@ FileParser::~FileParser()
 
 void FileParser::readFile(std::unique_ptr<SceneDescription>& sceneDesc, std::unique_ptr<Scene>& scene)
 {
-   if (lineStream.is_open())
+   std::unique_ptr<ValidationFlags> validationFlags(new ValidationFlags());
+   std::unique_ptr<FileParserState> state(new FileParserState());
+
+   std::string line, cmd;
+   bool cmdParsed = false;
+
+   getline(lineStream, line);
+   while (lineStream)
    {
-      std::unique_ptr<ValidationFlags> validationFlags(new ValidationFlags());
-      std::unique_ptr<FileParserState> state(new FileParserState());
-
-      std::string line, cmd;
-      bool cmdParsed = false;
-
-      getline(lineStream, line);
-      while (lineStream)
+      // Ignore blank/commented lines
+      if ((line.find_first_not_of(" \t\r\n") != std::string::npos) && (line[0] != '#'))
       {
-         // Ignore blank/commented lines
-         if ((line.find_first_not_of(" \t\r\n") != std::string::npos) && (line[0] != '#'))
+         std::stringstream wordStream(line);
+         wordStream >> cmd;
+
+         try
          {
-            std::stringstream wordStream(line);
-            wordStream >> cmd;
+            // Pre-validation
+            parameterPreValidation(cmd, validationFlags, state);
 
-            try
+            // The parseGeometryCommands() function is the only one out of the 5 parsing functions that can throw
+            cmdParsed = parseGeometryCommands(cmd, wordStream, validationFlags, state);
+         }
+         catch(const char* errorMsg)
+         {
+            cleanExceptionExit(state);
+            throw errorMsg;
+         }
+
+         if (!cmdParsed)
+         {
+            if (parseSetupCommands(cmd, wordStream, validationFlags, state))
             {
-               // Pre-validation
-               parameterPreValidation(cmd, validationFlags, state);
-
-               // The parseGeometryCommands() function is the only one out of the 5 parsing functions that can throw
-               cmdParsed = parseGeometryCommands(cmd, wordStream, validationFlags, state);
+               // Setup
             }
-            catch(const char* errorMsg)
+            else if (parseTransformationCommands(cmd, wordStream, state))
             {
-               cleanExceptionExit(state);
-               throw errorMsg;
+               // Transformation
             }
-
-            if (!cmdParsed)
+            else if (parseLightCommands(cmd, wordStream, state))
             {
-               if (parseSetupCommands(cmd, wordStream, validationFlags, state))
-               {
-                  // Setup
-               }
-               else if (parseTransformationCommands(cmd, wordStream, state))
-               {
-                  // Transformation
-               }
-               else if (parseLightCommands(cmd, wordStream, state))
-               {
-                  // Light
-               }
-               else if (parseMaterialCommands(cmd, wordStream, state))
-               {
-                  // Material
-               }
-               else
-               {
-                  // Unknown
-                  std::cout << "\n Command \"" << cmd << "\" is unknown. It will be ignored.\n";
-               }
+               // Light
+            }
+            else if (parseMaterialCommands(cmd, wordStream, state))
+            {
+               // Material
             }
             else
             {
-               cmdParsed = false;
+               // Unknown
+               std::cout << "\n Command \"" << cmd << "\" is unknown. It will be ignored.\n";
             }
          }
-
-         getline(lineStream, line);
+         else
+         {
+            cmdParsed = false;
+         }
       }
 
-      try
-      {
-         // Post-validation
-         parameterPostValidation(validationFlags);
-      }
-      catch(const char* errorMsg)
-      {
-         cleanExceptionExit(state);
-         throw errorMsg;
-      }
-
-      // Create the SceneDescription and Scene objects
-      sceneDesc.reset(new SceneDescription(state->width,
-                                           state->height,
-                                           state->outputFilename,
-                                           state->eye,
-                                           state->center,
-                                           state->up,
-                                           state->fovy));
-
-      scene.reset(new Scene(state->objects,
-                            state->lights,
-                            state->maxDepth));
+      getline(lineStream, line);
    }
-   else
+
+   try
    {
-      // No need to call cleanExceptionExit() since no objects have been dynamically allocated with raw pointers
-      throw "\n Unable to open the scene description.\n";
+      // Post-validation
+      parameterPostValidation(validationFlags);
    }
+   catch(const char* errorMsg)
+   {
+      cleanExceptionExit(state);
+      throw errorMsg;
+   }
+
+   // Create the SceneDescription and Scene objects
+   sceneDesc.reset(new SceneDescription(state->width,
+                                        state->height,
+                                        state->outputFilename,
+                                        state->eye,
+                                        state->center,
+                                        state->up,
+                                        state->fovy));
+
+   scene.reset(new Scene(state->objects,
+                         state->lights,
+                         state->maxDepth));
 }
 
 bool FileParser::parseSetupCommands(const std::string& cmd, std::stringstream& wordStream, std::unique_ptr<ValidationFlags>& validationFlags, std::unique_ptr<FileParserState>& state)

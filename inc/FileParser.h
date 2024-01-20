@@ -3,7 +3,7 @@
 
 #include <memory>
 #include <stack>
-#include <fstream>
+#include <sstream>
 
 #include "Affine.h"
 #include "Scene.h"
@@ -23,7 +23,7 @@ class FileParser
 {
 public:
 
-   FileParser(const char* filename);
+   FileParser(const std::string& sceneDescription);
    ~FileParser();
 
    void readFile(std::unique_ptr<SceneDescription>& sceneDesc, std::unique_ptr<Scene>& scene);
@@ -91,7 +91,7 @@ private:
 
    void cleanExceptionExit(std::unique_ptr<FileParserState>& state);
 
-   std::ifstream lineStream;
+   std::istringstream lineStream;
 };
 
 #endif
