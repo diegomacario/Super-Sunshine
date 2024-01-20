@@ -86,7 +86,7 @@ This project started out as a final assignment for Ravi Ramamoorthi's fantastic 
 - A file parser designed to read scene descriptions written with a simple scene description language.
 - A linear algebra API for performing operations with points, vectors, normals and affine transformation matrices.
 
-All the code was written in C++, with a strong focus on making it clear and organized. The only external library used is the [FreeImage](https://www.edx.org/course/computer-graphics-uc-san-diegox-cse167x-2) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
+All the code was written in C++, with a strong focus on making it clear and organized. The only external library used is the [stb_image_write](https://github.com/nothings/stb/blob/master/stb_image_write.h) library (it is used to generate PNG images with the RGB values calculated by the ray-tracer).
 
 To compile the project in macOS or Linux, simply use the Makefile included in this repository (thanks to [Yarden Arane](https://github.com/YArane) and [Daniel Macario](https://github.com/macadev) for helping with the cross-platform support!).
 

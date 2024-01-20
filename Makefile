@@ -9,14 +9,13 @@ CXX=g++ -std=c++11
 RM=rm -f
 CPPFLAGS=-g $(shell root-config --cflags)
 LDFLAGS=-g $(shell root-config --ldflags)
-LDLIBS=-lfreeimage
 
 OBJS=$(subst .cc,.o,$(SRC_FILES))
 
 all: superSunshine
 
 superSunshine: $(OBJS)
-	$(CXX) $(LDFLAGS) $(INCLUDE) -o superSunshine $(OBJS) $(LDLIBS)
+	$(CXX) $(LDFLAGS) $(INCLUDE) -o superSunshine $(OBJS)
 
 depend: .depend
 

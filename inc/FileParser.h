@@ -1,6 +1,7 @@
 #ifndef FILE_PARSER_H
 #define FILE_PARSER_H
 
+#include <memory>
 #include <stack>
 #include <fstream>
 
