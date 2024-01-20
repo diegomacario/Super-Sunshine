@@ -72,7 +72,7 @@ int main(int argc, char* argv[])
       film.prepareNextPixel();
    }
 
-   stbi_write_png("test.png", sceneDesc->getWidth(), sceneDesc->getHeight(), 3, &(film.getExposedFilm()[0]), sceneDesc->getWidth() * 3);
+   stbi_write_png(sceneDesc->getOutputFilename().c_str(), sceneDesc->getWidth(), sceneDesc->getHeight(), 3, film.getExposedFilm(), sceneDesc->getWidth() * 3);
 
    return 0;
 }
