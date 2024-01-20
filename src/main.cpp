@@ -6,7 +6,6 @@
 #include "RayGenerator.h"
 #include "Film.h"
 #include "SceneDescription.h"
-//#include "FreeImage.h"
 
 bool validateCmdLineArguments(const int numOfArgs);
 
@@ -36,9 +35,6 @@ int main(int argc, char* argv[])
       return 1;
    }
 
-   // Initialize the FreeImage library
-   //FreeImage_Initialise();
-
    // The SampleGenerator updates a Sample object to specify the coordinates of the center of each pixel on the image plane
    SampleGenerator sampleGenerator(sceneDesc->getWidth(), sceneDesc->getHeight());
 
@@ -51,7 +47,7 @@ int main(int argc, char* argv[])
                              sceneDesc->getFovy());
 
    // The Film object stores the final colour of each pixel and coverts it from the [0, 1.0] range to the [0, 255] range,
-   // so that it can be used to generate an image with the FreeImage library
+   // so that it can be used to generate an image with the stb_image_write library
    Film film(sceneDesc->getWidth(), sceneDesc->getHeight());
 
    Sample sample;
@@ -73,23 +69,6 @@ int main(int argc, char* argv[])
 
       film.prepareNextPixel();
    }
-
-   // Generate image
-   //FIBITMAP * image = FreeImage_ConvertFromRawBits(film.getExposedFilm(),
-   //                                                sceneDesc->getWidth(),
-   //                                                sceneDesc->getHeight(),
-   //                                                sceneDesc->getWidth() * 3,
-   //                                                24,
-   //                                                0xFF0000,
-   //                                                0x00FF00,
-   //                                                0x0000FF,
-   //                                                true);
-
-   // Save image
-   //FreeImage_Save(FIF_PNG, image, sceneDesc->getOutputFilename().c_str(), 0);
-
-   // Uninitialize the FreeImage library
-   //FreeImage_DeInitialise();
 
    return 0;
 }
