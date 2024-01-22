@@ -17,7 +17,7 @@ output sword.png
 # --- --- --- --- -- CAMERA -- --- --- --- ---
 
 # Sideways
-camera 0 5 -2.44 0 0 -2.44 -1 0 0 45
+camera 0 6.5 -2.44 0 0 -2.44 -1 0 0 45
 
 # Hilt
 #camera  0 2 0.18 0 0 0.18 0 0 -1 45
