@@ -11,7 +11,7 @@
 int main()
 {
    std::string sceneDescription = R"(
-size 849 259
+size 536 240
 output sword.png
 
 # --- --- --- --- -- CAMERA -- --- --- --- ---

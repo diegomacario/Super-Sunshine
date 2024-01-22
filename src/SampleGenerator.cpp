@@ -5,8 +5,8 @@
 SampleGenerator::SampleGenerator(const int width, const int height)
    : width(width)
    , height(height)
-   , x(0.5)
-   , y(0.5)
+   , x(0)
+   , y(0)
 { }
 
 SampleGenerator::~SampleGenerator()
@@ -23,9 +23,9 @@ void SampleGenerator::generateSample(Sample& sample)
    x++;
 
    // When a horizontal line is completed, jump to the beginning of the next line
-   if (x > width)
+   if (x == width)
    {
-      x = 0.5;
+      x = 0;
       y++;
 
       displayProgress(y);
@@ -41,7 +41,7 @@ bool SampleGenerator::sampleIsAvailable()
    return false;
 }
 
-void SampleGenerator::displayProgress(const float y)
+void SampleGenerator::displayProgress(unsigned int y)
 {
    static bool beginning = true;
 

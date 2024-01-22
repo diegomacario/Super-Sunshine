@@ -28,6 +28,6 @@ void RayGenerator::generateRay(const Sample& sample, Ray& ray)
 {
    // The origin of the ray has already been set as the eye
    // The direction of the ray is calculated with the expression below
-   ray.direction = ((alpha * (((2 * sample.x) / width) - 1) * u) + (beta * (1 - ((2 * sample.y) / height)) * v) - w).normalize();
+   ray.direction = ((alpha * (((2 * (sample.x + 0.5f)) / width) - 1) * u) + (beta * (1 - ((2 * (sample.y + 0.5f)) / height)) * v) - w).normalize();
 }
 

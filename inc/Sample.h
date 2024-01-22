@@ -19,12 +19,12 @@ struct Sample
       , y(0)
    { }
 
-   Sample(float x, float y)
+   Sample(unsigned int x, unsigned int y)
       : x(x)
       , y(y)
    { }
 
-   float x, y;
+   unsigned int x, y;
 };
 
 #endif

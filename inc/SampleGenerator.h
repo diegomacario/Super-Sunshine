@@ -29,14 +29,14 @@ public:
 private:
 
    // Print how much of the image has been generated (10%, 20%, ...)
-   void displayProgress(const float y);
+   void displayProgress(unsigned int y);
 
    // Number of pixels = Number of samples = width * height
-   int width, height;
+   unsigned int width, height;
 
    // x and y are equal to zero at the upper-left corner
    // x increases as we move towards the right, while y increases as we move towards the bottom
-   float x, y;
+   unsigned int x, y;
 };
 
 #endif
